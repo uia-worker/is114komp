@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="no-NB">
+<head>
+    <meta charset="utf-8">
+    <title>IS-114 Kompendium</title>
+    <link href='https://fonts.googleapis.com/css?family=IBM Plex Serif' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/is114-style.css" title="default">
+    <script type="text/javascript" src="js/is114.js"></script>
+</head>
+<body>
+  <div class="tocset">
+    <div class="tocview">
+      <div class="tocviewlist tocviewlisttopspace">
+        <div class="tocviewtitle">
+          <table cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td style="width: 1em;">
+              <a href="javascript:void(0);" title="Expand/Collapse" class="tocviewtoggle" onclick="TocviewToggle(this,&quot;tocview_0&quot;);">▼</a>
+                </td>
+                <td>
+                </td>
+                <td>
+                  <a href="index.html" class="tocviewlink" data-pltdoc="x">Høst 2023: IS-114</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tocviewsublisttop" style="display: block;" id="tocview_0">
+          <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="index.html" class="tocviewlink" data-pltdoc="x">Beskrivelse og rettningslinjer</a>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="#" class="tocviewselflink" data-pltdoc="x">Kompendium</a>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="#" class="tocviewlink" data-pltdoc="x">Oppgaver</a>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="#" class="tocviewlink" data-pltdoc="x">Kollokvium</a>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="honnor.html" class="tocviewlink" data-pltdoc="x">Honnør</a>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="tocviewlist">
+        <table cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <td style="width: 1em;">
+                <a href="javascript:void(0);" title="Expand/Collapse" class="tocviewtoggle" onclick="TocviewToggle(this,&quot;tocview_1&quot;);">▼</a>
+              </td>
+              <td>
+              </td>
+              <td>
+                <a href="" class="tocviewselflink" data-pltdoc="x">Kompendium</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="tocviewsublistbottom" style="display: block;" id="tocview_1">
+          <table cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="intro.html" class="tocviewlink" data-pltdoc="x">Introduksjon</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="basis.html" class="tocviewlink" data-pltdoc="x">Basiskunnskap</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="#" class="tocviewlink" data-pltdoc="x">...</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="tocsub">
+      <div class="tocsubtitle">På denne siden:</div>
+      <table class="tocsublist" cellspacing="0">
+        <tbody>
+          <tr>
+            <td>
+              <span class="tocsublinknumber">1<tt>&nbsp;</tt></span>
+              <a href="#intro" class="tocsubseclink" data-pltdoc="x">Intro</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="tocsublinknumber">2<tt>&nbsp;</tt></span>
+              <a href="#fil" class="tocsubseclink" data-pltdoc="x">Diverse</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="tocsublinknumber">3<tt>&nbsp;</tt></span>
+              <a href="#mem" class="tocsubseclink" data-pltdoc="x">Minne og prosess</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="maincolumn">
+    <!-- kun for første side
+    <div class="versionbox">
+      <span class="version">Torsdag, 5. Januar 2023, laget av Janis Gailis</span>
+    </div>
+    -->
+
+    <h1>
+      Introduksjon
+      <a name="intro"></a>
+    </h1>
+    <h2>Problemløsning med regnemaskiner</h2>
+
+    <p>Det er et faktum at introduksjon i programmering tilbys i de fleste høyere utdanningsinstitusjonene verden rundt. Det er også et faktum at slike introduksjoner er basert på å lære et programmeringsspråk fra bunnen av, det vil si, med fokus på syntaks og grammatikalske regler. Selv om det ikke finnes et allment akseptert måte (metode) for å lære å programmere på, finnes det indikasjoner på at en tilnærming basert på <i>problemløsning</i> kan for mange være den beste måten å gjøre det på. I IS-114 defineres <i>problemløsning</i> som <b>å øve på å løse reelle problemer ved hjelp av en regnemaskin</b>. Ved å formulere og løse reelle problemer, skal studentene lære om temaer som <b>design av programmer for regnemaskiner ved hjelp av flere programmeringsspråk</b>, <b>testing av programmene</b> og <b>valg av datastrukturer for spesifikke problemer</b>.</p>
+
+    <p><i>Reelle problemer</i> er et meget vidt og tvetydig begrep og må vurderes kritisk. Det er ikke alltid mulig å skape miljø for helt realistiske problemer i en utdanningssituasjon. Problemene, som vi vil foreslå, vil være så nært knyttet til reelle situasjoner relatert til vårt fagområdet (som er systemutvikling), som mulig. Studentene vil også få mulighet til å definere sine egne problemstillinger.</p>
+
+    <p>Når man har designet et program, er det viktig å teste løsningen i forhold til ytelse, pålitelighet, og forutsigbarhet. For å gjennomføre testing, brukes det vitenskapelige metoder/fremgangsmåter (testing av hypoteser). Pålitelighet (autentisering, autorisering, funksjonere selv med noen feil, bruker kan gjennomføre sine oppgaver med rimelig kvalitet), skalerbarhet (fungere selv under vekst ...) og vedlikeholdbarhet. __inngår ytelse og forutsigbarhet i pålitetlighet?__</p>
+
+    <p>__må skrives om__ Siden alle løsningene blir implementert i en kontekst hvor homo sapiens er involvert, er det også viktig å forstå mulige sosiale implikasjoner, som en teknologisk løsning kan ha. Den sosiale konteksten kan deles opp i 4 grunnkomponenter, - den biologiske, den økonomiske, den politiske og den kulturelle (Mario Bunge). Det å se det sosiale, det vitenskapelige og det tekniske som en helhet, ligger i kjernen for studier om informasjonssystemer, som er definert som et forskningsfelt (blir introdusert i IS-100) og som ligger i kjernen for vårt BACIT studium.</p>
+
+    <p>La oss fremme en påstand (hypotese) om at i sentrum av all problemløsning med regnemaskiner står data. I IS-114 vil vi praktisere <i>datasentrert</i> tilnærming til problemløsning.</p>
+
+    <p>Oppsummert, målsettingen for programmeringsdelen av IS-114 er å lære å designe og teste programmer, som løser reelle problemer ved hjelp av datasentrert tilnærming til problemløsing.</p>
+
+    <h2>Fokus på data</h2>
+
+    <p>Datamaskiner har vært og er et nyttig hjelpemiddel for å få svar på diverse spørsmål, knyttet til de fleste virksomhetene av homo sapiens, ved hjelp av beregningsmetoder brukt på data. Data kan defineres som informasjon (hovedsakelig nummerisk), som er innhentet gjennom (ut)forskning.</p>
+
+    <blockquote class="incercise">
+      <p class="incerciseheader">Gjør dette nå!</p>
+      <blockquote class="incercisebody">
+        <p>Prøv dette ut nå og bekreft suksess!</p>
+      </blockquote>
+    </blockquote>
+
+    
+    <h2>Regnemaksiner er ikke "presise"</h2>
+
+     <blockquote class="codeexamp">
+      <p class="codeexampheader">Kodeeksempel 1</p>
+      <blockquote class="codeexampbody">
+        <pre>
+          tolerance = 0.00000001
+          abs(0.1+0.2-0.3) < tolerance
+        </pre>
+      </blockquote>
+    </blockquote>
+
+    <h2>Klart definerte problemer</h2>
+    <p>TicTacToe: 3*3*3*3*3*3*3*3*3 = 3^9 = 19,683 mulige måter å fylle en 3x3 bord på hvis man har tre mulig symboler som kan være i en rute til enhver tid.</p>
+    <p>52<sup>13</sup> = 635013559600 mulige "hender" i bridge</p>
+    <p>10<sup>111</sup> til 10<sup>123</sup> mulige bordposisjoner i sjakk</p>
+    <p>10<sup>170</sup> mulige posisjoner i Go ( L(19, 19) ∼ 0.012×3<sup>361</sup> ∼ 2.089×10<sup>170</sup> (estimatet er foreslått av Achim Flammenkamp) )</p>
+
+    
+    <h2>Hvile hypoteser kan relateres til prosessen for å lære å programmere?</h2>
+    <p>__husk ref. Krishnamurti__</p>
+    <p>(H1) Programvare skrives ikke kun for å bli utført, det skrives også for andre lesere og den må også endres/administreres av andre (eller en selv noen tid senere, når man ikke lenger husker hva har tenkt tidligere).</p>
+    <p>(H2) Programmerere er ansvarlig for at programmene som de skriver tilfredstiller målsettinger og er så feilfrie (i programmering kalles feil vanligvis for "bugs") som mulig. Derfor er testing og verifisering av programmene en vesentlig del av programmeringsprosessen.</p>
+    <p>(H3) Utfallet av utførelsen av et program bør kunne forutsies før programmet faktisk utføres. Utfallet kan beskrives med hvor lang tid datamaskinen(-e) bruker for å utføre programmet, hvor mye lagringsplass er nødvendig, hvor mye strøm datamaskine(-e) skal konsumere og i mange tilfeller også sosiale implikasjoner for aktørene som administrerer og bruker programmet.</p>
+    <p style="background-color: lightskyblue;">Oppgave mens du leser (eller i klassen).</p>
+    <p>Hvilken kunnskap må man besitte for å kunne jobbe i tråd med hypotesene (H1), (H2) og (H3)?</p>
+
+    <h2>Lever vi i en data- (informasjons-) alder?</h2>
+    <p style="background-color: lightskyblue;">Oppgave mens du leser (eller i klassen).</p>
+    <p>Hva menes det med at "vi lever i en verden full av data" eller at "vi lever i en informasjonsalder? Og hva menes med uttrykk som "data er den nye oljen"?</p>
+    <br/>
+
+    <p>Alle klassifiseringer av tidsepoker er selvsagt tilfeldige og basert på noens synspunkt og en eller annen kontekst. Det er vanskelig å besvare spørsmålene ovenfor, uten å stadfeste at data og informasjon er sterkt knyttet til språket. Det finnes flere teorier om utvikling av språket til homo sapiens. Hovedsakelig er språket stert relatert til lyder og symboler, selv om miljøet (atmosfæren, lys) har også en påvirkning på hvert enkelt av rasens medlemmene. Menneskene kommuniserer ved hjelp av sanseorganer (sensorer), kroppsdelene (aktuatorer) samt lyder og symboler, hvis betydning da, veldig enkelt forklart, er lagret i hjernen. Fra et slikt perspektiv, så kunne man si at homo sapiens har levd i en informasjonsalder, siden det har foregått kommunikasjon ved hjelp lyder og symboler mellom to eller flere individer. Man må være kritisk til retoriske uttallelser som at "data er den nye oljen", "vi lever i en informasjonsalder", "vi er omgitt av data" og "verden er full av data".</p>
+
+    <p>Hvis vi ser bort fra tolkninger av "verden er full av data" i dagliglivet, så kan vi begrense oss til representasjon av data i datamaskiner, dvs. relatert til beregninger. Datamaskiner kan betraktes som regnemaskiner (et automat som er designet basert på logikk og matematikk), siden en datamaskin kan kun bruke data, som er oversatt til tall. Eller ennå mer spesifikt, data som er oversatt til et binært tallsystem, som kun består at to symboler, 0 og 1.</p>
+    <p>datasentrert = viten om data + datastrukturer</p>
+    <ul> 
+      <li>viten om data</li>
+      <li>notasjonsmaskiner</li>
+      <li>sosialt ansvar</li>
+      <li>forskning (se referanser)</li>
+    </ul>
+    <h3>Viten om data (en. "data science")</h3>
+    <p>La oss starte med å se på viten om data. Hva trenger vi å vite om data for å kunne løse (homo sapiens sine) problemer ved hjelp av beregning gjennomført av datamaskiner.</p>
+    <p>...</p>
+    <p>Øvelser, "gjør det nå", strategier, ansvarlig beregning</p>
+    <p>Programmeringsspråk: starter med Pyret og går over til JavaScript.</p>
+
+    <h3>Datasentrert og dataintensivt</h3>
+    <p>Nå som vi har definert hva vi mener med "datasentrert", må vi også nevne begrepet "dataintensivt". To grunnleggende fysiske elementer til ethvert datasystem (se Bunges data prosesserings enhet) er prosessor og minne. Med prosessor menes ofte CPU, som er en forkortelse for det engelse uttrykket Central Processing Unit. Med minne menes vanligvis RAM, som er en forkortelse for Random Access Memory. Når et program består av instruksjoner, som gjør mye beregning på relativt liten mengde data, betegnes prosessen av utførelsen av dette programmet for beregningsintensiv, eller på engelsk "compute-intensive". Når et program består av instruksjoner som lagrer og henter relativt store mengder data, betegnes prosessen som dataintensivt. </p>
+    <p>For å bygge <i>dataintensive applikasjoner</i> brukes noen veletablerte abstraksjoner som byggeklosser. Disse abstraksjonene er (kan være flere): 
+    <ul>
+    <li>database,</li>
+    <li>kommunikasjon mellom prosesser ved hjelp av meldinger (en. "stream processing"),</li>
+    <li>spesifikke beregninger på spesifikke tidspunkt (en. "batch processing"),</li>
+    <li>søkeindeks/filter,</li>
+    <li>mellomlagring av resultater fra ressurskrevende beregninger (en. "cache").</li>
+    </ul>
+  </p>
+
+    <h2>Lage og analysere egne datamodeller?</h2>
+    <p style="background-color: lightskyblue;">Oppgave mens du leser (eller i klassen/"gjør det nå").</p>
+    Tenk et området eller menneskelig aktivitet, som du ønsker å samle data om. Beskriv fenomenet så detaljert som mulig og finn alle egenskapene til fenomenet, som kan betegnes som data (du kan bruke din tolkning av "data"). 
+    <h2>Et motiverende eksempel: Flagg</h2>
+    <p>Kan vi finne på et praktisk eksempel som er så nærme reelle problemstillinger som programmerere møter i "det reelle livet"? (med forbehold om å ikke klare tolke dette uttrykke presist nok)?</p>
+
+
+   <h2>Tabelleksempel</h2>
+   <table class="table1">
+    <thead>
+      <tr>
+        <th colspan="2">Rad over alle kolonner</th>
+      </tr>
+      <tr>
+        <th>Kolonnenavn #1</th>
+        <th>Kolonnenavn #2</th>        
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tbody>
+  </table>
+
+  <h2>Blokken for ansvarlig databehandling (mal)</h2>
+  <blockquote class="respcs">
+    <p class="respcsheader">Responsible Computing: Choose Analysis Artifacts Wisely</p>
+    <blockquote class="respcsbody">
+    <p>As more and more decisions are guided by statistical analyses of data
+(performed by humans), it’s critical to recognize that data can be a
+poor proxy for the actual phenomenon that we seek to understand. Here,
+Debbie had data about program behavior, which led to
+mis-interpretations regarding which program is best. But Debbie also
+had the programs themselves, from which the data were
+generated. Analyzing the programs, rather than the data, is a more
+direct approach to assessing the performance of a program.</p>
+<p>While the rest of this chapter is about analyzing programs as written
+in code, this point carries over to non-programs as well. You might
+want to understand the effectiveness of a process for triaging
+patients at a hospital, for example. In that case, you have both the
+policy documents (rules which may or may not have been turned into a
+software program to support managing patients) and data on the
+effectiveness of using that process. Responsible computing tells us to
+analyze both the process and its behavioral data, against knowledge
+about best practices in patient care, to evaluate the effectiveness of
+systems.</p>
+</blockquote>
+</blockquote>
+
+
+  </div>
+
+</body>
+</html>
