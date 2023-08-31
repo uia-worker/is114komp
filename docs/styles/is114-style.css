@@ -31,12 +31,12 @@ pre {
   font-family: 'Monaco', monospace;
   padding: 0 1em;
   font-size: 0.9em;
-  color: #cfd5d3;
+  color: #000000;
 }
 code {
   font-family: Monaco, monospace;
   line-height: 100%;
-  color: #cfd5d3; /* #cfd5d3 #565656 #636262 9fafaa 1f2e2a */
+  color: #000000; /* #cfd5d3 #565656 #636262 9fafaa 1f2e2a */
   padding: 0.2em;
   letter-spacing: -0.05em;
   word-break: normal;
@@ -80,7 +80,7 @@ code {
   margin-right: 2em;
 }
 .tocview, .tocsub {
-  background-color: #dcd9b3; /* #4f8a8b; #dcd9b3 */
+  background-color: #dcd9b3;
 }
 .tocviewlisttopspace {
   margin-bottom: 1em;
