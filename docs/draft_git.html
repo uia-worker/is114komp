@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>IS-114 Git </title>
     <link href='https://fonts.googleapis.com/css?family=IBM Plex Serif' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/is114-style.css" title="default">
     <script type="text/javascript" src="js/is114.js"></script>
 </head>
@@ -59,17 +60,38 @@
   </div>
   <div class="maincolumn">
     <h2>
-      Git
+      Om Git
       <a name="git"></a>
     </h2>
-    <p><b>Git</b> er versjonskontrollsystem (et dataprogram), som oppsto av nødvendighet for sikker og effektiv samarbeidsmetode for utviklere av programvare, spesielt relatert til åpen kildekode programvare. Utviklingen av <b>Git</b> ble startet av Linus Thorvalds (The Linux Foundation, 2015) i 2005, og har blitt utviklet i åpen kildekode felleskapet siden.</p>
-    <p>Åpen kildekode programvare prosjekter ofte har sporadiske bidrag fra et stort antall utviklere (kodere eller programmerere) og det fører til et behov for et system, som begrenser muligheter for at feil blir lagt inn i programvaren, spesielt i den gjeldende versjonen, som kalles for <i>produksjonsversjon</i>. I slike prosjekter opererer man også ofte med en annen versjon av programvare, som kalles for <i>utviklingsversjon</i> (på engelsk "development versjon"). Regler for å legge inn endringer i koden er mindre strenge for utviklingsversjonen enn for produksjonsversjonen og utviklingsversjonen brukes for å teste ut programvaren etter at feil har blitt rettet (på engelsk kaller man det "hotfix" eller "bugfix") eller når nye funksjoner (eller brukstilfeller, som kan inkludere flere funksjoner og eventuelt moduler) er lagt til.</p>
+    <p><b>Git</b> er et versjonskontrollsystem (et dataprogram), som oppsto av nødvendighet for sikker og effektiv samarbeidsmetode mellom utviklere av programvare, spesielt relatert til åpen kildekode programvare. Utviklingen av <b>Git</b> ble startet av Linus Thorvalds i 2005 (The Linux Foundation, 2015), og har blitt utviklet i åpen kildekode felleskapet siden (Git.git - the Core Git Plumbing, 2023).</p>
 
-    <p>I et programmeringsmiljø bruker man ofte begrepet <b>fil</b> om en mengde data lagret som en enhet (fra et symbol for begynnelse til et symnbol for slutt) og gitt et [unikt] navn. I dagliglivet bruker man ofte begrepet <b>dokument</b>. Et dokument er en av artefaktene (Det Norske Akademis Ordbok, 2023a), som homo sapiens bruker for å bevare sine mentale modeller og for å kommunisere (f. eks. definere relasjoner med hverandre). Om det er et manus for en roman, besvarelse av en skoleoppgave, vitenskapelig artikkel skrevet på et spesifikt "naturlig" språk (f. eks. norsk, engelsk, urdu), juridisk kontrakt om et kjøp av eiendom, eller et program skrevet på et programmeringsspråk (f. eks. Pyret, Python, JavaScript), så avgrenser homo sapiens det ofte med et begrep <b>dokument</b> eller, som nevnt tidligere, - <b>fil</b> (fra ca. 1950 om informasjon lagret på en datamaskin som én enhet med ett navn). I vår kontekst (IS-114) definerer vi <b>dokument</b> som elektronisk tekst som kan lagres, redigeres og gjenfinnes (Det Norske Akademis Ordbok, 2023b), men vi vil hovedsakelig bruke begrepet <b>fil</b> om dokumenter som inneholder kildekode. <b>Git</b> kan da betraktes som et program som lagrer endringene i en mengde filer, som hører til en større enhet, som vi kaller for <b>applikasjon</b> og som er distribuert på flere datamaskiner. <b>Git</b> hjelper å synkronisere endringene i filene fra flere utviklere, som ofte befinner seg på forskjellige [fysiske] lokasjoner i et større datanettverk (f. eks. Internett). Man kan også betrakte <b>Git</b>, som en distribuert databasesystem. Vi skal etterhvert finne ut at i <b>Git</b> applikasjonen brukes det en egen mappe (med navn <code>.git</code>) på filsystemene til hver av datamaskinene, som inneholder data om endringene av den applikasjonen som utviklere jobber med. De forskjellige kommandoene (som vi kan også kalle programmer), gir muligheter til å synkronisere alle databasene over et nettverk og registrere alle endringene fra alle utviklere.</p>
+    <p>Først la oss se på noen definisjoner. <b>Programvare</b> kan defineres som en samling av programmer for en datamaskin. Ofte brukes programvare og applikasjon om hverandre. En <b>applikasjon</b> kan defineres som et program, som er utformet for å løse spesielle oppgaver eller gi en bestemt type informasjon (Det Norske Akademis Ordbok, 2023c). Et <b>program</b> er et sett av instruksjoner for en teknisk prosess, for datamaskin, vaskemaskin, e.l. (Det Norske Akademis Ordbok, 2023d). Dette begrepet er tvetydig, siden den brukes både for å beskrive tekst, som inneholder instruksjoner skrevet i et bestemt programmeringsspråk, og også for å beskrive binære data, som kan utføres på en datamaskin.  En <b>fil</b> kan defineres som en mengde data lagret som en enhet på en datamaskin og betegnet med et [unikt] navn. Begrepet <b>fil</b> brukes for avgrensning av alle typer data, dvs. ikke bare tekst (som kildekode), men også binære data, som kan representere utførbare programmer, bilde, lyd eller video. F. eks. i Unix operativsystemet er til og med utstyr tilkoblet til datamaskin abstrahert som fil (Wikipedia Contributors, 2023a). </p>
 
-    <p><b>Git</b> har dannet et grunnlag for verdens største kodebase, som er i hovedsak er åpen for alle, som har tilgang til Internett. Selv om mange kommandoer, som hører til <b>Git</b> applikasjonen, kan fremstå som vanskelige å forstå med en gang, er hovedprinsippet om å gjøre samarbeid på den samme kodebasen sikker og produktiv, forholdsvis enkelt. Når det gjelder forståelsen og anvendelsen, så er hovedbudskapet her det samme som mange andre steder, - øvelse gjør mester.</p>
+    <p><b>Git</b> er designet for å administrere endringer i tekstfiler, ikke binære filer og er derfor en programvare, som hjelper utviklere å administrere versjoner av kildekode. <b>Kildekode</b> er tekst med kommandoer (instruksjoner) skrevet i et bestemt programmeringsspråk, brukt som kilde til utførelsen av et [data]program, dvs. det er koden til et [data]program. Et systemutviklingsprosjekt er vanligvis konstituert av mange type filer, både utførbare programmer (kommandoer), kildekode og dokumentasjon. Hva som er utførbart avhenger av miljøet kildekoden blir prosessert i og er et eget omfattende tema, som ikke vil bli diskutert her. Men man bør unngå å lagre eksekverbare filer i mappen som "overvåkes" av <b>Git</b>. Det siste begrepet vi skal definere er <b>repository</b>. Samling av alle filer relatert til en applikasjon (husk det var et program, som hadde spesifikke formål) blir kalt for <b>repository</b>. Da dette ordet finnes ikke i norske ordbøker, brukes det "en" som ubestemt artikkel i dette dokumentet og roten av det engelske ordet beholdes uendret, dvs. <b>en repository</b> og <b>repository-en</b>.</p>
 
-    <p>I en del av punktene i oppgaven, er det lagt inn noen spørsmål, som er ment som hjelp til refleksjon om det, som dere praktisk gjennomfører på deres datamaskiner. </p>
+
+    <p><b>Git</b> kan betraktes som en applikasjon, som "overvåker" endringene i en mengde filer, som alle er lagret i en mappe og konstituerer en applikasjon i seg selv, og som kan være distribuert på flere datamaskiner. <b>Git</b> hjelper å synkronisere endringene i filene fra flere kopier av repository-en, som ofte befinner seg på forskjellige [fysiske] lokasjoner, forbundet med et større datanettverk (f. eks. Internett). Man kan også betrakte <b>Git</b>, som et distribuert databasesystem. Vi skal etterhvert finne ut at i <b>Git</b> applikasjonen brukes det en egen mappe (med navn <code>.git</code>), som er lagret på filsystemet til hver av datamaskinene, og som inneholder data om endringene av de filene, som utviklere jobber med. De forskjellige kommandoene (utførbare programmer), gir muligheter til å synkronisere alle databasene, som har utspring i samme repository, over et nettverk og registrere alle endringene fra alle utviklere. Det er viktig å huske på at <b>Git</b> kan ikke fikse alle konfliktene automatisk og at i enkelte situasjoner må en utvikler, som har skrivetilgang til repository-en, gjøre sammenslåingen manuelt. Problemer oppstår når det blir gjort endringer på de samme linjene i den samme filen i to forskjellige kopier av repository-en.</p>
+
+
+    <p>La oss se på flere mulige scenarioer for bruken av <b>Git</b>:
+    <ul>
+      <li>(SC01) Du, som utvikler en applikasjon alene, ønsker å ha sikkerhetskopi av kildekode, vise koden din til andre utviklere eller automatisk kopiere kildekoden til en ekstern server på Internett, slik at applikasjonen er tilgjengelig for potensielle brukere. Du kan også ha behov for å gå tilbake til tidligere versjoner av applikasjonen, eller fikse bugger, som blir oppdaget når applikasjonen tas i bruk. I dette tilfelle kan du bruke <b>Git</b> for å etablere et pålitelig utviklingsmiljø. </li>
+      <li>(SC02) Du, som enkeltperson, ønsker å bidra til utvikling av åpen kildekode programvare, som er tilgjengelig i en åpen repository i et datanettverk (f. eks. Internett). Da kan du bruke <b>Git</b> for å kopiere (klone) eller gaffle (på engelsk heter det å gjøre en "fork") repository-en fra en datamaskin tilgjengelig på Internett, gjøre endringer og eventuelt kopiere disse endringene tilbake til repository-en. I dette tilfelle har man vanligvis ikke tilgang til å skrive til den originale repository-en direkte (gjøre en <code>merge</code>), men kan gjøre en såkalt "Pull request", forutsatt at applikasjonen (f. eks. Github, Gitlab eller Bitbucket) tilbyr en slik tjeneste. Før <b>Git</b> ble brukt i store web-baserte applikasjoner som Github, måtte utviklere bruke e-postmeldinger (vanligvis i relasjon til e-postlister) for å annonsere om at man har gjort endringer i sin lokale repository. Da kunne alle, som abonnerte på en slik e-postliste, se meldingen og eventuelt velge å gjøre en <code>git pull</code> for å ta endringene inn i sin egen versjon av repository-en. Dette illustrerer også den distribuerte naturen av <b>Git</b>, hvor et utviklerteam kan funksjonere uten en sentral repository. I dag bruker de fleste utviklerteam en sentral repository, som til enhver tid inneholder en produksjonsklar versjon av applikasjonen. Se neste scenario.</li>
+      <li>(SC03) Du er medlem i et team (kan være virtuelt team knyttet til åpen programvare prosjekt, eller et team i en bedrift, som jobber med proprietære løsninger), og bidrar til utvikling av en applikasjon. I dette tilfelle kan man bruke <b>Git</b> (vanligvis sammen med en web-tjeneste, som Github), for å sette opp et pålitelig utviklingsmiljø. Man bør planlegge strategier for hvem som kan gjøre sammenslåinger (<code>merge</code>) og eventuelt også hvem som jobber på hvilke deler av kildekoden. Det er vanlig at man planlegger utvikling i forveien, slik at forskjellige utviklere kan jobbe med forskjellige filer og dermed unngå direkte konflikter ved sammenslåinger. Web-applikasjoner (Github, Gitlab, Bitbucket) er ofte knyttet til andre tjenester, som, for eksempel, automatisk testing av kildekoden, automatisk kompilering (ofte kalt "build") av kildekoden og automatisk kopiering av utførbare filer til et miljø i nettsky, slik at potensielle brukere kan få tilgang til applikasjonen. I de senere årene har det også blitt populært å knytte prosjektadministrasjonsverktøy til repository-ene (som "Github project", for eksempel). Linus Thorvalds, den opprinnelige utvikleren av <b>Git</b>, har vært kritisk til slike utvidelser, men han snakker positivt om utvidelser som "Issues" og "Pull Request" (The Linux Foundation, 2015).</li>
+    </ul>
+    </p>
+
+    <p>Dere vil få muligheten til å praktisere alle de tre nevnte scenarioene, og muligens flere varianter av dem, i løpet av bachelorstudiet. Når det gjelder forskjell på kloning og gaffling (cloning and forking), så ved kloning kopierer man endringsloggen (databasen i <code>.git</code> mappen) som den er og den er fortsett knyttet til den originale repositorien. Man kan, for eksempel, gjøre påfølgende <code>git pull</code> for å få kopiert over nye endringer fra originalen. Ved gaffling, derimot, lager man en ny endringslogg, som eies av den som gjør gaffling og tar med seg hele historikken fra den originale repositorien. Gaffling brukes ofte når man ønsker å ta utviklingen i en annen retning en det felleskapet rundt den originale repositorien ønsker.</p>
+
+
+    <p>Åpen kildekode programvare prosjekter har sporadiske (ikke planlagte) bidrag fra et stort antall utviklere (kodere, programmerere), som er en av årsakene at det oppsto et behov for et system, som begrenser muligheter for feil (bugger) i kildedoden. I tillegg oppsto det også et behov for å administrere versjoner, dvs. hvilken versjon av kildekoden som er gjennomtestet og stabil (<i>produksjonsversjon</i>), og hvilken som er kun en eksperimentell versjon (<i>utviklingsversjon</i>), som med høy sannsynlighet inneholder bugger. I <b>Git</b> kan man håndtere slike versjoner av den samme programvaren ved hjelp av såkalte <i>branches</i> (på norsk kan man kalle det grener), og kildekoden i de forskjellige grenene kan være forskjellig på et gitt tidspunkt. Det finnes ingen etablert standard for navngiving og antall av grenene i en repository, men man kaller ofte grener for retting av mindre bugger "hotfix-" og grener for implementasjon av ny funksjonalitet for "feature-". Det er en god praksis å gjøre all ny utvikling i sin egen gren, for eksempel, "feature-registrering" og så gjøre en sammenslåing med et annet gren når man har gjennomført testing av den nyskrevede koden. Det er også vanlig å slette de grenene som er sammenslått med produksjonsgren (vanligvis kalt "main").</p>
+
+    
+
+    <p><b>Git</b> har dannet et grunnlag for verdens største samlinger av kildekode (Octoverse 2022: The State of Open Source, 2022), som er i all hovedsak åpne for alle, som har tilgang til Internett. Selv om mange kommandoer, som hører til <b>Git</b> applikasjonen, kan fremstå som vanskelige å forstå med en gang, er hovedprinsippet om å gjøre samarbeid på en felles kodebase sikker, pålitelig og produktiv. Når det gjelder forståelsen og anvendelsen, så er hovedbudskapet her det samme som mange andre steder, - øvelse gjør mester.</p>
+
+
+    <p>I flere av punktene i oppgaven, er det lagt inn noen spørsmål, som er ment som hjelp til refleksjon om de praktiske oppgavene, som dere utfører på deres datamaskiner. Formålet med det er å øke innsikt. En "mekanisk" gjennomføring av kommandoer basert på en oppskrift eller en video kan gi et resultat, men med manglende innsikt vil det ikke være enkelt å inkludere kunnskapen i sin egen praksis. Hvis ting er uklare ved de første forsøkene på å bli kjent med stoffet, så bør man unngå negative tanker og spørre lærere og hjelpelærere om hjelp.</p>
 
     
 
@@ -77,17 +99,74 @@
       Prosjektoblig 03
       <a name="po03"></a>
     </h2>
+    <p><b><span style="color:red;">OBS!</span></b> Under gjennomføringen av oppgaven skal en "commit-tre" tegnes. Det vil bli gitt et eksempel på "commit-tre" på samlingen den 4. september 2023.</p>
 
     <h3>Individuell del</h3>
     <ol>
-      <li>Installere et "minimalistisk" tekstredigeringsverktøy, som Sublime Text (for macOS, Linux og MS Windows) eller Notepad++ (kun for MS Windows). Hvorfor anbefales det ikke å bruke IDE (Integrated Development Environment) som <b>Visual Studio Code</b> eller <b>IntelliJ</b> hvis man er nybegynner i systemutvikling?</li>
-      <li>Installere Git på egen datamaskin. Hva er Git og hvorfor trenger man å bruke det? Hvorfor er det ikke anbefalt å installere en GUI (Graphical User Interface) klient applikasjon for Git?</li>
-      <li>Gjøre seg kjent med grunnleggende bruk av applikasjonen <b>Terminal</b> i macOS eller Linux (Ubuntu 22.04), og <b>GitBash</b> i MS Windows operativsystemet. Hvilke grunnleggende kommandoer trenges for å kunne se filene, som er lagret på egen datamaskin på kommandolinjen? Hvordan finner jeg de samme filene i <b>Terminal</b>/<b>GitBash</b> som jeg ser i applikasjonen med grafisk grensesnitt (explorer?) for fremvisning av mappene hvor filene er lagret (filsystemet)? Hvorfor er det anbefalt å lære å bruke Git-kommandoer fra kommandolinjen?</li>
-      <li>Lage egen konto på github.com og logge inn. Hvorfor trenger man en konto på Github?</li>
-      <li>Lage en "personal access token" (selektere alt for "repo") for kontoen. Hvorfor trenger man en slik "token"?</li>
-      <li>Lage en offentlig (ikke privat) repository (velge et meningsbærende navn for repository, velge en lisens, velge standard README-fil) på Github. Hva er en repository? Hvorfor skal navn være meningsbærende? Hvorfor velge lisens? Hva betyr README-fil og hvorfor er det anbefalt å ha det i hver repository? Hva betyr det at repository-en er på Github? Hva betyr det at repository har en gren (på engelsk <i>branch</i>) som heter <code>main</code>?</li>
-      <li>Klone (kopiere) repository-en fra Github på sin egen datamaskin. Hvorfor skal man kopiere repository-en fra Github til egen datamaskin? Hvordan velger man et egnet sted å kopiere repository-en til på egen datamaskin? Hvilke filer og eventuelt mapper som blir kopiert fra Github til egen datamaskin med kommandoet for kloning?</li>
-      <li>Åpne en tekstredigeringsverktøy på egen datamaskin, åpne mappen hvor repository-en fra Github ble klonet (lagret i), velge filen README.md, skrive inn navn og versjon for operativsystemet på egen datamaskin på en ny linje og lagre endringene. Er det alltid nødvendig å åpne egen applikasjon for tekstredigering for å kunne gjøre endringer i filene? Kunne jeg endret andre type filer på samme måte, som, for eksempel, bilde- eller videofiler? Begrunne svar.</li>
+      <li>Installere et "minimalistisk" tekstredigeringsverktøy, som Sublime Text (for macOS, Linux og MS Windows) eller Notepad++ (kun for MS Windows). 
+      <blockquote class="incercise">
+        <p class="incerciseheader">Gjør det nå! Spørsmål til refleksjon.</p>
+        <blockquote class="incercisebody">
+          <p>Hva kan være argumenter imot å bruke IDE (Integrated Development Environment) som <b>Visual Studio Code</b> eller <b>IntelliJ</b> hvis man er nybegynner i systemutvikling?</p>
+        </blockquote>
+      </blockquote> 
+        </li>
+      <li>Installere Git på egen datamaskin (Git - Downloads, 2023). Se Appendix II.
+      <blockquote class="incercise">
+        <p class="incerciseheader">Gjør det nå! Spørsmål til refleksjon.</p>
+          <blockquote class="incercisebody">
+          <p>Hva er Git og hvorfor trenger man å bruke det? Hvorfor er det ikke anbefalt å installere en GUI (Graphical User Interface) klient applikasjon for Git?</p>
+          </blockquote>
+        </blockquote>
+      </li>
+      <li>Gjøre seg kjent med grunnleggende bruk av applikasjonen <b>Terminal</b> i macOS eller Linux (Ubuntu 22.04), og <b>GitBash</b> i MS Windows operativsystemet (Academind, 2020; Grunwald, 2018; Cocca, 2022; edureka, 2021; Super SQA, 2023). 
+      <blockquote class="incercise">
+        <p class="incerciseheader">Gjør det nå! Spørsmål til refleksjon.</p>
+          <blockquote class="incercisebody">
+          <p>Hvilke grunnleggende kommandoer kan brukes på kommandolinjen for å kunne se filene, som er lagret på egen datamaskin? Hvordan finner jeg de samme filene i <b>Terminal</b>/<b>GitBash</b> som jeg ser i applikasjonen med grafisk grensesnitt for fremvisning av mappe- og filstruktur på min datamaskin? Hvorfor er det anbefalt å lære å bruke Git-kommandoer som kan brukes på kommandolinjen?</p>
+          </blockquote>
+        </blockquote>
+        </li>
+      <li>Lage egen konto på github.com og logge inn.
+      <blockquote class="incercise">
+        <p class="incerciseheader">Gjør det nå! Spørsmål til refleksjon.</p>
+          <blockquote class="incercisebody">
+          <p>Hva karakteriserer et godt brukernavn på Github?</p>
+          </blockquote>
+        </blockquote>
+      </li>
+      <li>Lage en "personal access token" (selektere alt for "repo") for kontoen. Se Appendix III.
+      <blockquote class="incercise">
+        <p class="incerciseheader">Gjør det nå! Spørsmål til refleksjon.</p>
+          <blockquote class="incercisebody">
+          <p>Hvorfor trenger man en slik "token"? Kan man bruke andre måter å autentisere seg på enn "token"?</p>
+          </blockquote>
+        </blockquote>
+      </li>
+      <li>Lage en offentlig (ikke privat) repository (velge et meningsbærende navn for repository, velge en lisens, velge standard README-fil) på Github. 
+      <blockquote class="incercise">
+        <p class="incerciseheader">Gjør det nå! Spørsmål til refleksjon.</p>
+          <blockquote class="incercisebody">
+          <p>Hva er en repository? Hvorfor skal repositorynavn være meningsbærende? Hvorfor velge en lisens? Hva er formålet med README-fil og hvorfor er det anbefalt å ha det i hver repository? Hva betyr det at repository-en er på Github? Hva betyr det at repository har en gren (på engelsk <i>branch</i>) som heter <code>main</code>?</p>
+          </blockquote>
+        </blockquote>
+        </li>
+      <li>Klone (kopiere) repository-en fra Github til egen datamaskin. 
+      <blockquote class="incercise">
+        <p class="incerciseheader">Gjør det nå! Spørsmål til refleksjon.</p>
+          <blockquote class="incercisebody">
+          <p>Hvorfor skal man kopiere repository-en fra Github til egen datamaskin? Hvordan velger man et egnet sted å kopiere repository-en til på egen datamaskin? Hvilke filer og eventuelt mapper som blir kopiert fra Github til egen datamaskin med kommandoen for kloning?</p>
+          </blockquote>
+        </blockquote>
+      </li>
+      <li>Åpne et tekstredigeringsverktøy (se pkt. 1) på egen datamaskin, åpne mappen hvor repository-en fra Github ble klonet (lagret i), velge filen <code>README.md</code>, skrive inn navn og versjon for operativsystemet på egen datamaskin på en ny linje og lagre endringene. 
+      <blockquote class="incercise">
+        <p class="incerciseheader">Gjør det nå! Spørsmål til refleksjon.</p>
+          <blockquote class="incercisebody">
+          <p>Er den eneste måten å gjøre endringene på i filene i en mappe administrert av <b>Git</b> å åpne egen applikasjon for tekstredigering? Kunne jeg endret andre type filer på samme måte, som, for eksempel, bilde- eller videofiler? Begrunne svar.</p>
+          </blockquote>
+        </blockquote>
+      </li>
       <li>Bruk egnede <b>Git</b>-kommandoer på kommandolinjen for å 
         <ul>
           <li>sjekke status for endringene i den gjeldende mappen</li>
@@ -95,15 +174,56 @@
           <li>forpliktende (på engelsk "commit") legge inn den nye versjonen av filen (endringene av filen og generelt i den gjeldende mappen) i repository-en,</li>
           <li>kopiere eller overføre (på engelsk "push") endringene til en annen instans (som kan ha samme versjon som ved siste synkronisering eller en endret versjon) av den samme repository-en.</li> 
         </ul>
-      Hvilken er gjeldende mappe på kommandolinjen? Hvorfor trenger man flere operasjoner for å registrere endringene i Git versjonskontrollsystemet? Kan man klone og kopiere endringene tilbake for en repository man ikke selv eier (dvs. repository-er som andre har laget ved hjelp av sine kontoer på Github)? Hvorfor er det nyttig å kopiere endringene gjort i en fil på egen datamaskin til Github?</li>
-      <li>I nettleseren, i grensesnittet for github.com, og pålogget med din konto, gjør endringer i README.md filen. Legg inn brukernavnet for din github-konto på en ny linje i README-filen. Lagre filen i Github.</li>
-      <li>Gå til tekstredigeringsverktøyet på din lokale datamaskin igjen og legg inn en ny linje i README.md med versjonsnummer til Git applikasjonen som du har installert på din egen datamaskin (for eksempel "git version 2.30.1 (Apple Git-130)". Lagre endringene. Prøv å registrere den endrede versjonen av README.md, legg inn endringene i den lokale versjonen av repository-en og sende/pushe endringene til Github. Hvilke respons genererer "push"-kommandoen? Hva er grunnen til en slik respons?</li>
-      <li>Prøv å finne en løsning for å kunne ta vare både på de endringene som ble gjort i Github og de som ble gjort i den lokale repository-en.</li>
-      <li>Konfigurer "Github pages" for din repository i Github fra grenen <code>main</code> og i mappen <code>/docs</code>. Hva er funksjonen til "Github pages"?</li>
-      <li>I din lokale repository-en lag en mappe med navn <code>docs</code> og i denne mappen lag en fil med navn <code>index.html</code>. Hvorfor gjør man endringene i den lokale repository-en og ikke i Github direkte?</li>
-      <li>I denne filen legg inn følgende kode:
+        <blockquote class="incercise">
+        <p class="incerciseheader">Gjør det nå! Spørsmål til refleksjon.</p>
+          <blockquote class="incercisebody">
+          <p>Hvordan finner man hva er gjeldende mappe på kommandolinjen? Hvorfor trenger man flere operasjoner for å registrere endringene i Git versjonskontrollsystemet? Kan man klone og kopiere endringene tilbake for en repository man ikke selv eier (dvs. repository-er som andre har laget ved hjelp av sine kontoer på Github)? Hvorfor er det nyttig å kopiere endringene gjort i en fil på egen datamaskin til Github?</p>
+          </blockquote>
+        </blockquote>
+      </li>
+      <li>I nettleseren, i grensesnittet for github.com, og pålogget med din konto, gjør endringer i <code>README.md</code> filen. Legg inn brukernavnet for din github-konto på en ny linje i <code>README.md</code>. Lagre filen i Github.
+        <blockquote class="incercise">
+        <p class="incerciseheader">Gjør det nå! Spørsmål til refleksjon.</p>
+          <blockquote class="incercisebody">
+          <p>Hvilke argumenter kan være imot å gjøre endringene i filene direkte i web-grensesnittet til Github?</p>
+          </blockquote>
+        </blockquote>
+      </li>
+      <li>Gå til tekstredigeringsverktøyet på din lokale datamaskin igjen og legg inn en ny linje i <code>README.md</code> med versjonsnummer til Git applikasjonen som du har installert på din egen datamaskin (for eksempel "git version 2.30.1 (Apple Git-130)". Lagre endringene. Prøv å registrere den endrede versjonen av <code>README.md</code>, legg inn endringene i den lokale versjonen av repository-en og send (på engelsk "push") endringene til Github. 
+        <blockquote class="incercise">
+        <p class="incerciseheader">Gjør det nå! Spørsmål til refleksjon.</p>
+          <blockquote class="incercisebody">
+          <p>Hvilken respons genererer "push"-kommandoen? Hva er grunnen til en slik respons?</p>
+          </blockquote>
+        </blockquote>
+      </li>
+      <li>Prøv å finne en løsning for å kunne ta vare både på de endringene som ble gjort i Github og de som ble gjort i den lokale repository-en.
+        <blockquote class="incercise">
+        <p class="incerciseheader">Gjør det nå! Spørsmål til refleksjon.</p>
+          <blockquote class="incercisebody">
+          <p>Hvilke kommandoer brukes for sammenslåing? Hvorfor må man redigere filen manuelt?</p>
+          </blockquote>
+        </blockquote>
+      </li>
+      <li>Konfigurer "Github pages" for din repository i Github fra grenen <code>main</code> og i mappen <code>/docs</code>. 
+       <blockquote class="incercise">
+        <p class="incerciseheader">Gjør det nå! Spørsmål til refleksjon.</p>
+          <blockquote class="incercisebody">
+          <p>Hva er formålet med <i>Github pages</i>?</p>
+          </blockquote>
+        </blockquote>
+      </li>
+      <li>I din lokale repository-en lage en mappe med navn <code>docs</code> og i denne mappen lag en fil med navn <code>index.html</code>. 
+       <blockquote class="incercise">
+        <p class="incerciseheader">Gjør det nå! Spørsmål til refleksjon.</p>
+          <blockquote class="incercisebody">
+          <p>Hvorfor er det hensiktsmessig å gjøre endringene i den lokale repository-en og ikke i Github direkte?</p>
+          </blockquote>
+        </blockquote>
+      </li>
+      <li>Legg inn følgende kode i <code>index.html</code>:
         <pre>
-<!DOCTYPE html>
+&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
@@ -116,10 +236,38 @@
 &lt;/body&gt;
 &lt;/html&gt;
         </pre>
-        Hvilken type kode er denne? Hvordan kan denne koden bli utført?
+        <blockquote class="incercise">
+        <p class="incerciseheader">Gjør det nå! Spørsmål til refleksjon.</p>
+          <blockquote class="incercisebody">
+          <p>Hvilken type kode er denne? Hvordan og hvor utføres denne koden?</p>
+          </blockquote>
+        </blockquote>
       </li>
-      <li>Bruk git-kommandoer for å lagre endringene i Github. Hva betyr det at en webside er tilgjengelig på Internett?</li>
-      <li>Gjør endringer (legg inn ditt navn i tittelen og lag en kort beskrivelse av din portfolio så langt) i filen <code>index.html</code>, lagre endringene lokalt og sende endringene til Github igjen. Hvorfor er en slik fremgangsmåte nyttig ved utvikling av websider?</li>
+      <li>Bruk git-kommandoer for å lagre endringene både lokalt og i Github.
+        <blockquote class="incercise">
+        <p class="incerciseheader">Gjør det nå! Spørsmål til refleksjon.</p>
+          <blockquote class="incercisebody">
+          <p>Hva betyr det at en webside er tilgjengelig på Internett?</p>
+          </blockquote>
+        </blockquote>
+       </li>
+      <li>Gjør endringer (legg inn ditt navn i tittelen og lag en kort beskrivelse av din portfolio så langt) i filen <code>index.html</code>, lagre endringene lokalt og sende endringene til Github igjen. 
+       <blockquote class="incercise">
+        <p class="incerciseheader">Gjør det nå! Spørsmål til refleksjon.</p>
+          <blockquote class="incercisebody">
+          <p>Er denne fremgangsmåten, - å redigere filer direkte i grenen <code>main</code>, optimal? Begrunn svaret.</p>
+          </blockquote>
+        </blockquote>
+      </li>
+      <li>Det er en feil i HTML koden i filen <code>index.html</code>. Lag og sjekk ut en ny gren <code>hotfix</code>. Fikse feilen i HTML koden, legge endringen inn i den lokale repositorien under grenen <code>hotfix</code> og sende endringen også til Github (den originale repository-en. Teste at feilen er fikset ved å prosessere <code>index.html</code> lokalt (i en nettleser). Legge inn endringene gjort i grenen <code>hotfix</code> i grenen <code>main</code> og slette grenen <code>hotfix</code> både fra den lokale repository-en og på Github.
+      <blockquote class="incercise">
+        <p class="incerciseheader">Gjør det nå! Spørsmål til refleksjon.</p>
+          <blockquote class="incercisebody">
+          <p>Hvorfor kan man kun teste Hva er <code>fast-forward</code>?</p>
+          </blockquote>
+        </blockquote>
+      </li>
+      <li>Reflekter rundt tegningen av "commit-tre".</li>
     </ol>
     <h3>Gruppedel</h3>
     <ol>
@@ -132,12 +280,53 @@
       <li>I denne grenen endre <code>index.html</code> ved å legge inn et avsnitt med eget visitkort (kanskje lurt å unngå å legge ut mobilnummer, siden såkalte "crawlere" søker opp alle offentlig tilgengelige sider på WWW og "skraper" disse for informasjon som kan brukes i spamming/markedsføring).</li>
       <li>Legg inn en "Pull request" for din gren i <code>HOVEDREPOSITORY</code>.</li>
       <li>Alle sammen følger med på når eieren til <code>HOVEDREPOSITORY</code> godtar og legger inn alle endringene i grenen <code>main</code>.</li>
+      <li>Alle sletter sine personlige grener både fra den lokale og fra <code>HOVEDREPOSITORY</code>.</li>
+      <li>Reflekter rundt tegningen av "commit-tre".</li>
+
     </ol>
+          <blockquote class="incercise">
+        <p class="incerciseheader">Gjør det nå! Spørsmål til refleksjon.</p>
+          <blockquote class="incercisebody">
+          <p>Skisser hvordan man kunne gjennomføre prosessen i pkt. 6-9 uten å bruke "Pull request". Hva kan være fordeler og ulemper med en (eller flere) alternative fremgangsmåter?</p>
+          </blockquote>
+          </blockquote>
     <h2>Hva skal evalueres?</h2>
-    <p>Vise deres læringsassitent den individuelle repository-en og websiden basert på den. Vise frem gruppe repository-en og websiden basert på den. Vise frem status for begge repository-ene på kommandolinje lokalt på sin datamaskin. Websidene må vises frem korrekt, dvs. ha gyldig HTML-kode. README.md i den lokale repositorien må inneholde 3 linjer (1: operativsystemets navn og versjon, 2: brukenavnet for Github-konto, 3: versjonsidentifikator til Git). "Github pages" må være konfigurert korrekt både i de individuelle og gruppe repository-en. <code>HOVEDREPOSITORY</code> må inneholde minst en "Pull request" fra hver av gruppemedlemmene. Bidragene fra gruppemedlemmene må være lagt inn i <code>index.html</code> filen og vises frem på websiden (gjennom "Github pages"). I tilfelle det har oppstått problemer med gjennomføring av noen av punktene i oppgaven, skal studenten eller gruppen forklare sin fremgangsmåte og beskrive problemet for LA-en. Dere må også være forberedt på å svare på hver av spørsmålene, som står i oppgaveteksten (LA-en vil velge hvilke spørsmål som blir stilt). Godkjent/Ikke godkjent, men det blir gitt flere forsøk på å få innleveringen godkjent.</p>
+    <p>Læringsassitenten skal sjekke følgende:
+    <ul>
+      <li>Git og en tekstredigeringsverktøy installert på egen datamaskin.</li>
+      <li>Studenten kan operere applikasjonene Terminal i macOS eller Linux og GitBash i MS Windows (avhengig av hvilket operativsystem vedkommende bruker).</li>
+      <li>Studenten er kjent med kommandoer for kommandolinjee for å 
+      <ul>
+        <li>vise gjeldende mappe,</li>
+        <li>lage en ny mappe,</li>
+        <li>liste ut filer i en mappe,</li>
+        <li>navigere i mappe strukturen,</li>
+        <li>kunne legge til en fil på "scenen" til Git,</li>
+        <li>kunne legge inn endringer i den lokale repositorien,</li>
+        <li>kunne kopiere endringene til Github (remote origin),</li>
+        <li>kunne vise status og log for repository-er,</li>
+        <li>for å kunne lage og sjekke ut en ny gren,</li>
+        <li>for å kunne slette en gren både lokalt og på Github.</li>
+      </ul>
+      </li>
+      <li>Studenten har registert en konto på Github</li>
+      <li>Studenten kan vise frem den individuelle repository-en og websiden som baserer seg på den gjennom en konfigurasjon av Github pages.</li>
+      <li>Github pages er konfigurert basert på <code>main</code> gren og med roten for websidene i mappen <code>docs</code>.</li>
+      <li>Gruppen kan vise frem repository-en til gruppen (<code>HOVEDREPOSITORY</code>) og websiden som baserer seg på den gjennom en konfigurasjon av Github pages.</li>
+      <li>Studentene kan vise status og log for begge repository-ene på kommandolinje lokalt på sin datamaskin.</li>
+      <li><code>README.md</code> i den lokale repositorien inneholder 3 linjer (1: operativsystemets navn og versjon, 2: brukenavnet for Github-konto, 3: versjonsidentifikator til Git).</li>
+      <li><code>HOVEDREPOSITORY</code> inneholder minst en "Pull request" fra hver av gruppemedlemmene. Bidragene fra gruppemedlemmene er sammenslått i <code>index.html</code> filen og vises frem på websiden gjennom en konfigurasjon av "Github pages".</li>
+      <li>Studenten har tegnet "commit-tre" for begge prosessene som ble gjennomført basert på oppgaveteksten.</li>
+      <li>Studenten kan redegjøre for spørsmålene til refleksjon (LA vil spørre noen tilfeldig utvalgte spørsmål).</li>
+    </ul>
+    I tilfelle det har oppstått problemer med gjennomføringen av noen av punktene i oppgavene, skal studenten eller gruppen forklare sin fremgangsmåte og beskrive problemene for LA-en.
+    </p>
+    <p>Godkjent/Ikke godkjent, men det blir gitt flere forsøk på å få innleveringen godkjent.</p>
     
-    <h2>Appendix I: Eksempler</h2>
+    <h2>Appendix I: Eksempler på (feil)meldinger fra <b>Git</b></h2>
     <p>
+
+<code>git push origin main</code>
 <pre>
 To https://github.com/[brukernavn]/[repository-navn].git
 ! [rejected]        main -> main (fetch first)
@@ -148,6 +337,8 @@ hint: to the same ref. You may want to first integrate the remote changes
 hint: (e.g., 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 </pre>
+<br /> 
+<code>git pull</code>
 <pre>
 hint: Pulling without specifying how to reconcile divergent branches is
 hint: discouraged. You can squelch this message by running one of the following
@@ -189,20 +380,40 @@ hint: invocation.
     </ul>
     </p>
 
+    <h2>Appendix III: Autentisering</h2>
+    <ul> 
+      <li>(About Authentication to GitHub - GitHub Docs, 2023)</li>
+      <li>(Managing Your Personal Access Tokens - GitHub Docs, 2023)</li>
+      <li>(Caching Your GitHub Credentials in Git - GitHub Docs, 2023)</li>
+      <li>(Git-Ecosystem/Git-Credential-Manager: Secure, Cross-Platform Git Credential Storage with Authentication to GitHub, Azure Repos, and Other Popular Git Hosting Services., 2023)</li>
+    </ul>
+
 <h2>
       Referanser
       <a name="references"></a>
     </h2>
     <ul>  
-      <li>The Linux Foundation. (2015, April 6). 10 Years of Git: An Interview with Git Creator Linus Torvalds - Linux Foundation. Linuxfoundation.org; The Linux Foundation. https://www.linuxfoundation.org/blog/blog/10-years-of-git-an-interview-with-git-creator-linus-torvalds (The Linux Foundation, 2015)</li>
+      <li>About authentication to GitHub - GitHub Docs. (2023). GitHub Docs. https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github (About Authentication to GitHub - GitHub Docs, 2023)</li>
       <li>Academind. (2020). macOS Terminal (zsh) - The Beginners’ Guide [YouTube Video]. In YouTube. https://www.youtube.com/watch?v=ogWoUU2DXBU (Academind, 2020)</li>
-      <li>Grunwald, P. (2018). Absolute BEGINNER Guide to the Mac OS Terminal [YouTube Video]. In YouTube. https://www.youtube.com/watch?v=aKRYQsKR46I (Grunwald, 2018)</li>
-      <li>Det Norske Akademis ordbok. (2023a). Naob.no. https://naob.no/ordbok/artefakt</li>
-      <li>Det Norske Akademis ordbok. (2023b). Naob.no. https://naob.no/ordbok/dokument</li>
-      <li>Git - Git References. (2023). Git-Scm.com. https://git-scm.com/book/en/v2/Git-Internals-Git-References (Git - Git References, 2023)</li>
+      <li>Caching your GitHub credentials in Git - GitHub Docs. (2023). GitHub Docs. https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git (Caching Your GitHub Credentials in Git - GitHub Docs, 2023)</li>
       <li>Cocca, G. (2022, April 5). Command Line for Beginners – How to Use the Terminal Like a Pro [Full Handbook]. FreeCodeCamp.org; freeCodeCamp.org. https://www.freecodecamp.org/news/command-line-for-beginners/ (Cocca, 2022)</li>
-      
+      <li>Det Norske Akademis ordbok. (2023c). Naob.no. https://naob.no/ordbok/applikasjon</li>
+      <li>Det Norske Akademis ordbok. (2023d). Naob.no. https://naob.no/ordbok/program</li>
+      <li>edureka. (2021). Git Bash Tutorial | Git Bash Basics | Git and GitHub Tutorial | DevOps Training | Edureka [YouTube Video]. In YouTube. https://www.youtube.com/watch?v=iGutIN5t9Mo (edureka, 2021)</li>
+      <li>Git - Basic Branching and Merging. (2023). Git-Scm.com. https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging#_basic_merging (Git - Basic Branching and Merging, 2023)</li>
+      <li>Git - Downloads. (2023). Git-Scm.com. https://git-scm.com/downloads (Git - Downloads, 2023)</li>
+      <li>Git - merge-strategies Documentation. (2023). Git-Scm.com. https://git-scm.com/docs/merge-strategies#Documentation/merge-strategies.txt-ort (Git - Merge-Strategies Documentation, 2023)</li>
+      <li>git-ecosystem/git-credential-manager: Secure, cross-platform Git credential storage with authentication to GitHub, Azure Repos, and other popular Git hosting services. (2023, August 28). GitHub. https://github.com/git-ecosystem/git-credential-manager (Git-Ecosystem/Git-Credential-Manager: Secure, Cross-Platform Git Credential Storage with Authentication to GitHub, Azure Repos, and Other Popular Git Hosting Services., 2023)</li>
+      <li>git.git - The core git plumbing. (2023). Kernel.org. https://git.kernel.org/pub/scm/git/git.git/ (Git.git - the Core Git Plumbing, 2023)</li>
+      <li>gitlearningjourney. (2023, May 20). GitHub - gitlearningjourney/learning-git. GitHub. https://github.com/gitlearningjourney/learning-git (gitlearningjourney, 2023)</li>
+      <li>Grunwald, P. (2018). Absolute BEGINNER Guide to the Mac OS Terminal [YouTube Video]. In YouTube. https://www.youtube.com/watch?v=aKRYQsKR46I (Grunwald, 2018)</li>
+      <li>Managing your personal access tokens - GitHub Docs. (2023). GitHub Docs. https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens (Managing Your Personal Access Tokens - GitHub Docs, 2023)</li>
+      <li>Octoverse 2022: The state of open source. (2022). The State of the Octoverse. https://octoverse.github.com/ (Octoverse 2022: The State of Open Source, 2022)</li>
+      <li>Super SQA. (2023). What is Terminal / CMD / Command line for beginners [YouTube Video]. In YouTube. https://www.youtube.com/watch?v=J2jvpnwt1jU (Super SQA, 2023)</li>
+      <li>The Linux Foundation. (2015, April 6). 10 Years of Git: An Interview with Git Creator Linus Torvalds - Linux Foundation. Linuxfoundation.org; The Linux Foundation. https://www.linuxfoundation.org/blog/blog/10-years-of-git-an-interview-with-git-creator-linus-torvalds (The Linux Foundation, 2015)</li> 
+      <li>Wikipedia Contributors. (2023a, May 5). Everything is a file. Wikipedia; Wikimedia Foundation. https://en.wikipedia.org/wiki/Everything_is_a_file (Wikipedia Contributors, 2023)</li>   
     </ul>
+    
   </div>
 
 </body>
