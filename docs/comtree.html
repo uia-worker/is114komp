@@ -173,9 +173,68 @@
 
      <p>Bilde ovenfor har en dårlig oppløsning, men lenken til repositorien er <code>https://github.com/uia-worker/is-114.git</code>. Vi kan si litt om hvordan dette navnet (som er en global identifikator på WWW) er konstruert. Først er det protokoll, som brukes for å kommunisere mellom to noder (les datamaskiner) på Internett, - <code>https://</code>, som står for <i>HyperText Transfer Protocol</i>. Så kommer det "sertifiserings autoritet" eller "servernavn", som i vårt tilfelle er <code>github.com</code>. Det finnes flere webapplikasjoner som tilbyr lignende tjenester som Github, - Bitbucket, Gitlab, sourcehat</p>
     
-    
+    <img src="images/git-eksempel-log-initiell-commit.png" width="500" alt="output git log initiell commit">
+     <p><i>Figur X. Output fra <code>git log</code> i kommandovindu (skjermdump laget 5. Sept. 2023).</i></p>
 
-<img src="images/" width="500" alt="Arduino UNO R3">
+     <p>La oss analysere linjene fra output på kommandolinjen vist i <i>Figur X</i>. 
+      <ul>  
+        <li><code>janisg@UIAA223034AS is-114 % git log</code> er en såkalt prompt sammen med et kommando og dets subkommando. Fra latin <i>promptus</i>, som betyr <i>beredt</i>. I denne konteksten kan man tolke det at brukeren får en tekstuell hint og en markør, som inviterer til handling (noen ganger kaller man det også <i>affordance</i>, som kan oversettes til norsk som <i>råd</i>). I dette eksemplet er output generert på en MacBook Pro datamaskin og derfor er annerledes enn, for eksempel, i GitBash. <code>janisg@UIAA223034AS</code> indikerer brukernavn for bruker som bruker terminalen sammen med en kodeord, som indikerer navn til datamaskinen (blir valgt når datamaskinen blir konfigurert for første gang). Tegnet "%" brukes har som et prompt-tegn, dvs. den skal signalisere at etter det kan bruker skrive inn sine kommandoer. Før man har skrevet inn noe, skal det også vises en markør (kan være en stedsholder eller noe som fremstår som blinkende). I zsh (Wikipedia Contributors, 2023a) og i macOS (Wikipedia Contributors, 2023b) kan man modifisere promten ved å skrive inn spesifikke kommandoer i en spesifikk konfigurasjonsfil med navn <code>~/.zshrc</code>, hvor <code>~</code> representerer brukerens hjemmemappen (Williams, 2022). <br /> <code>git log</code> er kommandoen og subkommandoen, som jeg skrev på kommandolinje og som vi kaller for input. Mer informasjon om <code>git log</code> kan man finne ved å skrive inn uttrykket <code>git log --help</code> (den består av hovedkommando, subkommando og en en såkalt <i>alternativ</i> (på engelsk <i>option</i>).</li>
+        <li><code>commit ea38683d0e38e99c1b04b943f8b7c2092ef4b32a (HEAD -> main, origin/main, origin/HEAD)</code> er linje fra <b>Git</b> og er den første linje i output. Den viser en id for commit, som er en <i>SHA-1 hash</i>. Kort forklart er det en ID, som består av tall og bokstaver (en streng), og er generert på en møte (med en algoritme), som gjør at sjansen for å generere to like slike strenger innen en repository er tilnærmet null. I vår "commit-tre" skal vi kun notere de første 7 symboler fra denne strengen. I parentes så er det ekstra informasjon om tilstanden til <b>Git</b>-databasen. <b>Git</b> bruker et begrep <code>HEAD</code>, som man kan forestille seg som en slags markør som markerer den gjeldende grenen (på engelsk <b>current branch</b>), som i dette tilfelle er <code>main</code>. Det indikeres også at den lokale og den originale grenen er synkronisert <code>origin/main</code>, og at den lokale og den originale HEAD <code>origin/HAED</code>, peker på toppen av sine respektive grener.</li>
+        <li>Denne linjen bør være selvforklarende. Husk at navnet og e-postadressen er den som ble definert med  <pre><code>
+        git config --global user.name "(ditt navn)"
+        git confit --global user.email "(din e-postadresse)"
+        </code></pre>
+        </li>
+        <li>Dato eller tidsstempel (fra den engelske <i>timestamp</i>). Definisjon av formatet er en innstiling i <b>Git</b> men kan være avhengig av innstillingen for operativsystemet på din datamaskin. Vi går ikke inn på det her.</li>
+        <li>Etter en tom linje kommer det en kommentar for hva commit-en dreier seg om. Husk at en commit kan relateres til endringer i flere enn en fil, så beskrivelsen burde gjenspeile alle endringene så kortfattet som mulig.</li>
+      </ul>
+     </p>
+
+     <p>Nå kan vi begynne å tegne "commit-tre", siden <b>Git</b> har oppdaget en commit i databasen som er lagret i mappen <code>.git</code>.</p>
+
+     <img src="images/commit-tree-versjon-001.svg" width="100" alt="Commit-tre etter den initielle commit-en.">
+     <p><i>Figur X. Viser "commit-tre" etter den initielle commit-en med gjeldende gren og commit id.</i></p>
+
+     <p>Før vi går videre, kan vi introdusere et nyttig kommando-uttryk <code>git status</code>, som vi vil bruke mye. </p>
+      <img src="images/is-114-repository-output-git-status.png" width="300" alt="Output git status up-to-date-">
+     <p><i>Figur X. Viser output fra kommando-uttrykket <code>git status</code></i></p>
+      
+      <p>Jeg bruker ordet <b>kommando-uttrykk</b> for å illustrere at det inneholder en hovedkommando <code>git</code> og en subkommando <code>status</code>. Dette kan være forvirrende, siden vi brukte også et ord <b>alternativ</b>. Et uttrykk på kommandolinje kan ha mange former. De kan også være forskjellige fra forskjellige operativsystemer og i forskjellige terminaler. Vi definerer følgende (men vær oppmerksom på at denne representerer ikke noen form for standardterminologi):
+<ul>  
+<li>et kommando er et ord som man skriver på kommandolinje som kaller opp en applikasjon (som <code>git</code>, <code>ls</code>, <code>pwd</code>, men her kan også begrepene være tvetydige, siden mange kaller disse for <b>verktøy</b> eller <b>utilities</b> på engelsk)</li>
+<li>et subkommando er et type alternativ, som representerer en større funksjonalitet i seg selv (for eksempel <code>git add</code>, <code>go build</code>, <code>doctl apps</code> osv.); noen applikasjoner introduserer også subsubkommandoer</li>
+<li>et alternativ indikerer at applikasjon oppfører seg vesentlig annerledes og som vanligvis starter med tegn <code>-</code> eller <code>--</code></li>
+<li>Et flagg, som enten slår en funksjonalitet av eller på. </li>
+</ul>
+      </p>
+
+     <p>Til nå har jeg ikke gjort noen endringer i noen av filene i repository-en, så jeg skal nå legge til en elektronisk versjon av den filen som vi brukte som fysisk eksempel i klasserommet, - <code>agenda-del-1.txt</code>. Jeg gir filen etternavn <code>.txt</code> (tekst), siden agenda ble ikke skrevet på et spesifikt programmeringsspråk, men på et naturlig språk. Jeg åpner min <i>Sublime Text editor</i> applikasjonen, finner menyelement for å åpne en mappe, finner mappen hvor jeg klonet repository-en <code>is-114</code> i mitt filsystem, lager en ny fil under mappen <code>is-114</code> og lagrer filen med navn <code>agenda-del-1.txt</code>.</p>
+
+     <img src="images/git-eksempel-sublime-text-agenda-del-1.png" width="500" alt="agenda-del-1 i Sublime Text">
+     <p><i>Figur X. Viser Sublime Text vinduet med mappestruktur til repositorien is-114 og innholdet i filen agenda-del-1.txt.</i></p>
+
+     <p>Hva viser <code>git status</code> nå?</p>
+
+     <img src="images/is-114-repository-output-git-status-after-added-agenda-del-1.png
+" width="500" alt="git status etter at agenda-del-1.txt ble skapt">
+     <p><i>Figur X. Viser output fra <code>git status</code> etter at filen agenda-del-1.txt ble skapt.</i></p>
+
+      
+     <img src="images/is-114-repository-output-git-status-after-git-add-agenda-del-1.png" width="400" alt="">
+     <p><i>Figur X. Viser output fra <code>git status</code> etter <code>git add agenda-del-1.txt</code></i></p>
+
+     <p>Det er forsett kun en endring registrert i loggen, og tilstanden er fortsatt som vist i <i>Figur X (commit-tre)</i>. <code>git commit -m "Laget fil agenda-del-1 og skrev inn agenda for 4. september 2023"</code></p>
+
+     <img src="images/is-114-repository-output-git-status-after-git-commit.png" width="500" alt="">
+     <p><i>Figur X. Status etter <code>git commit</code></i></p>
+
+
+
+     <img src="images/" width="500" alt="">
+     <p><i>Figur X. </i></p>
+
+
+<img src="images/" width="500" alt="">
      <p><i>Figur X. </i></p>
 
   <code><pre>
@@ -187,6 +246,20 @@
     // ... eventuelt et eksempel på kildekode
   </code></pre>
   <p><i>CLI-eksempel X. ..</i>
+
+    <h2>
+      Referanser
+      <a name="references"></a>
+    </h2>
+    <ul>  
+
+     
+
+    <li>Wikipedia Contributors. (2023a, July 20). Z shell. Wikipedia; Wikimedia Foundation. https://en.wikipedia.org/wiki/Z_shell (Wikipedia Contributors, 2023a)</li>
+    <li>Wikipedia Contributors. (2023b, September 2). macOS. Wikipedia; Wikimedia Foundation. https://en.wikipedia.org/wiki/MacOS (Wikipedia Contributors, 2023b)</li>
+     <li>Williams, C. (2022, May 31). Customizing my Zsh Prompt. DEV Community; DEV Community. https://dev.to/cassidoo/customizing-my-zsh-prompt-3417 (Williams, 2022)</li>
+
+  </ul>
 
   </div>
 </body>
