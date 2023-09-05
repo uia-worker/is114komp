@@ -131,17 +131,62 @@
 
   </div>
   <div class="maincolumn">
-    <!-- kun for første side -->
-    <div class="versionbox">
-      <span class="version">Versjon: Tirsdag, 5. september 2023 10:00, utviklet av Janis Gailis</span>
-    </div>
-    <h1>Oppgaver</h1>
+    <h1>Commit tre</h1>
     <h2>
-      Beskrivelse av oppgaver
-      <a name="beskrivelse"></a>
+      Eksempel på commit tre
+      <a name="comtree"></a>
     </h2>
-    <p>Formålet med oppgaver er å få praktisk erfaring med problemløsning ved hjelp av regnemaskiner.</p>
-    <p>Se oppgaven om Git <a href="draft_git.html">Prosjektoblig 03</a>. Oppgaven er også publisert i Canvas (på PDF-format) og innlevering skal skje i Canvas.</p>
+    <p></p>
+
+    <img src="images/git-eksempel-agenda-del-1.png" width="500" alt="Dokument med metadata og agende (et eksempel)">
+    <p><i>Figur X. Et bilde av et skriftlig dokument med metadata og en agenda som innhold (brukt på samling 4. Sept. 2023).</i></p>
+
+    <p>La oss bruke dette dokumentet som et utgangspunkt for en repository på Github. Jeg oppretter en repository (ved å bruke knappen "New"; se <i>Figur X</i>) i brukerkontoen <code>uia-worker</code> med navn <code>is-114</code>. Som dere husker fra forelesning, så brukte vi UiA som metoforen for en sertifiserende autoritet. I den elektroniske "verden" skal vi anta at Github er en slik autoritet som vi alle stoler på. Vi bruker de samme navn (identifikatorer) på eier og boks (repository) i den elektroniske "verden", som vi brukte i den fysiske verden.</p>
+
+    <img src="images/git-eksempel-opprette-repository.png" width="500" alt="Github New knapp for å lage ny repository">
+    <p><i>Figur X. Skjermdump demonstrerer knappen "New", som kan brukes for å lage en ny repository (skjermdump laget 5. Sept. 2023).</i></p>
+
+     <p>Det er flere valg i den elektroniske "verden", som ikke fantes i den fysiske verden (se <i>Figur X</i>). Det er to type repository-er på Github, - <i>Public</i> (alle med på Internett kan se innholdet i repository-en, men eieren kan bestemme hvem kan skrive til repository-en) og <i>Private</i> (eieren kan bestemme hvem som kan se innholdet og skrive til repository-en). I dette tilfelle velger jeg <i>Public</i> fordi at jeg ønsker at et stort antall utviklere kan se innholdet i denne repository-en. Noen applikasjoner tilbyr også valget "Unlisted", som gjør at alle som kjenner til lenken kan se repository, men den er ikke listet ut i brukerens profil.</p>
+    
+    <img src="images/git-eksempel-oprette-repository-valg.png" width="500" alt="Valg når man lager ny repository i webformen til Github">
+     <p><i>Figur X. Skjermdump demonstrerer knappen valg gjort før man lager en ny repository (skjermdump laget 5. Sept. 2023).</i></p>
+
+    <p>Jeg ønsker også at programmet på Github skal lage en fil med navn <code>README.md</code> i det repository-en blir opprettet. Det er en "de facto"-standard (uformell lov) at hver repository skal ha en fil som beskriver prosjektet som en helhet. Jeg kunne skrive noe som 
+      <blockquote>
+       <i>Denne repositorien inneholder oppgaver for emne IS-114 ved Universitetet i Agder. Repositorien kan brukes for å lære å bruke Git og Github.</i>
+     </blockquote>
+     Foreløpig ingen dyptgående beskrivelse, men den kan utvides senere.</p>
+    <p>Foreløpig lar vi valget "Add .gitignore" ligge (la stå "None"). Dette valget kommer vi tilbake til senere.</p>
+    <p>Jeg velger derimot en lisens for mitt arbeid, - "Creative commons Zero v1.0 Universal license". Denne lisensen ønsker jeg å bruke fordi at den er designet for å maksimalt fremme deling, gjenbruk og adopsjon av kreativt arbeid (åndsverk) uten begrensninger og tillate andre til å bruke arbeidet for ethvert formål, inkludert kommersiell bruk, uten å søke tillatelse eller gi attribusjon til den opprinnelige skaperen. Det finnes flere type lisenser, som brukes for å fremme åpen tilgang til kunnskap og dere vil bli kjent med dem i løpet av studiet.</p>
+    <p>Da er alt klart for å skape en ny repository!</p>
+
+
+    <img src="images/git-eksempel-ny-repository-is-114.png" width="500" alt="Viser en nylig skapt repository på Github.">
+     <p><i>Figur X. Viser en nylig skapt repository på Github med navn "IS-114 (skjermdump laget 5. Sept. 2023).</i></p>
+
+    <p>Som vi kan se i <i>Figur X</i>, har Github applikasjonen skapt et grensesnitt for oss, med mange funksjoner. Dere kan see "Issues" (vi nevnte de på samlingen) i den horisontale menyen nesten på toppen av siden. Dere kan også se "Fork" knappen neste øverst til høyre, som gir mulighet å kopiere repository-en til sin egen konto og eventuelt videreutvikle den videre uten direkte tilknytting til den opprinnelige (videre kalt originale og i git-terminologien kalt <code>origin</code>) repository-en. Under "Settings" finnes det flere valg, blant annet for å gi samarbeidspartnere rettigheten til å skrive til (gjøre <code>git push</code>) den originale repository-en. For å lage en "Personal Access Token", må dere bruke "Settings" for deres konto og ikke "Settings" for repository-en. Dere kan gjerne selv utforske flere funksjoner på siden.</p>
+
+    <p>Før vi forlater webgrensesnittet fra Github, skal vi kopiere lenken som skal gi oss mulighet til å klone repository-en på vår lokale datamaskin ved å skrive kommandoen <code>git clone</code> på kommandolinje (Terminal, GitBash, cmd eller PowerShell). Se <i>Figur X</i>, som illustrerer dette. For å kunne skrive tilbake til repository, er det nødvendig å konfigurere autentisering, siden default er det kun eieren av repository-en som kan skrive til den på Github. Hvis du har laget en "Personal Access Token" og installert Git på din datamaskin korrekt, så kan du velge metoden "HTTPS". Vi forklarer de andre metodene senere.</p>
+
+    <img src="images/git-eksempel-klone-is-114.png" width="500" alt="Arduino UNO R3">
+     <p><i>Figur X. Viser valg for kloning i webgrensesnittet på Github (skjermdump laget 5. Sept. 2023)</i></p>
+
+     <p>Bilde ovenfor har en dårlig oppløsning, men lenken til repositorien er <code>https://github.com/uia-worker/is-114.git</code>. Vi kan si litt om hvordan dette navnet (som er en global identifikator på WWW) er konstruert. Først er det protokoll, som brukes for å kommunisere mellom to noder (les datamaskiner) på Internett, - <code>https://</code>, som står for <i>HyperText Transfer Protocol</i>. Så kommer det "sertifiserings autoritet" eller "servernavn", som i vårt tilfelle er <code>github.com</code>. Det finnes flere webapplikasjoner som tilbyr lignende tjenester som Github, - Bitbucket, Gitlab, sourcehat</p>
+    
+    
+
+<img src="images/" width="500" alt="Arduino UNO R3">
+     <p><i>Figur X. </i></p>
+
+  <code><pre>
+    $ git clone
+  </code></pre>
+  <p><i>CLI-eksempel X. ..</i>
+
+  <code><pre>
+    // ... eventuelt et eksempel på kildekode
+  </code></pre>
+  <p><i>CLI-eksempel X. ..</i>
 
   </div>
 </body>
