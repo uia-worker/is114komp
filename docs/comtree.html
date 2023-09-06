@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>IS-114 Oppgaver: Prosjektoblig 03: commit tre</title>
     <link href='https://fonts.googleapis.com/css?family=IBM Plex Serif' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/is114-style.css" title="default">
     <script type="text/javascript" src="js/is114.js"></script>
     <script type="text/javascript" src="js/events.js"></script>
@@ -136,106 +137,148 @@
       Eksempel på commit tre
       <a name="comtree"></a>
     </h2>
-    <p></p>
+    <p>La oss bruke dokumentet i <i>Figur 1</i>, som et utgangspunkt for en repository på Github.</p>
 
     <img src="images/git-eksempel-agenda-del-1.png" width="500" alt="Dokument med metadata og agende (et eksempel)">
-    <p><i>Figur X. Et bilde av et skriftlig dokument med metadata og en agenda som innhold (brukt på samling 4. Sept. 2023).</i></p>
+    <p><i>Figur 1. Et bilde av et skriftlig dokument med metadata og en agenda som innhold (brukt på samling 4. Sept. 2023).</i></p>
 
-    <p>La oss bruke dette dokumentet som et utgangspunkt for en repository på Github. Jeg oppretter en repository (ved å bruke knappen "New"; se <i>Figur X</i>) i brukerkontoen <code>uia-worker</code> med navn <code>is-114</code>. Som dere husker fra forelesning, så brukte vi UiA som metoforen for en sertifiserende autoritet. I den elektroniske "verden" skal vi anta at Github er en slik autoritet som vi alle stoler på. Vi bruker de samme navn (identifikatorer) på eier og boks (repository) i den elektroniske "verden", som vi brukte i den fysiske verden.</p>
+    <h3>Lage ny repository på Github</h3>
+
+    <p>Jeg oppretter en repository (ved å bruke knappen "New"; se <i>Figur 2</i>) i brukerkontoen <code>uia-worker</code> med navn <code>is-114</code>. Som dere husker fra forelesning, så brukte vi UiA som metaforen for en sertifiserende autoritet. I den elektroniske "verden" skal vi anta at Github er en slik autoritet, som vi alle kan stole på, og gjennom hvis "rom" skal vi kommunisere. Vi bruker de samme navn (identifikatorer) på eier og boks (repository) i den elektroniske "verden", som vi brukte i den fysiske verden. </p>
 
     <img src="images/git-eksempel-opprette-repository.png" width="500" alt="Github New knapp for å lage ny repository">
-    <p><i>Figur X. Skjermdump demonstrerer knappen "New", som kan brukes for å lage en ny repository (skjermdump laget 5. Sept. 2023).</i></p>
+    <p><i>Figur 2. Skjermdump demonstrerer knappen "New", som kan brukes for å lage en ny repository (skjermdump laget 5. Sept. 2023).</i></p>
+    
+    <p>Jeg vil bruke begrepet "verden" her i en betydning, som kanskje for noen av dere er kjent fra dataspill. For å kunne klare å spille dataspill, må man leve seg inn i en fiksjon. Egentlig gjelder det mange aktiviteter, som den moderne (nåtidens, anno 2023) homo sapiens må engasjere seg i, - uten fantasi er det utfordrende å navigere abstrakte rom. Alle "rom" på WWW er abstrakte. For å drive med systemutvkling, må man kunne praktisere fiksjon. Vi har det fysiske rommet (V-FYS) med alle reelle ting (som konserverer energi), så kan vi dele fiksjons rommet i mange "verdener" etter behov. I dette dokumentet trenger vi å være i en "verden" med grafisk brukergrensesnitt (V-GUI), hvor vi må praktisere et tankemønster, og så må vi skifte til en "verden" med kommandolinje (V-CLI), som krever en annen tankemønster (eller modus). En analogi, - tidligere editorer hadde minst to moduser, - tekst- eller skrive modus og kommandomodus. Når man er i den ene modusen, kan man ikke samtidig handle i den andre.</p>
 
-     <p>Det er flere valg i den elektroniske "verden", som ikke fantes i den fysiske verden (se <i>Figur X</i>). Det er to type repository-er på Github, - <i>Public</i> (alle med på Internett kan se innholdet i repository-en, men eieren kan bestemme hvem kan skrive til repository-en) og <i>Private</i> (eieren kan bestemme hvem som kan se innholdet og skrive til repository-en). I dette tilfelle velger jeg <i>Public</i> fordi at jeg ønsker at et stort antall utviklere kan se innholdet i denne repository-en. Noen applikasjoner tilbyr også valget "Unlisted", som gjør at alle som kjenner til lenken kan se repository, men den er ikke listet ut i brukerens profil.</p>
+
+    <p>Det er flere valg i "verden" V-GUI, som ikke fantes i den fysiske verden V-FYS (se <i>Figur 3</i>). Det er to type repository-er på Github, - <i>Public</i> (alle med på Internett kan se innholdet i repository-en, men eieren kan bestemme hvem kan skrive til repository-en) og <i>Private</i> (eieren kan bestemme hvem som kan se innholdet og skrive til repository-en). I dette tilfelle velger jeg <i>Public</i> fordi at jeg ønsker at et stort antall utviklere kan se innholdet i denne repository-en. Noen applikasjoner tilbyr også valget "Unlisted", som gjør at alle som kjenner til lenken kan se repository, men den er ikke listet ut i brukerens profil.</p>
     
     <img src="images/git-eksempel-oprette-repository-valg.png" width="500" alt="Valg når man lager ny repository i webformen til Github">
-     <p><i>Figur X. Skjermdump demonstrerer knappen valg gjort før man lager en ny repository (skjermdump laget 5. Sept. 2023).</i></p>
+     <p><i>Figur 3. Skjermdump demonstrerer valg man kan gjøre, før man lager en ny repository (skjermdump laget 5. Sept. 2023).</i></p>
 
-    <p>Jeg ønsker også at programmet på Github skal lage en fil med navn <code>README.md</code> i det repository-en blir opprettet. Det er en "de facto"-standard (uformell lov) at hver repository skal ha en fil som beskriver prosjektet som en helhet. Jeg kunne skrive noe som 
+    <p>Jeg ønsker også at programmet på Github skal lage en fil med navn <code>README.md</code> når repository-en blir opprettet. Det er en "de facto"-standard (uformell lov) at hver repository skal ha en fil som beskriver prosjektet i sin helhet. Jeg kunne skrive noe som 
       <blockquote>
        <i>Denne repositorien inneholder oppgaver for emne IS-114 ved Universitetet i Agder. Repositorien kan brukes for å lære å bruke Git og Github.</i>
      </blockquote>
-     Foreløpig ingen dyptgående beskrivelse, men den kan utvides senere.</p>
+     
     <p>Foreløpig lar vi valget "Add .gitignore" ligge (la stå "None"). Dette valget kommer vi tilbake til senere.</p>
     <p>Jeg velger derimot en lisens for mitt arbeid, - "Creative commons Zero v1.0 Universal license". Denne lisensen ønsker jeg å bruke fordi at den er designet for å maksimalt fremme deling, gjenbruk og adopsjon av kreativt arbeid (åndsverk) uten begrensninger og tillate andre til å bruke arbeidet for ethvert formål, inkludert kommersiell bruk, uten å søke tillatelse eller gi attribusjon til den opprinnelige skaperen. Det finnes flere type lisenser, som brukes for å fremme åpen tilgang til kunnskap og dere vil bli kjent med dem i løpet av studiet.</p>
     <p>Da er alt klart for å skape en ny repository!</p>
 
+    <h3>"Søtsaker" i Github grensesnittet</h3>
+
 
     <img src="images/git-eksempel-ny-repository-is-114.png" width="500" alt="Viser en nylig skapt repository på Github.">
-     <p><i>Figur X. Viser en nylig skapt repository på Github med navn "IS-114 (skjermdump laget 5. Sept. 2023).</i></p>
+     <p><i>Figur 4. Viser en nylig skapt repository på Github med navn "IS-114 (skjermdump laget 5. Sept. 2023).</i></p>
 
-    <p>Som vi kan se i <i>Figur X</i>, har Github applikasjonen skapt et grensesnitt for oss, med mange funksjoner. Dere kan see "Issues" (vi nevnte de på samlingen) i den horisontale menyen nesten på toppen av siden. Dere kan også se "Fork" knappen neste øverst til høyre, som gir mulighet å kopiere repository-en til sin egen konto og eventuelt videreutvikle den videre uten direkte tilknytting til den opprinnelige (videre kalt originale og i git-terminologien kalt <code>origin</code>) repository-en. Under "Settings" finnes det flere valg, blant annet for å gi samarbeidspartnere rettigheten til å skrive til (gjøre <code>git push</code>) den originale repository-en. For å lage en "Personal Access Token", må dere bruke "Settings" for deres konto og ikke "Settings" for repository-en. Dere kan gjerne selv utforske flere funksjoner på siden.</p>
+    <p>Som vi kan se i <i>Figur 4</i>, har Github applikasjonen skapt et grensesnitt, som har mange funksjoner. Dere kan see "Issues" (vi nevnte de på samlingen) i den horisontale menyen nesten på toppen av siden. Dere kan også se "Fork" knappen neste øverst til høyre, som gir mulighet å kopiere repository-en til sin egen konto og eventuelt videreutvikle den videre uten direkte tilknytting til den opprinnelige (videre kalt originale og i git-terminologien kalt <code>origin</code>) repository-en. Under "Settings" finnes det flere valg, blant annet for å gi samarbeidspartnere rettigheten til å skrive til (gjøre <code>git push</code>) den originale repository-en. For å lage en "Personal Access Token", må dere bruke "Settings" for deres konto og ikke "Settings" for repository-en. Dere kan gjerne selv utforske flere funksjoner på siden.</p>
 
-    <p>Før vi forlater webgrensesnittet fra Github, skal vi kopiere lenken som skal gi oss mulighet til å klone repository-en på vår lokale datamaskin ved å skrive kommandoen <code>git clone</code> på kommandolinje (Terminal, GitBash, cmd eller PowerShell). Se <i>Figur X</i>, som illustrerer dette. For å kunne skrive tilbake til repository, er det nødvendig å konfigurere autentisering, siden default er det kun eieren av repository-en som kan skrive til den på Github. Hvis du har laget en "Personal Access Token" og installert Git på din datamaskin korrekt, så kan du velge metoden "HTTPS". Vi forklarer de andre metodene senere.</p>
+    <h3>Kloning</h3>
+
+    <p>Før vi forlater webgrensesnittet fra Github, skal vi kopiere lenken, som skal gi oss mulighet til å klone repository-en til vår lokale datamaskin, ved å skrive kommandoen <code>git clone</code> på kommandolinje (Terminal, GitBash, cmd eller PowerShell). Se <i>Figur 5</i>, som illustrerer dette. For å kunne skrive tilbake til repository, er det nødvendig å konfigurere autentisering, siden default er det kun eieren av repository-en som kan skrive til den på Github. Hvis du har laget en "Personal Access Token" og installert Git på din datamaskin korrekt, så kan du velge metoden "HTTPS". Vi forklarer disse metodene senere.</p>
 
     <img src="images/git-eksempel-klone-is-114.png" width="500" alt="Arduino UNO R3">
-     <p><i>Figur X. Viser valg for kloning i webgrensesnittet på Github (skjermdump laget 5. Sept. 2023)</i></p>
+     <p><i>Figur 5. Viser valg for kloning i webgrensesnittet på Github (skjermdump laget 5. Sept. 2023)</i></p>
 
-     <p>Bilde ovenfor har en dårlig oppløsning, men lenken til repositorien er <code>https://github.com/uia-worker/is-114.git</code>. Vi kan si litt om hvordan dette navnet (som er en global identifikator på WWW) er konstruert. Først er det protokoll, som brukes for å kommunisere mellom to noder (les datamaskiner) på Internett, - <code>https://</code>, som står for <i>HyperText Transfer Protocol</i>. Så kommer det "sertifiserings autoritet" eller "servernavn", som i vårt tilfelle er <code>github.com</code>. Det finnes flere webapplikasjoner som tilbyr lignende tjenester som Github, - Bitbucket, Gitlab, sourcehat</p>
+     <p>Bilde ovenfor har en dårlig oppløsning, men lenken til repositorien er <code>https://github.com/uia-worker/is-114.git</code>. Vi kan si litt om hvordan dette navnet (som er en global identifikator på WWW) er konstruert. Først er det navnet på protokoll, som brukes for å kommunisere mellom to noder (les datamaskiner) på Internett, - <code>https://</code>, som står for <i>HyperText Transfer Protocol Secure</i> (IS-105 stoff). Så kommer det "sertifiserings autoritet" eller domennavn/"servernavn", som i vårt tilfelle er <code>github.com</code>. Det finnes flere webapplikasjoner, som tilbyr lignende tjenester som Github, - Bitbucket, Gitlab, sourcehat.</p>
+
+     <p>Nå er det på tiden å skifte "verden" fra V-GUI til V-CLI og utføre <code>git clone</code> kommandoen med lenken til repository som argument (argumentet som kommandoen "virker" på, kalles også <b>operand</b>; vi vil møte dette konseptet igjen, når vi skal snakke om funksjoner i programmeringsspråk). Jeg skal også bruke symbolet <code>$</code> for å indikere prompten til kommandolinjen (et annet symbol som ofte brukes er <code>%</code>) For kommentarer brukes det symbolet <code>#</code> (se <i>CLI Eksempel 1</i>). Kommentarer blir ignorert av fortolkeren. CLI står for <i>Command Language Interpreter</i> (CONTENTS, 2018).
+      <pre><code>
+        $ pwd                      # kommando "print working directory"
+        ~/github.com/uia-worker/   # ~ betegner her hjemmemappe
+        $ git clone https://github.com/uia-worker/is-114.git
+      </code></pre>
+      <p><i>CLI Eksempel 1. Utlisting av gjeldende mappe og kloning av repositorien fra kommandolinjen på en lokal datamaskin.</i></p>
+        <p>Legg merke til at linjer 1 og 3 i <i>CLI Eksempel 1</i> kan tolkes også som <b>input</b>, og linje 2 som <b>output</b> (for input <code>pwd</code>).</p>
+      </p>
+
+     <h3>Endringshistorikken (loggen)</h3>
+
+     <p>Nå som vi har kopiert repository-en fra Github, kan se på hvilken historikk har den. Det gjøres med kommandoen <code>git log</code>. <i>Figur 6</i> viser denne historikken rett etter kloning. Husk at du må endre mappen fra den mappen du gjorde kloning i, til mappen hvor alle filene og mappene til repositorien ligger i (kommandoen er <code>cd is-114</code>.</p>
     
     <img src="images/git-eksempel-log-initiell-commit.png" width="500" alt="output git log initiell commit">
-     <p><i>Figur X. Output fra <code>git log</code> i kommandovindu (skjermdump laget 5. Sept. 2023).</i></p>
+     <p><i>Figur 6. Output fra <code>git log</code> i kommandovindu (skjermdump laget 5. Sept. 2023).</i></p>
 
      <p>La oss analysere linjene fra output på kommandolinjen vist i <i>Figur X</i>. 
       <ul>  
-        <li><code>janisg@UIAA223034AS is-114 % git log</code> er en såkalt prompt sammen med et kommando og dets subkommando. Fra latin <i>promptus</i>, som betyr <i>beredt</i>. I denne konteksten kan man tolke det at brukeren får en tekstuell hint og en markør, som inviterer til handling (noen ganger kaller man det også <i>affordance</i>, som kan oversettes til norsk som <i>råd</i>). I dette eksemplet er output generert på en MacBook Pro datamaskin og derfor er annerledes enn, for eksempel, i GitBash. <code>janisg@UIAA223034AS</code> indikerer brukernavn for bruker som bruker terminalen sammen med en kodeord, som indikerer navn til datamaskinen (blir valgt når datamaskinen blir konfigurert for første gang). Tegnet "%" brukes har som et prompt-tegn, dvs. den skal signalisere at etter det kan bruker skrive inn sine kommandoer. Før man har skrevet inn noe, skal det også vises en markør (kan være en stedsholder eller noe som fremstår som blinkende). I zsh (Wikipedia Contributors, 2023a) og i macOS (Wikipedia Contributors, 2023b) kan man modifisere promten ved å skrive inn spesifikke kommandoer i en spesifikk konfigurasjonsfil med navn <code>~/.zshrc</code>, hvor <code>~</code> representerer brukerens hjemmemappen (Williams, 2022). <br /> <code>git log</code> er kommandoen og subkommandoen, som jeg skrev på kommandolinje og som vi kaller for input. Mer informasjon om <code>git log</code> kan man finne ved å skrive inn uttrykket <code>git log --help</code> (den består av hovedkommando, subkommando og en en såkalt <i>alternativ</i> (på engelsk <i>option</i>).</li>
+        <li><code>janisg@UIAA223034AS is-114 % git log</code> er en såkalt prompt sammen med et kommando og dets subkommando. Fra latin <i>promptus</i>, som betyr <i>beredt</i>. I denne konteksten kan man tolke det at brukeren får en tekstuell hint og en markør, som inviterer til handling (noen ganger kaller man det også <i>affordance</i>, som kan oversettes til norsk som <i>råd</i>). I dette eksemplet er output generert på en MacBook Pro datamaskin og derfor er annerledes enn, for eksempel, i GitBash. <code>janisg@UIAA223034AS</code> indikerer brukernavn for bruker som bruker terminalen sammen med en kodeord, som indikerer navn til datamaskinen (blir valgt når datamaskinen blir konfigurert for første gang). Symbolet <code>%</code> brukes har som et prompt-tegn (nevnt også tidligere), dvs. den skal signalisere at etter det kan bruker skrive inn sine kommandoer. Før man har skrevet inn noe, skal det også vises en markør (kan være en stedsholder eller noe som fremstår som blinkende). I zsh (Wikipedia Contributors, 2023a) og i macOS (Wikipedia Contributors, 2023b) kan man modifisere promten ved å skrive inn spesifikke kommandoer i en spesifikk konfigurasjonsfil med navn <code>~/.zshrc</code>, hvor <code>~</code> representerer brukerens hjemmemappen (Williams, 2022). <br /> <code>git log</code> er kommandoen, som jeg skrev på kommandolinje og vi kan kalle det for <b>input</b>. Mer informasjon om <code>git log</code> kan man finne ved å skrive inn kommandoen <code>git log --help</code> (denne kommandoen har også et alternativ <code>--help</code> (på engelsk <b>option</b>), som da indikere at vi ønsker hjelp med syntaksen og definisjoner for kommandoen.</li>
         <li><code>commit ea38683d0e38e99c1b04b943f8b7c2092ef4b32a (HEAD -> main, origin/main, origin/HEAD)</code> er linje fra <b>Git</b> og er den første linje i output. Den viser en id for commit, som er en <i>SHA-1 hash</i>. Kort forklart er det en ID, som består av tall og bokstaver (en streng), og er generert på en møte (med en algoritme), som gjør at sjansen for å generere to like slike strenger innen en repository er tilnærmet null. I vår "commit-tre" skal vi kun notere de første 7 symboler fra denne strengen. I parentes så er det ekstra informasjon om tilstanden til <b>Git</b>-databasen. <b>Git</b> bruker et begrep <code>HEAD</code>, som man kan forestille seg som en slags markør som markerer den gjeldende grenen (på engelsk <b>current branch</b>), som i dette tilfelle er <code>main</code>. Det indikeres også at den lokale og den originale grenen er synkronisert <code>origin/main</code>, og at den lokale og den originale HEAD <code>origin/HAED</code>, peker på toppen av sine respektive grener.</li>
-        <li>Denne linjen bør være selvforklarende. Husk at navnet og e-postadressen er den som ble definert med  <pre><code>
-        git config --global user.name "(ditt navn)"
-        git confit --global user.email "(din e-postadresse)"
+        <li>Denne linjen bør være selvforklarende. Husk at navnet og e-postadressen er den som ble definert med kommandoer
+        <a name="cli-eksempel-2"></a>
+        <pre><code>
+        $ git config --global user.name "(ditt navn)"
+        $ git confit --global user.email "(din e-postadresse)"
         </code></pre>
+        <p><i>CLI Eksempel 2. Definere konfigurajonsparametre for <b>Git</b> installasjonen.</i></p>
         </li>
         <li>Dato eller tidsstempel (fra den engelske <i>timestamp</i>). Definisjon av formatet er en innstiling i <b>Git</b> men kan være avhengig av innstillingen for operativsystemet på din datamaskin. Vi går ikke inn på det her.</li>
         <li>Etter en tom linje kommer det en kommentar for hva commit-en dreier seg om. Husk at en commit kan relateres til endringer i flere enn en fil, så beskrivelsen burde gjenspeile alle endringene så kortfattet som mulig.</li>
       </ul>
      </p>
 
-     <p>Nå kan vi begynne å tegne "commit-tre", siden <b>Git</b> har oppdaget en commit i databasen som er lagret i mappen <code>.git</code>.</p>
+     <h3>Commit tre versjon 1</h3>
+
+     <p>Nå kan vi begynne å tegne "commit-tre" (se <i>Figur 7</i>). <b>Git</b> har oppdaget en initiell commit i databasen , som er lagret i mappen <code>.git</code> og som vi fikk fra den originale repository-en når vi gjorde kloning.</p>
 
      <img src="images/commit-tree-versjon-001.svg" width="100" alt="Commit-tre etter den initielle commit-en.">
-     <p><i>Figur X. Viser "commit-tre" etter den initielle commit-en med gjeldende gren og commit id.</i></p>
+     <p><i>Figur 7. Viser "commit-tre" etter den initielle commit-en med gjeldende grennavn og commit id.</i></p>
 
-     <p>Før vi går videre, kan vi introdusere et nyttig kommando-uttryk <code>git status</code>, som vi vil bruke mye. </p>
+     <p>Før vi går videre, kan vi introdusere en nyttig kommando<code>git status</code>, som vi skal bruke mye. </p>
       <img src="images/is-114-repository-output-git-status.png" width="300" alt="Output git status up-to-date-">
-     <p><i>Figur X. Viser output fra kommando-uttrykket <code>git status</code></i></p>
+     <p><i>Figur 8. Viser output fra kommandoen <code>git status</code> (viser hvilken gren er den gjeldende og at arbeidstre er "ren")</i></p>
+     <p>Som vi ser i <i>Figur 8</i>, så er det ingen endringer, som er blitt gjort i den lokale repository-en.</p>
       
-      <p>Jeg bruker ordet <b>kommando-uttrykk</b> for å illustrere at det inneholder en hovedkommando <code>git</code> og en subkommando <code>status</code>. Dette kan være forvirrende, siden vi brukte også et ord <b>alternativ</b>. Et uttrykk på kommandolinje kan ha mange former. De kan også være forskjellige fra forskjellige operativsystemer og i forskjellige terminaler. Vi definerer følgende (men vær oppmerksom på at denne representerer ikke noen form for standardterminologi):
-<ul>  
-<li>et kommando er et ord som man skriver på kommandolinje som kaller opp en applikasjon (som <code>git</code>, <code>ls</code>, <code>pwd</code>, men her kan også begrepene være tvetydige, siden mange kaller disse for <b>verktøy</b> eller <b>utilities</b> på engelsk)</li>
-<li>et subkommando er et type alternativ, som representerer en større funksjonalitet i seg selv (for eksempel <code>git add</code>, <code>go build</code>, <code>doctl apps</code> osv.); noen applikasjoner introduserer også subsubkommandoer</li>
-<li>et alternativ indikerer at applikasjon oppfører seg vesentlig annerledes og som vanligvis starter med tegn <code>-</code> eller <code>--</code></li>
-<li>Et flagg, som enten slår en funksjonalitet av eller på. </li>
-</ul>
-      </p>
+     <h3>Lage en ny fil <code>agenda-del-1.txt</code></h3>
 
-     <p>Til nå har jeg ikke gjort noen endringer i noen av filene i repository-en, så jeg skal nå legge til en elektronisk versjon av den filen som vi brukte som fysisk eksempel i klasserommet, - <code>agenda-del-1.txt</code>. Jeg gir filen etternavn <code>.txt</code> (tekst), siden agenda ble ikke skrevet på et spesifikt programmeringsspråk, men på et naturlig språk. Jeg åpner min <i>Sublime Text editor</i> applikasjonen, finner menyelement for å åpne en mappe, finner mappen hvor jeg klonet repository-en <code>is-114</code> i mitt filsystem, lager en ny fil under mappen <code>is-114</code> og lagrer filen med navn <code>agenda-del-1.txt</code>.</p>
+     <p>Til nå har jeg ikke gjort noen endringer i noen av filene i repository-en, så nå skal jeg legge til en elektronisk versjon av den filen, som vi brukte som fysisk eksempel i klasserommet, - <code>agenda-del-1.txt</code>. Dere ser sikkert at man må skifte "verden" fra V-CLI til V-GUI, hvis man skal bruke en editor med grafisk brukergrensesnitt. Det må nevnes her at det finnes også editorer (pico, vim, emacs), som man kan bruke i V-CLI "verden" (kort sagt, - fra kommandolinjen). Det er en god ide å lære å bruke en slik editor for å unngå å skifte "verdener", som kan være en kognitivt belastende øvelse.</p> 
+
+     <p>Jeg gir filen etternavn <code>.txt</code> (tekst), siden agenda ble ikke skrevet på et spesifikt programmeringsspråk, men på et naturlig språk. Jeg åpner min <i>Sublime Text editor</i> applikasjonen, finner menyelement for å åpne en mappe, finner mappen hvor jeg klonet repository-en <code>is-114</code> i mitt filsystem, lager en ny fil under mappen <code>is-114</code> og lagrer filen med navn <code>agenda-del-1.txt</code>. Se  <i>Figur 9</i> for detaljer.</p>
 
      <img src="images/git-eksempel-sublime-text-agenda-del-1.png" width="500" alt="agenda-del-1 i Sublime Text">
-     <p><i>Figur X. Viser Sublime Text vinduet med mappestruktur til repositorien is-114 og innholdet i filen agenda-del-1.txt.</i></p>
+     <p><i>Figur 9. Viser Sublime Text vinduet med mappestruktur til repositorien is-114 og innholdet i filen agenda-del-1.txt.</i></p>
 
      <p>Hva viser <code>git status</code> nå?</p>
 
      <img src="images/is-114-repository-output-git-status-after-added-agenda-del-1.png
 " width="500" alt="git status etter at agenda-del-1.txt ble skapt">
-     <p><i>Figur X. Viser output fra <code>git status</code> etter at filen agenda-del-1.txt ble skapt.</i></p>
+     <p><i>Figur 10. Viser output fra <code>git status</code> etter at filen agenda-del-1.txt ble skapt.</i></p>
 
-      
+    <h3>Legge endringene "på scenen"</h3>
+
+    <p>Verdensendring fra V-GUI til V-CLI!</p>
+
+    <p>For å lagre endringer i våre lokale repository, må vi legge endringene "på scenen" og etterpå gjøre en commit. Først må vi bruke kommandoen <code>git add</code>:</p>
+
+    <pre><code>
+      $ git add agenda-del-1.txt
+    </code></pre>
+    <p><i>CLI Eksempel 3. Viser kommandoen for å legge endringene "på scenen".</i></p>
+
      <img src="images/is-114-repository-output-git-status-after-git-add-agenda-del-1.png" width="400" alt="">
-     <p><i>Figur X. Viser output fra <code>git status</code> etter <code>git add agenda-del-1.txt</code></i></p>
+     <p><i>Figur 11. Viser output fra <code>git status</code> etter kommandoen <code>git add</code></i></p>
 
-     <p>Det er forsett kun en endring registrert i loggen, og tilstanden er fortsatt som vist i <i>Figur X (commit-tre)</i>. <code>git commit -m "Laget fil agenda-del-1 og skrev inn agenda for 4. september 2023"</code></p>
+     <p>Det er forsett kun en endring registrert i loggen, og tilstanden er fortsatt som vist i <i>Figur 7</i>. </p>
 
+  <h3>Commit</h3>
+  <p>
+      Nå kan vi gjøre commit til våre lokale repository-en. 
+      <pre><code>
+      $ git commit -m "Laget fil agenda-del-1 og skrev inn agenda for 4. september 2023"
+    </code></pre>
+    <p><i>CLI Eksempel 4. Viser kommandoen for å gjøre en commit.</i></p>
+  </p>
+  <p>Vi forventer nå at endringene vi har gjort på vårt filsystem (i mappen hvor vi har lagret den klonede repository-en) er blitt lagret i endringsloggen som ligger i mappen <code>.git</code> (se <i>Figur 12</i>). Husk at vi kan sjekke endringsloggen/historikke til vår lokale repository med kommando <code>git log</code>.</p>
      <img src="images/is-114-repository-output-git-status-after-git-commit.png" width="500" alt="">
-     <p><i>Figur X. Status etter <code>git commit</code></i></p>
+     <p><i>Figur 12. Innholdet i endringsloggen etter <code>git commit</code></i></p>
+
+   <p>Et par ting vi kan legge merke til her. For det første, er <code>HEAD</code> nå flyttet til den siste commit som vi gjorde og <code>origin/main</code> ligger nå en commit bak. Eller mer presist formulert, den ligger en commit bak den versjonen som vi klonet. Hvis noen andre kan skrive til repository-en på Github, så kan vi ikke med sikkerhet vite om statusen på <code>origin/main</code> er den samme, som den var når vi gjorde kloning. Legg også merke til at min e-postadresse er ukorrekt (den eksisterer ikke). <b>Git</b> har forsøkt å lage en e-post adresse ved å kombinere e-postadressen som er registrert hos Github, mitt lokale brukernavn og det elektroniske navnet på min datamaskin (<code>janisg@uiaa223024as.uia.no</code>). Det er ikke heldig, hvis applikasjonen utvikles i et felleskap og hvis andre utviklere ønsker å ta kontakt med meg over e-post. Jeg kan løse dette ved å utføre kommandoene fra <i><a href="#cli-eksempel-2">CLI Eksempel 2</a></i>.</p>
+
+  <h3>Commit tre versjon 2</h3>
 
 
-
-     <img src="images/" width="500" alt="">
-     <p><i>Figur X. </i></p>
-
-
-<img src="images/" width="500" alt="">
-     <p><i>Figur X. </i></p>
+  <img src="images/" width="500" alt="">
+  <p><i>Figur X. </i></p>
 
   <code><pre>
     $ git clone
@@ -247,6 +290,69 @@
   </code></pre>
   <p><i>CLI-eksempel X. ..</i>
 
+    <h2>Diverse</h2>
+    <p>Hvis det oppstår nødvendighet for flere Github kontoer (eller eventuelt kontoer i andre webapplikasjoner), så må man jobbe med ekstra konfigurasjon eller lære noen triks (git-ecosystem, 2018). Hvis man ønsker å jobbe mot forskjellige tjenester (egentlig er hovedutfordring autentisering) kan man konfigurere identity file for ssh.</p>
+    <p><ul> 
+<li>generer nøkkelpar</li>
+<li>kopiere den offentlige nøkkelen til tjenesten</li>
+<li>registrere den private nøkkelen med ssh agent</li>
+<li>lage en konfigurasjonsfil</li>
+    </ul></p>
+
+<p>Om forskjellen mellom argument og parameter, - en parameter en en stedsholder for en verdi, mens en argument er den faktiske verdien som blir tilegnet en parameter når kommando eller funksjon blir utført. Typisk eksempel er at når man prøver å spesifisere at brukeren skal bruke sitt brukernavn med et kommando, så spesifiserer man en stedsholder <code>&lt;USERNAME&gt;</code> i syntaksen til kommandoen <code>git clone https://&lt;USERNAME&gt;@github.com//test</code></p>
+
+<pre>
+<br />
+The authenticity of host 'git.sr.ht (173.195.146.142)' can't be established.
+ECDSA key fingerprint is SHA256:1nUUjsHH0qwfjI3dYFWlXTjPUP/Un1oo6wfu9YL8tCQ.
+Are you sure you want to continue connecting (yes/no)?
+<br &>
+The most common way is to use the built-in credential helper to store credentials locally in memory or a file on disk. A more sophisticated and secure way to store credentials is by using SSH, although this can be more complex and may not work on all networks.
+<br />
+MacBook-Pro-3:api-json-eksempler janisg$ git commit -m "test 2023090602"
+[main 3903616] test 2023090602
+ 1 file changed, 2 insertions(+)
+MacBook-Pro-3:api-json-eksempler janisg$ git push
+remote: Permission to is114janisg/api-json-eksempler.git denied to uia-worker.
+fatal: unable to access 'https://github.com/is114janisg/api-json-eksempler.git/': The requested URL returned error: 403
+</pre>
+
+<pre><code>
+  MacBook-Pro-3:api-json-eksempler janisg$ git remote -v
+  origin  https://github.com/is114janisg/api-json-eksempler.git (fetch)
+  origin  https://github.com/is114janisg/api-json-eksempler.git (push)
+  MacBook-Pro-3:api-json-eksempler janisg$ git remote set-url origin https://is114janisg@github.com/is114janisg/api-json-eksempler.git
+  MacBook-Pro-3:api-json-eksempler janisg$ git remote -v
+  origin  https://is114janisg@github.com/is114janisg/api-json-eksempler.git (fetch)
+  origin  https://is114janisg@github.com/is114janisg/api-json-eksempler.git (push)
+  MacBook-Pro-3:api-json-eksempler janisg$ git push
+  Password for 'https://is114janisg@github.com': 
+  Enumerating objects: 5, done.
+  Counting objects: 100% (5/5), done.
+  Delta compression using up to 4 threads
+  Compressing objects: 100% (3/3), done.
+  Writing objects: 100% (3/3), 392 bytes | 392.00 KiB/s, done.
+  Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+  To https://github.com/is114janisg/api-json-eksempler.git
+    b3c14b3..3903616  main -> main
+  # Sletter PAT i Github kontoen is114janisg
+  MacBook-Pro-3:api-json-eksempler janisg$ vim README.md 
+  MacBook-Pro-3:api-json-eksempler janisg$ git add README.md 
+  MacBook-Pro-3:api-json-eksempler janisg$ git commit -m "test 2023090603"
+  [main 09f2ad9] test 2023090603
+  1 file changed, 1 insertion(+)
+  MacBook-Pro-3:api-json-eksempler janisg$ git push
+  remote: Invalid username or password.
+  fatal: Authentication failed for 'https://github.com/is114janisg/api-json-eksempler.git/'
+
+  # om SSH autentisering
+  $ ssh -T -p 443 git@ssh.github.com
+  # i ~/.ssh/config 
+  # Host github.com
+  #    Hostname ssh.github.com
+  #    Port 443
+  #    User git
+</code></pre>
     <h2>
       Referanser
       <a name="references"></a>
@@ -254,7 +360,8 @@
     <ul>  
 
      
-
+    <li>CONTENTS. (2018). Opengroup.org. https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/contents.html (CONTENTS, 2018)</li>
+    
     <li>Wikipedia Contributors. (2023a, July 20). Z shell. Wikipedia; Wikimedia Foundation. https://en.wikipedia.org/wiki/Z_shell (Wikipedia Contributors, 2023a)</li>
     <li>Wikipedia Contributors. (2023b, September 2). macOS. Wikipedia; Wikimedia Foundation. https://en.wikipedia.org/wiki/MacOS (Wikipedia Contributors, 2023b)</li>
      <li>Williams, C. (2022, May 31). Customizing my Zsh Prompt. DEV Community; DEV Community. https://dev.to/cassidoo/customizing-my-zsh-prompt-3417 (Williams, 2022)</li>
