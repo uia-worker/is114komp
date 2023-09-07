@@ -410,77 +410,7 @@
   <p><i>Figur 25. Versjon 5 av "commit-treet" med kun en gren.</i></p>
 
   <p>SLUTT.</p>
-  <code><pre>
-    // ... eventuelt et eksempel på kildekode
-  </code></pre>
-  <p><i>CLI-eksempel X. ..</i>
-
-    <h2>Diverse</h2>
-    <p>Hvis det oppstår nødvendighet for flere Github kontoer (eller eventuelt kontoer i andre webapplikasjoner), så må man jobbe med ekstra konfigurasjon eller lære noen triks (git-ecosystem, 2018). Hvis man ønsker å jobbe mot forskjellige tjenester (egentlig er hovedutfordring autentisering) kan man konfigurere identity file for ssh.</p>
-    <p><ul> 
-<li>generer nøkkelpar</li>
-<li>kopiere den offentlige nøkkelen til tjenesten</li>
-<li>registrere den private nøkkelen med ssh agent</li>
-<li>lage en konfigurasjonsfil</li>
-    </ul></p>
-
-<p>Om forskjellen mellom argument og parameter, - en parameter en en stedsholder for en verdi, mens en argument er den faktiske verdien som blir tilegnet en parameter når kommando eller funksjon blir utført. Typisk eksempel er at når man prøver å spesifisere at brukeren skal bruke sitt brukernavn med et kommando, så spesifiserer man en stedsholder <code>&lt;USERNAME&gt;</code> i syntaksen til kommandoen <code>git clone https://&lt;USERNAME&gt;@github.com//test</code></p>
-
-<pre>
-<br />
-The authenticity of host 'git.sr.ht (173.195.146.142)' can't be established.
-ECDSA key fingerprint is SHA256:1nUUjsHH0qwfjI3dYFWlXTjPUP/Un1oo6wfu9YL8tCQ.
-Are you sure you want to continue connecting (yes/no)?
-<br &>
-The most common way is to use the built-in credential helper to store credentials locally in memory or a file on disk. A more sophisticated and secure way to store credentials is by using SSH, although this can be more complex and may not work on all networks.
-<br />
-MacBook-Pro-3:api-json-eksempler janisg$ git commit -m "test 2023090602"
-[main 3903616] test 2023090602
- 1 file changed, 2 insertions(+)
-MacBook-Pro-3:api-json-eksempler janisg$ git push
-remote: Permission to is114janisg/api-json-eksempler.git denied to uia-worker.
-fatal: unable to access 'https://github.com/is114janisg/api-json-eksempler.git/': The requested URL returned error: 403
-</pre>
-
-<pre><code>
-  MacBook-Pro-3:api-json-eksempler janisg$ git remote -v
-  origin  https://github.com/is114janisg/api-json-eksempler.git (fetch)
-  origin  https://github.com/is114janisg/api-json-eksempler.git (push)
-  MacBook-Pro-3:api-json-eksempler janisg$ git remote set-url origin https://is114janisg@github.com/is114janisg/api-json-eksempler.git
-  MacBook-Pro-3:api-json-eksempler janisg$ git remote -v
-  origin  https://is114janisg@github.com/is114janisg/api-json-eksempler.git (fetch)
-  origin  https://is114janisg@github.com/is114janisg/api-json-eksempler.git (push)
-  MacBook-Pro-3:api-json-eksempler janisg$ git push
-  Password for 'https://is114janisg@github.com': 
-  Enumerating objects: 5, done.
-  Counting objects: 100% (5/5), done.
-  Delta compression using up to 4 threads
-  Compressing objects: 100% (3/3), done.
-  Writing objects: 100% (3/3), 392 bytes | 392.00 KiB/s, done.
-  Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-  To https://github.com/is114janisg/api-json-eksempler.git
-    b3c14b3..3903616  main -> main
-  # Sletter PAT i Github kontoen is114janisg
-  MacBook-Pro-3:api-json-eksempler janisg$ vim README.md 
-  MacBook-Pro-3:api-json-eksempler janisg$ git add README.md 
-  MacBook-Pro-3:api-json-eksempler janisg$ git commit -m "test 2023090603"
-  [main 09f2ad9] test 2023090603
-  1 file changed, 1 insertion(+)
-  MacBook-Pro-3:api-json-eksempler janisg$ git push
-  remote: Invalid username or password.
-  fatal: Authentication failed for 'https://github.com/is114janisg/api-json-eksempler.git/'
-
-  # om SSH autentisering over HTTPS
-  $ ssh -T -p 443 git@ssh.github.com
-  # i ~/.ssh/config 
-  # Host github.com
-  #    Hostname ssh.github.com
-  #    Port 443
-  #    User git
-  $ ssh -T git@github.com
-</code></pre>
-
-<p>Konklusjonen er at hvis man bruker HTTPS lenken, så må man bruke PAT og endre origin slik at den inneholder brukernavn. For at Git credential manager skal spørre om PAT, må PAT være aktiv på Github. Man kan ikke bruke HTTPS lenken uten at PAT er definert. Hvis man skal bruke SSH nøkkler må man klone med SSH lenken.</p>
+  
     <h2>
       Referanser
       <a name="references"></a>
