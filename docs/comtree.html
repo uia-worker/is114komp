@@ -38,36 +38,6 @@
               <td align="right">
               </td>
               <td>
-                <a href="index.html" class="tocviewlink" data-pltdoc="x">Beskrivelse og rettningslinjer</a>
-              </td>
-            </tr>
-            <tr>
-              <td align="right">
-              </td>
-              <td>
-                <a href="komp.html" class="tocviewlink" data-pltdoc="x">Kompendium</a>
-              </td>
-            </tr>
-            <tr>
-              <td align="right">
-              </td>
-              <td>
-                <a href="oppgaver.html" class="tocviewlink" data-pltdoc="x">Oppgaver</a>
-              </td>
-            </tr>
-            <!--
-            <tr>
-              <td align="right">
-              </td>
-              <td>
-                <a href="#" class="tocviewlink" data-pltdoc="x">Kollokvium</a>
-              </td>
-            </tr>
-            -->
-            <tr>
-              <td align="right">
-              </td>
-              <td>
                 <a href="honnor.html" class="tocviewlink" data-pltdoc="x">Honnør</a>
               </td>
             </tr>
@@ -121,10 +91,51 @@
           <tr>
             <td>
               <span class="tocsublinknumber">1<tt>&nbsp;</tt></span>
-              <a href="#comtree" class="tocsubseclink" data-pltdoc="x">Commit tre</a>
+              <a href="#fysdoc" class="tocsubseclink" data-pltdoc="x">Fysisk dokument</a>
             </td>
           </tr>
-
+          <tr>
+            <td>
+              <span class="tocsublinknumber">1<tt>&nbsp;</tt></span>
+              <a href="#nyrepogithub" class="tocsubseclink" data-pltdoc="x">Ny repo i Github</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="tocsublinknumber">1<tt>&nbsp;</tt></span>
+              <a href="#sugar" class="tocsubseclink" data-pltdoc="x">"Søtsaker" i GUI</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="tocsublinknumber">1<tt>&nbsp;</tt></span>
+              <a href="#kloning" class="tocsubseclink" data-pltdoc="x">"Søtsaker" i GUI</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="tocsublinknumber">1<tt>&nbsp;</tt></span>
+              <a href="#loggen" class="tocsubseclink" data-pltdoc="x">"Søtsaker" i GUI</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="tocsublinknumber">1<tt>&nbsp;</tt></span>
+              <a href="#comtrev1" class="tocsubseclink" data-pltdoc="x">"Søtsaker" i GUI</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="tocsublinknumber">1<tt>&nbsp;</tt></span>
+              <a href="#nyfil" class="tocsubseclink" data-pltdoc="x">"Søtsaker" i GUI</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="tocsublinknumber">1<tt>&nbsp;</tt></span>
+              <a href="#commit" class="tocsubseclink" data-pltdoc="x">"Søtsaker" i GUI</a>
+            </td>
+          </tr>
         </tbody>
       </table>
 
@@ -134,15 +145,17 @@
   <div class="maincolumn">
     <h1>Commit tre</h1>
     <h2>
-      Eksempel på commit tre
-      <a name="comtree"></a>
+      Begynner med et fysisk dokument
+      <a name="fysdoc"></a>
     </h2>
     <p>La oss bruke dokumentet i <i>Figur 1</i>, som et utgangspunkt for en repository på Github.</p>
 
     <img src="images/git-eksempel-agenda-del-1.png" width="500" alt="Dokument med metadata og agende (et eksempel)">
     <p><i>Figur 1. Et bilde av et skriftlig dokument med metadata og en agenda som innhold (brukt på samling 4. Sept. 2023).</i></p>
 
-    <h3>Lage ny repository på Github</h3>
+    <h2>Lage ny repository på Github
+<a name="nyrepogithub"></a>
+    </h2>
 
     <p>Jeg oppretter en repository (ved å bruke knappen "New"; se <i>Figur 2</i>) i brukerkontoen <code>uia-worker</code> med navn <code>is-114</code>. Som dere husker fra forelesning, så brukte vi UiA som metaforen for en sertifiserende autoritet. I den elektroniske "verden" skal vi anta at Github er en slik autoritet, som vi alle kan stole på, og gjennom hvis "rom" skal vi kommunisere. Vi bruker de samme navn (identifikatorer) på eier og boks (repository) i den elektroniske "verden", som vi brukte i den fysiske verden. </p>
 
@@ -166,7 +179,9 @@
     <p>Jeg velger derimot en lisens for mitt arbeid, - "Creative commons Zero v1.0 Universal license". Denne lisensen ønsker jeg å bruke fordi at den er designet for å maksimalt fremme deling, gjenbruk og adopsjon av kreativt arbeid (åndsverk) uten begrensninger og tillate andre til å bruke arbeidet for ethvert formål, inkludert kommersiell bruk, uten å søke tillatelse eller gi attribusjon til den opprinnelige skaperen. Det finnes flere type lisenser, som brukes for å fremme åpen tilgang til kunnskap og dere vil bli kjent med dem i løpet av studiet.</p>
     <p>Da er alt klart for å skape en ny repository!</p>
 
-    <h3>"Søtsaker" i Github grensesnittet</h3>
+    <h2>"Søtsaker" i Github grensesnittet
+<a name="sugar"></a>
+    </h2>
 
 
     <img src="images/git-eksempel-ny-repository-is-114.png" width="500" alt="Viser en nylig skapt repository på Github.">
@@ -174,7 +189,9 @@
 
     <p>Som vi kan se i <i>Figur 4</i>, har Github applikasjonen skapt et grensesnitt, som har mange funksjoner. Dere kan see "Issues" (vi nevnte de på samlingen) i den horisontale menyen nesten på toppen av siden. Dere kan også se "Fork" knappen neste øverst til høyre, som gir mulighet å kopiere repository-en til sin egen konto og eventuelt videreutvikle den videre uten direkte tilknytting til den opprinnelige (videre kalt originale og i git-terminologien kalt <code>origin</code>) repository-en. Under "Settings" finnes det flere valg, blant annet for å gi samarbeidspartnere rettigheten til å skrive til (gjøre <code>git push</code>) den originale repository-en. For å lage en "Personal Access Token", må dere bruke "Settings" for deres konto og ikke "Settings" for repository-en. Dere kan gjerne selv utforske flere funksjoner på siden.</p>
 
-    <h3>Kloning</h3>
+    <h2>Kloning
+<a name="kloning"></a>
+    </h2>
 
     <p>Før vi forlater webgrensesnittet fra Github, skal vi kopiere lenken, som skal gi oss mulighet til å klone repository-en til vår lokale datamaskin, ved å skrive kommandoen <code>git clone</code> på kommandolinje (Terminal, GitBash, cmd eller PowerShell). Se <i>Figur 5</i>, som illustrerer dette. For å kunne skrive tilbake til repository, er det nødvendig å konfigurere autentisering, siden default er det kun eieren av repository-en som kan skrive til den på Github. Hvis du har laget en "Personal Access Token" og installert Git på din datamaskin korrekt, så kan du velge metoden "HTTPS". Vi forklarer disse metodene senere.</p>
 
@@ -193,7 +210,9 @@
         <p>Legg merke til at linjer 1 og 3 i <i>CLI Eksempel 1</i> kan tolkes også som <b>input</b>, og linje 2 som <b>output</b> (for input <code>pwd</code>).</p>
       </p>
 
-     <h3>Endringshistorikken (loggen)</h3>
+     <h2>Endringshistorikken (loggen)
+<a name="loggen"></a>
+     </h2>
 
      <p>Nå som vi har kopiert repository-en fra Github, kan se på hvilken historikk har den. Det gjøres med kommandoen <code>git log</code>. <i>Figur 6</i> viser denne historikken rett etter kloning. Husk at du må endre mappen fra den mappen du gjorde kloning i, til mappen hvor alle filene og mappene til repositorien ligger i (kommandoen er <code>cd is-114</code>.</p>
     
@@ -217,7 +236,9 @@
       </ul>
      </p>
 
-     <h3>Commit tre versjon 1</h3>
+     <h2>Commit tre versjon 1
+<a name="comtrev1"></a>
+     </h2>
 
      <p>Nå kan vi begynne å tegne "commit-tre" (se <i>Figur 7</i>). <b>Git</b> har oppdaget en initiell commit i databasen , som er lagret i mappen <code>.git</code> og som vi fikk fra den originale repository-en når vi gjorde kloning.</p>
 
@@ -228,8 +249,10 @@
       <img src="images/is-114-repository-output-git-status.png" width="300" alt="Output git status up-to-date-">
      <p><i>Figur 8. Viser output fra kommandoen <code>git status</code> (viser hvilken gren er den gjeldende og at arbeidstre er "ren")</i></p>
      <p>Som vi ser i <i>Figur 8</i>, så er det ingen endringer, som er blitt gjort i den lokale repository-en.</p>
-      
-     <h3>Lage en ny fil <code>agenda-del-1.txt</code></h3>
+    
+<h2>Lage en ny fil <code>agenda-del-1.txt</code>
+<a name="nyfil"></a>
+</h2>
 
      <p>Til nå har jeg ikke gjort noen endringer i noen av filene i repository-en, så nå skal jeg legge til en elektronisk versjon av den filen, som vi brukte som fysisk eksempel i klasserommet, - <code>agenda-del-1.txt</code>. Dere ser sikkert at man må skifte "verden" fra V-CLI til V-GUI, hvis man skal bruke en editor med grafisk brukergrensesnitt. Det må nevnes her at det finnes også editorer (pico, vim, emacs), som man kan bruke i V-CLI "verden" (kort sagt, - fra kommandolinjen). Det er en god ide å lære å bruke en slik editor for å unngå å skifte "verdener", som kan være en kognitivt belastende øvelse.</p> 
 
@@ -244,7 +267,7 @@
 " width="500" alt="git status etter at agenda-del-1.txt ble skapt">
      <p><i>Figur 10. Viser output fra <code>git status</code> etter at filen agenda-del-1.txt ble skapt.</i></p>
 
-    <h3>Legge endringene "på scenen"</h3>
+    <h2>Legge endringene "på scenen"</h2>
 
     <p>Verdensendring fra V-GUI til V-CLI!</p>
 
@@ -260,7 +283,9 @@
 
      <p>Det er forsett kun en endring registrert i loggen, og tilstanden er fortsatt som vist i <i>Figur 7</i>. </p>
 
-  <h3>Commit</h3>
+  <h2>Commit
+<a name="commit"></a>
+  </h2>
   <p>
       Nå kan vi gjøre commit til våre lokale repository-en. 
       <pre><code>
@@ -272,19 +297,119 @@
      <img src="images/is-114-repository-output-git-status-after-git-commit.png" width="500" alt="">
      <p><i>Figur 12. Innholdet i endringsloggen etter <code>git commit</code></i></p>
 
-   <p>Et par ting vi kan legge merke til her. For det første, er <code>HEAD</code> nå flyttet til den siste commit som vi gjorde og <code>origin/main</code> ligger nå en commit bak. Eller mer presist formulert, den ligger en commit bak den versjonen som vi klonet. Hvis noen andre kan skrive til repository-en på Github, så kan vi ikke med sikkerhet vite om statusen på <code>origin/main</code> er den samme, som den var når vi gjorde kloning. Legg også merke til at min e-postadresse er ukorrekt (den eksisterer ikke). <b>Git</b> har forsøkt å lage en e-post adresse ved å kombinere e-postadressen som er registrert hos Github, mitt lokale brukernavn og det elektroniske navnet på min datamaskin (<code>janisg@uiaa223024as.uia.no</code>). Det er ikke heldig, hvis applikasjonen utvikles i et felleskap og hvis andre utviklere ønsker å ta kontakt med meg over e-post. Jeg kan løse dette ved å utføre kommandoene fra <i><a href="#cli-eksempel-2">CLI Eksempel 2</a></i>.</p>
+   <p>Et par ting vi kan legge merke til her. For det første, er <code>HEAD</code> nå flyttet til den siste commit som vi gjorde og <code>origin/main</code> ligger nå en commit bak. Eller mer presist formulert, den ligger en commit bak den versjonen som vi klonet. Hvis noen andre kan skrive til repository-en på Github, så kan vi ikke med sikkerhet vite om statusen på <code>origin/main</code> er den samme, som den var når vi gjorde kloning. Legg også merke til at min e-postadresse er ukorrekt (den eksisterer ikke). <b>Git</b> har forsøkt å lage en e-post adresse ved å kombinere e-postadressen som er registrert hos Github, mitt lokale brukernavn og det elektroniske navnet på min datamaskin (<code>janisg@uiaa223024as.uia.no</code>). Det er ikke heldig, hvis applikasjonen utvikles i et felleskap, og hvis andre utviklere ønsker å ta kontakt ved å sende e-post. Jeg kan løse dette ved å utføre kommandoene fra <i><a href="#cli-eksempel-2">CLI Eksempel 2</a></i>.</p>
 
-  <h3>Commit tre versjon 2</h3>
+  <h2>Commit tre versjon 2</h2>
+
+  <p>Nå kan vi bygge videre på "commit-treet", siden vi har gjort en ny commit. Foreløpig har commit kun vært registrert lokale, så vi må utføre en <code>git push</code> for å overføre endringene til <b>produksjonsversjonen</b> på Github.</p>
+
+  <img src="images/commit-tree-v2.svg" width="200" alt="Commit-tre med to commits i repository is-114.">
+  <p><i>Figur 13. Commit-tre med to commits i repository <code>is-114</code>.</i></p>
+
+  <h2>Klone på en ny datamaskin</h2>
+
+  <p>For å simulere et samarbeid, kloner vi repository med tilstand vist i <i>Figur 13</i> på en annen datamaskin. Den første hadde navnet <b>UIAA223024AS</b>, og den andre har navnet <b>MacBook-Pro-3</b>, som det fremgår fra prompt-strengen i kommandovinduet.</p>
+  <img src="images/is-114-repository-output-git-log-on-new-host.png" width="500" alt="Output fra git log etter å ha klonet repository is-114 på en annen datamaskin">
+  <p><i>Figur 14. Output fra <b>git log</b> etter at repository har blitt klonet på <b>MacBook-Pro-3</b> til en mappe <code>~/github.com/uia-worker/is-114</code>.</i></p>
+
+  <p>Nå ønsker brukeren på <b>MacBook-Pro-3</b> gjøre endringer på linje 5 i filen <code>agenda-del-1.txt</code>, dvs. endre linjen fra "GÅ HJEM" til "REFLEKTERE OVER UTØVENDE SYS. UTV.". Brukeren kan gjøre endringen direkte i grenen <code>main</code>, men det er ikke en god praksis å gjøre bidrag direkte til <code>main</code> (blant annet fordi at det grenet er vanligvis forbeholdt <b>produksjonsversjonen</b> og alle nye bidrag bør testes før man eventuelt endrer <b>produksjonsversjonen</b>. Derfor er en anbefalt praksis å bruke en <code>feature-</code> gren. <i>CLI Eksempel 5</i> demonstrerer hvordan man kan både lage en ny gren og bytte til den (med det menes at alle endringene man skal gjøre fra nå av, vil ikke på virke grenet <code>main</code>, men blir registrert på grenet <code>feature-ikke-gaa-hjem</code>.</p>
+
+  <pre><code>
+      $ git checkout -b feature-ikke-gaa-hjem
+    </code></pre>
+    <p><i>CLI Eksempel 5. Viser kommandoen for å skape en ny gren og bytte til den.</i></p>
+
+  <p><i>Figur 15</i> viser output fra gjennomføringen av kommandoen fra <i>CLI Eksempel 5</i>. Man kan alltid finne ut hvilken gren man arbeider på med kommandoen <code>git branch</code>. I dette eksemplet er det brukt en editor, som man kan åpne direkte i kommandolinjen (<code>vim agenda-del-1.txt</code>). Vi kan lære å bruke <code>vim</code> på et senere tidspunkt. Dere kan bruke den editoren som dere er komfortable med (men IDE, som Visual Studio Code, er ikke anbefalt i denne fasen). Legg merke til at <code>HEAD</code> peker nå på det nye grenet <code>feature-ikke-gaa-hjem</code>. Det betyr at det er på det stedet i treet vi har gjort våre endringene. Det er foreløpig ikke gjort en ny commit.</p>
+
+  <img src="images/is-114-repository-output-new-branch-and-log.png" width="600" alt="Ouput fra når man lager en ny gren og påfølgende git log">
+  <p><i>Figur 15. Lager en ny gren med navn <code>feature-ikke-gaa-hjem</code> og viser tilstanden til den lokale repository-en med kommandoen <code>git log</code>.</i></p>
+
+  <p>For å gjøre en ny commit, må vi først legge endringene under <b>Gits</b> overvåking ("på scenen"). Output fra <code>git add</code> er vist i <i>Figur 16</i>.</p>
 
 
-  <img src="images/" width="500" alt="">
-  <p><i>Figur X. </i></p>
+  
+  <img src="images/is-114-repository-output-new-branch-add.png" width="500" alt="Output etter git add før commit av endringene">
+  <p><i>Figur 16. Output etter <code>git add</code> og før <code>git commit</code>.</i></p>
+
+  <p>Nå kan vi gjøre commit til den lokale repository-en, og sende endringene videre til <b>origin</b>.</p>
+  <img src="images/is-114-repository-output-new-branch-push-upstreams.png" width="600" alt="Viser git commit og påfølgende git push, samt en melding fra Git om å bruke --set-upstream">
+  <p><i>Figur 17. Output som viser <code>git commit</code> med påfølgende <code>git push</code> og forslag om en utvidet kommando for å få etablert grenen <code>feature-ikke-gaa-hjem<</code> på <b>origin</b>.</i></p>
+
+  <p> Når vi prøver å bruke <code>git push</code> (se <i>Figur 17</i>), genererer <b>Git</b> output som indikerer at det finnes ingen gren <code>feature-ikke-gaa-hjem</code> på <b>origin</b>, så vi må spesifisere det med en argument <code>--set-upstream</code> og spesifisere hvilken gren vi ønsker å opprette på <b>origin</b>. 
+
+  <pre><code>
+      $ git push --set-upstream origin feature-ikke-gaa-hjem
+    </code></pre>
+    <p><i>CLI Eksempel 6. Kommandoen lager en ny gren på <b>origin</b> og sender endringene deretter.</i></p>
+  
+  <i>CLI Eksempel 6</i> viser hele kommandoen og <i>Figur 18</i> viser output på <b>MacBook-Pro-3</b>. Et par ting, som man bør reflektere over. - output foreslår å lage en <b>pull request</b> (som dere husker var det en måte å publisere endringene på <b>origin</b>, slik at de kan sees av alle potensielle utviklere i prosjektet og at disse utviklere kan bidra til en prosess av innlemmelse av den nye koden i <b>produksjonsversjonen</b>). <b>Git</b> foreslår også en lenke (en URL, som står for <i>Uniform Resource Locator</i> <code>https://github.com/uia-worker/is-114/pull/new/feature-ikke-gaa-hjem</code>, og er en standardmåte å navngi ressurser på WWW). En annen ting er at <b>Git</b> gir beskjed om at den lokale grenen er nå satt opp til å overvåke den tilsvarende grenen på <b>origin</b>.</p>
+
+  <img src="images/is-114-repository-output-new-branch-after-git-push-set-upstream.png" width="500" alt="Output etter at en ny gren er sendt over til origin ved hjelp av --set-upstream.">
+  <p><i>Figur 18. Output etter at en den lokale grenen <code>feature-ikke-gaa-hjem</code> er sendt over til <b>origin</b>. Illustrerer også <b>pull request</b>.</i></p>
+
+  <p>Vi kan også endre "verden" og se hvordan det ser ut på websiden til vår repository hos Github (<i>se Figur 19</i>). Oppløsningen er dårlig, men det som står på den grønne knappen er <b>Compare & pull request</b>. Når man trykker på knappen, fører den til den samme URL-en som <b>Git</b> foreslo i outputen på kommandolinjen.</p>
+  <img src="images/github-etter-push-new-branch-upstream.png" width="600" alt="Github webside etter git push ny gren upstreams">
+  <p><i>Figur 19. Github webside (i "verden" V-GUI), som viser at det har blitt laget en ny gren <code>feature-ikke-gaa-hjem</code>.</i></p>
+
+  <h2>Commit tre versjon 3</h2>
+
+  <p>Hvordan ser "commit-tre" ut nå? Nå har vi to grener i vår repository (både lokalt og på <b>origin</b>), - <code>main</code> og <code>feature-ikke-gaa-hjem</code>. I <i>Figur 20</i> ser vi endringsloggen for grenen <code>feature-ikke-gaa-hjem</code>, og i <i>Figur 21</i> endringsloggen for grenen <code>main</code>. Det er to commit-er i den første og tre i den andre. </p>
+  
+
+  <img src="images/is-114-repository-output-new-branch-git-log-commit-v3.png" width="500" alt="Endringsloggen til grenen feature-ikke-gaa-hjem">
+  <p><i>Figur 20. Endringsloggen til grenen <code>feature-ikke-gaa-hjem</code></i></p>
+
+  <p>Vi kan bytte mellom grenene med kommando <code>git checkout</code>.</p>
+  <pre><code>
+      $ git checkout main
+    </code></pre>
+    <p><i>CLI Eksempel 7. Kommando for å bytte mellom grenene.</i></p>
+
+  <img src="images/is-114-repository-output-main-branch-git-log-commit-v3.png" width="500" alt="Endringsloggen til grenen main">
+  <p><i>Figur 21. Endringsloggen til grenen <code>main</code></i></p> 
+
+  <p>Tilstanden til vår repository som den er nå er illustrert i <i>Figur 22</i>.</p>
+
+
+  <img src="images/commit-tree-v3.svg" width="300" alt="">
+  <p><i>Figur 22. Commit tre versjon tre med to grener og tre commit-er.</i></p>
+
+  <h2>Merging</h2>
+
+  <p>Endelig kan vi legge inn endringene i grenen <code>main</code>. Her vil det bli demonstrert en <code>git merge</code> fra kommandolinjen. Det forutsetter at brukeren har rettigheter til å skrive til <b>origin</b> på Github. Som vi har nevnt tidligere, den anbefalte måten å gjøre dette er gjennom <b>pull request</b>, men formålet med denne guiden var å illustrere tegning av "commit-treet". Sammenslåing blir også enkel her, siden jeg brukte samme Github-kontoen på begge maskinene. <b>Git</b> gjør sammenslåing (engelsk merging) automatisk i dette tilfelle.</p>
+
+  <pre><code>
+      $ git merge feature-ikke-gaa-hjem
+    </code></pre>
+    <p><i>CLI Eksempel 8. Kommando for å innlemme endringene fra grenen <code>feature-ikke-gaa-hjem</code> i grenen <code>main</code> (må være på grenen <code>main</code>).</i></p>
+
+   <img src="images/is-114-repository-output-merging.png" width="500" alt="">
+  <p><i>Figur 23. Output fra innlemming av endringene fra grenen <code>feature-ikke-gaa-hjem</code> i grenen <code>main</code>; brukes <b>Fast-forward</b> metode for sammenslåing, siden det er den samme brukeren som har endret en linje i en av filene i repository</i></p>
+
+  <h2>Commit tre versjon 4 og 5</h2>
+
+  <p>Commit treet etter etter <code>git push</code> er vist i <i>Figur 24</i>.</p>
+    
+
+  <img src="images/commit-tree-v4.svg" width="300" alt="">
+  <p><i>Figur 24. Versjon 4 av "commit-treet" etter sammenslåing og med to grener.</i></p>
+
+  <pre><code>
+      $ git merge feature-ikke-gaa-hjem
+    </code></pre>
+    <p><i>CLI Eksempel 8. Kommando for å innlemme endringene fra grenen <code>feature-ikke-gaa-hjem</code> i grenen <code>main</code> (må være på grenen <code>main</code>).</i></p>
 
   <code><pre>
-    $ git clone
+    $ git push origin -d feature-ikke-gaa-hjem
   </code></pre>
-  <p><i>CLI-eksempel X. ..</i>
+  <p><i>CLI-eksempel 9. Slette <code>feature-</code> grenen fra <b>origin</b> (det vanlig å ikke etterlate slike grener i repository, siden endringene er blitt innlemmet i grenen <code>main</code>.</i>
 
+  <p>Siste versjon av "commit-treet" er vist i </p>
+
+  <img src="images/commit-tree-v5.svg" width="250" alt="">
+  <p><i>Figur 25. Versjon 5 av "commit-treet" med kun en gren.</i></p>
+
+  <p>SLUTT.</p>
   <code><pre>
     // ... eventuelt et eksempel på kildekode
   </code></pre>
@@ -345,27 +470,26 @@ fatal: unable to access 'https://github.com/is114janisg/api-json-eksempler.git/'
   remote: Invalid username or password.
   fatal: Authentication failed for 'https://github.com/is114janisg/api-json-eksempler.git/'
 
-  # om SSH autentisering
+  # om SSH autentisering over HTTPS
   $ ssh -T -p 443 git@ssh.github.com
   # i ~/.ssh/config 
   # Host github.com
   #    Hostname ssh.github.com
   #    Port 443
   #    User git
+  $ ssh -T git@github.com
 </code></pre>
+
+<p>Konklusjonen er at hvis man bruker HTTPS lenken, så må man bruke PAT og endre origin slik at den inneholder brukernavn. For at Git credential manager skal spørre om PAT, må PAT være aktiv på Github. Man kan ikke bruke HTTPS lenken uten at PAT er definert. Hvis man skal bruke SSH nøkkler må man klone med SSH lenken.</p>
     <h2>
       Referanser
       <a name="references"></a>
     </h2>
     <ul>  
-
-     
     <li>CONTENTS. (2018). Opengroup.org. https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/contents.html (CONTENTS, 2018)</li>
-    
     <li>Wikipedia Contributors. (2023a, July 20). Z shell. Wikipedia; Wikimedia Foundation. https://en.wikipedia.org/wiki/Z_shell (Wikipedia Contributors, 2023a)</li>
     <li>Wikipedia Contributors. (2023b, September 2). macOS. Wikipedia; Wikimedia Foundation. https://en.wikipedia.org/wiki/MacOS (Wikipedia Contributors, 2023b)</li>
      <li>Williams, C. (2022, May 31). Customizing my Zsh Prompt. DEV Community; DEV Community. https://dev.to/cassidoo/customizing-my-zsh-prompt-3417 (Williams, 2022)</li>
-
   </ul>
 
   </div>
