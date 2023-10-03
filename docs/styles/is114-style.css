@@ -13,12 +13,21 @@ a:link, a:hover, a:active, a:visited {
   margin-left: 15em;
   line-height: 1.6em;
 }
+
+h1, h2 {
+  line-height: 1.2em;
+}
 .table1 {
   border-collapse: collapse;
 }
 .table1 td, .table1 th {
   border: 1px solid #bc9000;
   padding: 10px 20px;
+}
+.def {
+  padding: 1em; 
+  border: 3px groove #728FCE; 
+  width: 50%;
 }
 table {
   border-collapse: separate;
@@ -42,6 +51,16 @@ code {
   word-break: normal;
   /border-radius: 5px;/
 }
+blockquote {
+    border-left: 4px solid #ddd;
+    padding: 0 1em;
+    margin: 0.5em;
+    color: #767676;
+    display: inline-block;
+}
+
+
+
 /* Tekstbokser på høyre side av hovedkolonnen */
 .refelem, .refcolumn, .refcontent {
   background-color: #002F5D;
