@@ -275,7 +275,15 @@
    <p>Et par ting vi kan legge merke til her. For det første, er <code>HEAD</code> nå flyttet til den siste commit som vi gjorde og <code>origin/main</code> ligger nå en commit bak. Eller mer presist formulert, den ligger en commit bak den versjonen som vi klonet. Hvis noen andre kan skrive til repository-en på Github, så kan vi ikke med sikkerhet vite om statusen på <code>origin/main</code> er den samme, som den var når vi gjorde kloning. Legg også merke til at min e-postadresse er ukorrekt (den eksisterer ikke). <b>Git</b> har forsøkt å lage en e-post adresse ved å kombinere e-postadressen som er registrert hos Github, mitt lokale brukernavn og det elektroniske navnet på min datamaskin (<code>janisg@uiaa223024as.uia.no</code>). Det er ikke heldig, hvis applikasjonen utvikles i et felleskap og hvis andre utviklere ønsker å ta kontakt med meg over e-post. Jeg kan løse dette ved å utføre kommandoene fra <i><a href="#cli-eksempel-2">CLI Eksempel 2</a></i>.</p>
 
   <h3>Commit tre versjon 2</h3>
+  <p>Nå opererer vi både med en lokal og en original repository (som vi nevnte kan vi kalle den <b>origin</b>). En vanlig scenario er at man kloner fra en <b>origin</b>, gjør en eller flere sykluser med testing og utvikling, og så sender endringene tilbake til <b>origin</b>. På denne måten blir <b>origin</b> en sentral repository, som utviklere, som er knyttet til prosjektet, kan jobbe mot. Vi kan også kalle det for <b>produksjonsversjon</b> av applikasjonen. Derfor er vi mest interessert i commit tre for <b>produksjonsversjonen</b>. 
+  <p>La oss sende endringene tilbake til <b>origin</b> og tegne en ny versjon av commit tre.</p>
 
+  <img src="images/is-114-repository-output-git-log-after-git-push.png" width="500" alt="">
+     <p><i>Figur 13. Innholdet i endringsloggen etter <code>git push</code> (endringen gjaldt den nyskapte filen <code>agenda-del-1.txt</code>)</i></p>
+
+  <img src="images/commit-tree-v2.svg" width="250" alt="">
+     <p><i>Figur 14. Innholdet i endringsloggen etter <code>git push</code> (endringen gjaldt den nyskapte filen <code>agenda-del-1.txt</code>)</i></p>
+  
 
   <img src="images/" width="500" alt="">
   <p><i>Figur X. </i></p>
