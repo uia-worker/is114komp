@@ -51,7 +51,7 @@ code {
   word-break: normal;
   /border-radius: 5px;/
 }
-blockquote {
+.defblockquote {
     border-left: 4px solid #ddd;
     padding: 0 1em;
     margin: 0.5em;
