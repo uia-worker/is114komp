@@ -114,12 +114,18 @@
           <tr>
             <td>
               <span class="tocsublinknumber">1<tt>&nbsp;</tt></span>
-              <a href="#hvordanprog" class="tocsubseclink" data-pltdoc="x">Hvordan</a>
+              <a href="#hvordanprog" class="tocsubseclink" data-pltdoc="x">Hvordan lære prog</a>
             </td>
           </tr>
           <tr>
             <td>
-              <span class="tocsublinknumber">1<tt>&nbsp;</tt></span>
+              <span class="tocsublinknumber">2<tt>&nbsp;</tt></span>
+              <a href="#progtilprob" class="tocsubseclink" data-pltdoc="x">Prog og Prob</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="tocsublinknumber">x<tt>&nbsp;</tt></span>
               <a href="#fortolker" class="tocsubseclink" data-pltdoc="x">Fortolker</a>
             </td>
           </tr>
@@ -136,47 +142,89 @@
     -->
 
     <h1>
-      Om programmeringsutdanning (og vi starter å skrive kode)
+      Om programmeringsutdanning
     </h1>
-<p>Temaets video (Wat, <a href="https://www.destroyallsoftware.com/talks/wat">.htm</a>)</p>
+    <p>Temaets video (Wat, <a href="https://www.destroyallsoftware.com/talks/wat">.htm</a>)</p>
+    <p>Teamaets kode</p>
+    <pre>
+<span style="color:brown;"># bbp - barnehagebehov (antall) plasser</span>
+bbp = <span style="color:blue">200</span>
+bbp-plus-5-prosent = bbp + bbp <span style="color:blue">* 0.05</span>
+<span style="font-weight: bolder; color: green;">check</span>: 
+  bbp-plus-5-prosent <span style="font-weight: bolder; color: green;">is</span> <span style="color:blue">210</span>
+<span style="font-weight: bolder; color: green;">end</span>
+    </pre>
+    <h2>Hvorfor og hvordan programmering?
+      <a name="hvordanprog"></a>
+    </h2>
+   
+    <p>Vi besvarte <i>hvorfor</i> i forrige tema (<a href="progogis.html">.htm</a>).</p>
+
+    <p>Det er mye mer utfordrende å beskrive <i>hvordan</i>.</p>
+
+    <p>Programmeringsundervisning er et kontroversielt tema (Brown et al., 2023; Krishnamurthi, 2008; Lau & Guo, 2023). Det finnes ingen generelt annerkjent (bevist) metode for en slik undervisning. Et programmeringsspråk er i seg selv en abstraksjon og representerer mentale modeller til designere av dette språket. Mentale modeller avhenger både av kulturelle, økonomiske og politiske faktorer, og det fører til et stort mangfold av undervisningsopplegg. Det finnes, med andre ord, intet opplegg, som passer i alle kontekster og for hvert individ. Det å lære å programmere er å konstruere mentale modeller ved bruken av eksisterende språkmodeller (ingen programmerer på maskinspråket i dag), som er laget slik at de kan utføres på datamaskiner.</p>
+
+    <p>Hvis du er interessert, så kan du se på hvordan andre universiteter tilnærmer seg programmeringsundervisning. Populære amerikanske universiteter tilbyr introduksjonskurs i informatikk/datavitenskap og programmering (Introduction to Computer Science and Programming in Python | Electrical Engineering and Computer Science | MIT OpenCourseWare, 2016; CSBridge, 2023; CS50x 2023, 2023), og noen av disse er tilgjengelig online.</p> 
+
+    <p>I IS-114 skal vi delvis gjenbruke ett opplegg fra Brown University i USA hvor det brukes en <b>datasentrert</b> tilnærming til problemløsning ved hjelp av datamaskiner. Man kan hevde at data står sentralt i all problemløsning ved bruk av datamaskiner. Av programmeringsspråk skal vi bruke <b>Pyret</b> (designet spesielt for programmeringsopplæring) og <b>JavaScript</b> (pop-språket i dataapplikasjoner anno 2023). I tillegg skal vi stifte kjennskap med et markup-språk <b>HTML</b> og et stilark-språk <b>CSS</b>.</p>
+
+    <p>Et stort felt i programvareutvikling er <b>testing</b>. Det er en bred konsensus rundt at all programvare inneholder bugger (det engelske ordet er <i>bugs</i>). For å minimalisere antall bugger i programmene, er det viktig å kjenne til metoder for testing og kode gjennomgang, som kan redusere antall bugger. Derfro skal vi også introdusere <b>testing</b> i vår introduksjon til programmering.</p>
+
+    <p>I tillegg skal vi bruke <b>versjonskontrollsystemet</b> Git, for å kunne lagre, utveksle og eksekvere (kjøre, utføre) våre programmer. Vi skal også bruke en teksteditor og i noen tilfeller utføre programmene lokalt på vår datamasin.</p>
+
+    <p>Oppsummert, målsettingen for programmeringsdelen av IS-114 er å lære å designe og teste programmer, som løser reelle problemer ved hjelp av datasentrert tilnærming til problemløsing og ved hjelp av [kulturelle] artefakter som Pyret, JavaScript, HTML, CSS, testmetodikken, versjonskontrollsystem og miljø for utførelse av programmer.</p>
 
     
-      Hvorfor og hvordan lære å programmere? 
+    <h2>Hvordan kan programmeringsopplæring relateres til praktisk problemløsning? 
+      <a name="progtilprob"></a>
+    </h2>
+  <p>Det er ikke mulig. Hva? Alt er mulig, hvis man bare tenker positivt! Hva er et praktisk problem? Jeg vil være sjefen av alle generative utrente transformatorer, men får det ikke til. Hvordan angripe et slikt problem? Eller, jeg får angst når jeg tenker på alle programmene (eller var det systemene?), som jeg må bruke i min rolle som X. Kan noen løse dette problemet, please ...!? Eller, jeg vil ha alle A-er, men får bare E-er. Er dette noe som kan løses ved at jeg lærer å programmere datasentrert? JA!!! En til (siste, jeg lover), - jeg vil fikse alle problemene med krig og dårlig bærekraft i verden ... OK, ok på tiden å stoppe nå ...</p>
 
-    Finnes det en optimalt opplegg for å lære å programmere? 
+  <p>Litt mer alvorlig, så ser vi på noe avgrenset problemdomene i tilfelle med informasjonssystemer. Som vi definerte i forrige tema, så må "våre" informasjonssystemer inkludere en eller mange informasjonsprosesseringsenheter. Og informasjonsprosesseringsenheter (IPU-er) må inkludere (en eller mange?) informasjonsteknologier (husk, - en sterk prosessor, som kan utføre algoritmer som representerer sosiale relasjoner (problemer) og som simulerer en høyere ordens tenkning.</p>
 
-  Hvordan kan programmeringsopplæring relateres til praktisk problemløsning? Hva er systemutvikling? 
+  <p>Vi klarer ikke å unngå <i>sosiale problemer</i> og <i>høyere ordens tenking</i>, men det er klart at vi kommer ingen vei uten maskinvaren (prosessor, minne, input/output utstyr med sine fysiske kontrollere og kontaktpunkter).</p>
 
+  <p>Vi kan konkludere at våre <i>praktiske problemer</i> må i de fleste tilfeller løses i forhold til en (firkantet) skjerm og andre input/output innretninger (mus, tastatur, berøringssensorer, mikrofon osv.).</p>
+
+  <p>De rasjonelle (vi kan også kalle de regnskaps- eller kontrakt-) problemer vi løser ved hjelp av datamaskiner er generering av data (i form av diverse symboler og basert på mentale modeller), lagring av data, bearbeiding/endring av data, henting av data og eventuelt sletting av data (som ikke lenger er så trivielt). </p>
+
+  <p>Så kan vi jo spekulere i at vi også "løser" noen problemer med våre lyster, - spill/underholdning, sex, varer. Vi er blitt vandt til vår <i>browser</i>, som gir oss mulighet til å være en <i>lidenskapelig tilskuer</i>, som Charles Baudelaire definerer som en som ønsker å være <cite>bortreist, men allikeve hjemme overalt, se verden, være i verdenssentrum og samtidig være usynlig for resten av verden</cite>.</p>
+
+  <p>Om allminnelig og vitenskapelig kunnskap faller under noen av disse problem-kategoriene er et godt spørsmål.</p>
+
+      <blockquote class="incercise">
+        <p class="incerciseheader">Gjør det nå! Spørsmål til refleksjon.</p>
+        <blockquote class="incercisebody">
+          <p>Ser du flere problemerområder, som kan løses ved hjelp informasjonssystemer enn de <i>rasjonelle</i> og de <i>lystrelaterte</i>? Hvilket praktisk problem som du har tenkt på eller kunne tenke på, som kunne løses med informasjonssystemer?</p>
+        </blockquote>
+      </blockquote> 
+
+<p>Så hva er svaret på spørsmålet "hvordan kan programmeringsopplæring relateres til praktisk problemløsning"? Foreløpig, tenke på problemer fra sin egen hverdag og se om de kan løses ved hjelp av informasjonssystemer (slik som vi har definert det).</p>
+
+  Hva er systemutvikling? 
+<p>Når vi har "tenkt ut" problemer, kan vi gå i gang med <i>systemutviklin</i>. Vi nevnte flere mulig tilnærminger i forrige tema, og anbefalte en "forenkelig" tilnærming med tre hovedfaser, - analyse og design, testing og utrulling.</p>
+<p>Kort sagt, vi må formalisere vårt problem på en måte, som en datamaskin kan bidra til å løse. Som det fremkommer fra definisjon av informasjonsteknologi (Harold J. Leavitt og Thomas L. Whisler), som vi ikke kan unngå, så trenger vi å bruke beregningsorientert tenkning (dvs. matematisk og logisk apparat). Før vi skriver en linje med kode, må vi vite rimelig nøyaktig hvordan vi skal "stokke" de instruksjonene, som er tilgjengelig gjennom et programmeringsspråk. Det betyr også at vi på et eller annet tidspunkt må velge et (eller flere) programmeringsspråk for å kunne utvikle noe som helst.</p>
 
 Hva er beregningsbasert tenkning (relevante abstraksjoner: algoritmer, datastrukturer, tilstandsmaskiner, språk, logikk og semantikk, heuristikk, kontrollstrukturer, kommunikasjon, arkitekturer)? 
+
 
 
 Hva er rollen til programmering i systemutvikling generelt? 
 <p>Programmering </p>
 
 Hva er datasentrert læring av programmering? 
-<p>Under gjennomgangen av forrige tema brukte vi mange ord som begynte med <b>data</b>. Dataingeniør, datasystem, databehandling, dataanalytiker, datamaskin osv. Uten data finnes det ingen informasjonsprosesseringsenhet (IPU) og dermed intet informasjonssystem. Enhver prosess for å skape informasjonssystemer begynner med datainnsamling. Siden mennesker kommuniserer med naturlige språk, så presenteres data på naturlige språk i første omgang. For å kunne få hjelp av Turing kom</p>
+<p>Under gjennomgangen av forrige tema brukte vi mange ord som begynte med <b>data</b>. Dataingeniør, datasystem, databehandling, dataanalytiker, datamaskin osv. Uten data finnes det ingen informasjonsprosesseringsenhet (IPU) og dermed intet informasjonssystem. Enhver prosess for å skape informasjonssystemer begynner med datainnsamling. Siden mennesker kommuniserer med naturlige språk, så presenteres data på naturlige språk i første omgang. For å kunne få hjelp av Turing-komplett Von-Neumann maskin, må data representere med tall. Det kalles kvantifisering eller formalisering.</p>
 
 Hva er et programmeringsspråk? 
 <p>Formelt defineres et språk med en alfabet og regler (begrensninger) for bruken av dette alfabetet. Et alfabet i et formelt språk an bestå av symboler, bokstaver eller token</p>
 
 Hvorfor er det så mange programmeringsspråk? 
-<p>Taksonomisk system for språk brukt i datamaskiner (<a href="https://web.archive.org/web/20110220062716/http://hopl.murdoch.edu.au/taxonomy.html">.htm</a>).</p>
-<p>Tidslinjen (opp til 2020) av programmeringsspråk (<a href="https://www.levenez.com/lang/">.htm</a>).</p>
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Go</td>
-      <td><cite>... what became called "cloud computing" needed a language with good support for concurrency and easy deployment, among other things.</cite> (Rob Pike, <a href="https://evrone.com/blog/rob-pike-interview">.htm</a>)</td>
-    </tr>
-  </tbody>
-</table>
+<p>Den nyeste oversikten over de mest brute programmaringsspråk, som jeg klarte å finne var på Wikipedia (<a href="https://en.wikipedia.org/wiki/Timeline_of_programming_languages">.htm</a>). Det finnes også en side som prøver å holde det oppdatert, men den strekker seg foreløpig til 2020 <a href="https://www.levenez.com/lang/">.htm</a>).</p>
+
+<p>Man kan spekulere i mange grunner for at det finnes mange programmeringsspråk, men det er to ting som kanskje er nødvendig for at nye programmeringsspråk blir laget og ikke minst distribuert (eller dissiminert), - Internett med de virtuelle felleskap og utstrakt bruk av datamaskiner i mange forskjellige (kulturelle) kontekster. Endringer i måter man prosserer data på er også en trigger for nye programmeringsspråk, som i tifelle av <code>Go</code>, - <cite>... what became called "cloud computing" needed a language with good support for concurrency and easy deployment, among other things.</cite> (Rob Pike, <a href="https://evrone.com/blog/rob-pike-interview">.htm</a>). Mange idebærere og skapere av programmeringsspråk, oppgir pragmatiske (og/eller opportunistiske) grunner for å lage et nytt språk. Det nyeste pop-språket er Mojo, som skal vil hjelpe å løse problemer med utvikling av KI-applikasjoner (<a href="https://www.latent.space/p/modular#details">.htm</a>).</p>
+
+
+
 
 Hva er rollen til programmeringsspråk i programmeringsutdanning?
 <p>Det finnes mange casestudier om hvilket programmeringsspråk er best egnet i utdanningssituasjoner, men det er fortsatt et åpent spørsmål.</p>
@@ -184,11 +232,19 @@ Hva er rollen til programmeringsspråk i programmeringsutdanning?
  Hvordan kan man eksperimentere med programmeringsspråk? 
 <p>Finnes mange interaktive verktøy på WWW. Finnes pakker for de fleste programmeringsspråk, som man kan laste ned fra WWW og utføre lokalt på sin datamaskin. Tio er en webside som gir mange muligheter for eksperimenter (<a href="https://tio.run/#">.htm</a>)</p>
 
-Hva er en fortolker? 
-<p>Et program som interpreterer kode skrevet på et programmeringsspråk og oversetter den direkte til en representajon som kan utføres på en datamaskin.</p>
 
-Hvorfor bruke en fortolker? 
-<p>Fortolker tolker kode direkte og returnerer output i real tid (programmerer trenger ikke å kompilerer koden først). Det er vanligvis en tregere måte å utføre programmer på, men det gjør debugging (finne og fjerne feil) enklere.</p>
+
+    <h2>Hva er en fortolker?
+      <a name="fortolker"></a>
+    </h2>
+
+    <p>Kort sagt er en fortolker et program som parser en mengde med symboler, oversetter disse symbolene til signaler, som datamaskin kan behandle og eventuelt returnerer en meningsfull output til en bruker (en individ i bruker-posisjonen, som spiller en rolle).</p>
+
+    <img src="images/is-114-jeffrey-kompilering-eksekvering.png" height="450" alt="Bunge Information Processing Unit = User + Hardware + Program">
+     <p><i>Figur 1. Faser og dataflyt for prosessering av et enkelt programmeringsspråk (tegnet av JG basert på Figure 1.1 fra boken "Build Your Own Programming Language" av Clinton L. Jeffrey, publisert av Packt Publishing).</i></p>
+
+<p>Som vist i <i><b>Figur 1</b></i> har tolkning av kildekode, dvs. instruksjonene som programmereren har lagret i en fil, flere sekvensielle faser. En fortolker, som f. eks. det vi bruker for Pyret programmeringsspråket, gjør alle disse fasene en etter en, dvs. mellomlagrer ikke noen av del-representasjoner. Vi skriver inn kildekode, trykker på <code>Run</code> (eller i noen tilfeller kan fortolker også fortolke i sanntid) og ser resultatet av vårt utført av datamaskinen.</p>
+<p>En fordel med fortolkere er at man kan eksperimentere med enkelte instruksjoner istedenfor å kompilere (mellomlagre en fil med en representasjon nærme maskinkode) et større program først og så utføre den. Det gjør at vi kan oppdage feil enklere. Ulempen med fortolkere er at de er relativt trege, fordi at de må gjøre hele prosessen vist i <i><b>Figur 1</b></i>om og om igjen, hver gang brukeren skriver inn en ny instruksjon. Fortolkere har vanligvis en prompt, hvor programmereren kan skrive inn instruksjoner direkte.</p>
 
 Hva er forskjell mellom en fortolker og et utviklingsmiljø?
 <p>En fortolker blir vanligvis brukt gjennom en prompt, men i et utviklingsmiljø (på engelsk kalles det ofte Integrated Development Environment, - IDE) opererer man en applikasjon med grafisk brukergrensesnitt og har andre funksjoner tilgjengelig direkte i grensesnittet. I et utviklingsmiljø kan man utvikle både i programmeringsspråk som bruker fortolkere og programmeringsspråk som bruker kompilatorer. </p>
@@ -198,30 +254,6 @@ Hvorfor er diskusjon om hvordan skrive programmer viktig ("vanlig" tekstbehandle
 
 Praktisk introduksjon av to fortolkere (Pyret fortolker(PF) og JavaScript fortolker (JSF)).
 <p></p>
-
-    <h2>Hvorfor og hvordan programmering?
-      <a name="hvordanprog"></a>
-    </h2>
-   
-    <p>Vi besvarte <i>hvorfor</i> i forrige tema (<a href="progogis.html">.htm</a>).</p>
-
-    <p>Det er mye mer utfordrende å beskrive <i>hvordan</i>.</p>
-
-    <p>Programmeringsundervisning er et kontroversielt tema (Brown et al., 2023; Krishnamurthi, 2008; Lau & Guo, 2023). Det finnes ingen generelt annerkjent (bevist) metode for en slik undervisning. Et programmeringsspråk er i seg selv en abstraksjon og representerer mentale modeller til designere av dette språket. Mentale modeller avhenger både av kulturelle, økonomiske og politiske faktorer, og det fører til et stort mangfold av undervisningsopplegg. Det finnes, med andre ord, intet opplegg, som passer i alle kontekster. Det å lære å programmere er å konstruere mentale modeller ved bruken av eksisterende språkmodeller (ingen programmerer på maskinspråket i dag), som er laget slik at de kan utføres av datamaskiner.</p>
-
-    <p>Populære amerikanske universiteter tilbyr introduksjonskurs i informatikk/datavitenskap og programmering (Introduction to Computer Science and Programming in Python | Electrical Engineering and Computer Science | MIT OpenCourseWare, 2016; CSBridge, 2023; CS50x 2023, 2023), og noen av disse er tilgjengelig online.</p> 
-
-    <p>I IS-114 skal vi fokusere på en datasentrert tilnærming til problemløsning ved hjelp av datamaskiner. Data står sentralt i all problemløsning ved bruk av datamaskiner. Av programmeringsspråk skal vi bruke Pyret og JavaScript. I tillegg skal vi stifte kjennskap med et markup-språk HTML og et stilark-språk CSS. Et stort felt i programvareutvikling er testing. Det er en bred konsensus om at all programvare inneholder bugger (det engelske ordet er <i>bugs</i>). For å minimalisere antall bugger i programmene, er det viktig å kjenne til metoder for testing og kode gjennomgang, som i noen tilfeller kan redusere antall bugger. Derfro skal vi også introdusere <b>testing</b> og <b>versjonskontrollsystemet Git</b>.</p>
-
-    <p>Oppsummert, målsettingen for programmeringsdelen av IS-114 er å lære å designe og teste programmer, som løser reelle problemer ved hjelp av datasentrert tilnærming til problemløsing og ved hjelp av [kulturelle] artefakter som Pyret, JavaScript, HTML og CSS.</p>
-
-
-    <h2>Hva er en fortolker?
-      <a name="fortolker"></a>
-    </h2>
-
-    <p>Kort sagt er en fortolker et program som parser en mengde med symboler, oversetter disse symbolene til signaler, som datamaskin kan behandle og eventuelt returnerer en meningsfull output til en bruker (en individ i bruker-posisjonen, som spiller en rolle).</p>
-
 
 <h2>Referanser</h2>
 <ul>  
