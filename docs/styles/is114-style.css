@@ -51,7 +51,7 @@ code {
   word-break: normal;
   /border-radius: 5px;/
 }
-blockquote {
+.defblockquote {
     border-left: 4px solid #ddd;
     padding: 0 1em;
     margin: 0.5em;
@@ -230,7 +230,25 @@ blockquote {
     margin-left: -10px;
 }
 
-.incercisebody, .exercisebody .dtrategybody .respcsbody .codeexampbody {
+.strategy {
+    padding: 0px 0px 0.5em 10px;
+    border: 3px solid #2a8891;
+    background-color: #dddddd;
+}
+
+.strategyheader p {
+  margin: 0 0 1em 0;
+}
+
+.strategyheader {
+    font-weight: bold;
+    background-color: #2a8891;
+    color: #E8E6E7;
+    padding: 5px 0px 5px 10px;
+    margin: 0 0 1em -10px;
+}
+
+.incercisebody, .exercisebody .dtrategybody .respcsbody .codeexampbody .strategybody {
     margin-left: 0px;
     margin-right: 10px;
 }
