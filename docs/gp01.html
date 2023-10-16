@@ -284,6 +284,15 @@ overlay-align("pinhole", "bottom", overlay-align("pinhole", "middle", circle(8, 
 
   <p>Analyse og syntese blir ofte fremstilt som to forskjellige prosesser. I systemutviklingen snakker vi mye mer om analyse enn syntese. Når vi setter oss mål, som vi ønsker å oppnå i form av en artefakt, så anbefales det vanligvis å analysere artefakten, dvs. dele den opp i komponenter. Syntese er når man tar eksisterende artefakter, som oppfattes helhetlig, og setter de sammen i et større system. I systemutvikling gjør vi dette kanskje mer ubevisst, når vi bruker eksisterende moduler, pakker, biblioteker og funsjoner i et rammeverkt og kombinerer disse for å oppnå et ønsket resultat. Først analyse og så syntese kan være en oppskrift på fremgang i programmering. <i>Tabell 1</i> er et eksempel på en analyse. Så må vi lete videre etter reelle og abstrakte elementer, som kan representere hver del som vi har delt ut under analysen, for eksempel, "byggeklossene" i Pyret fra "image"-pakken (som i mange programmeringsrammeverk kalles for innebygde funksjoner og biblioteker).</p>
 
+  <p>For å skape koden i <i>Kodeeksemplet 1</i> følgende innebygde funksjoner fra Pyret ble benyttet:
+<ul>
+  <li> <a href="https://pyret.org/docs/latest/image.html#%28idx._%28gentag._447%29%29">overlay-align</a>(legge et bilde over et annet bilde og plassere den med posisjonsnavn)</li>
+  <li><a href="https://pyret.org/docs/latest/image.html#%28idx._%28gentag._473%29%29">crop</a> (beskjære en et bilde med en firkant)</li>
+  <li><a href="https://pyret.org/docs/latest/image.html#%28idx._%28gentag._415%29%29">circle</a>(tegne en sirkel)</li>
+</ul>
+   </p>
+   <p>Du må være klar over at med "byggeklossene", som de innebygde funksjonene og funksjonene fra biblioteker i Pyret, finnes det et meget høyt antall mulige kombinasjoner for å oppnå samme resulatet. Måten  <i>Kodeeksempel 1</i> ble skapt kan man kalle for syntese. Jeg tok et problem  - å tegne "Yin og Yang" (kjent for meg bilde) ved hjelp av Pyret interpretator og på nettsided CPO -  analyserte bildet og fant ut at bilde kan tolkes som en kombinasjon av hvite og svarte sirkler (med forskjellige kombinasjoner av fyll og omriss, dvs. gjorde en analyse av et element fra dagliglivet. Så måtte jeg finne ut hvilke muligheter Pyret hadde for å tegne sirkler og begynte å teste tegninger av enkelte sirkler og etterhvert kombinere disse for å nå mitt mål, - "Yin og Yang"-bilde i det interaktivet vinduet på CPO (code.pyret.org). For å gjøre det i et annet programmeringsspråk og i et annet vindu, ville jeg måttet å studere de innebygde funksjonene og biblioteker for det konkrete programmeringssspråket. Jeg ville også måtte å finne et program/miljø, slik at jeg kunne  eksperimentert med funksjonene og til slutt fått et "Yin og Yang" bilde vist på skjermen.</p>
+
 
 
 <img src="images/is-114-bunge-ipu.png" width="300" alt="Bunge Information Processing Unit = User + Hardware + Program">
