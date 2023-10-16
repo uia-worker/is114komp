@@ -120,19 +120,25 @@
           <tr>
             <td>
               <span class="tocsublinknumber">1<tt>&nbsp;</tt></span>
-              <a href="#hvordanprog" class="tocsubseclink" data-pltdoc="x">Programmering, - hvorfor og hvordan</a>
+              <a href="#fantasimaskin" class="tocsubseclink" data-pltdoc="x">Fantasimaskin</a>
             </td>
           </tr>
           <tr>
             <td>
               <span class="tocsublinknumber">2<tt>&nbsp;</tt></span>
-              <a href="#" class="tocsubseclink" data-pltdoc="x">X</a>
+              <a href="#ica" class="tocsubseclink" data-pltdoc="x">Arbeid i klassen</a>
             </td>
           </tr>
           <tr>
             <td>
               <span class="tocsublinknumber">3<tt>&nbsp;</tt></span>
-              <a href="#" class="tocsubseclink" data-pltdoc="x">X</a>
+              <a href="#verk" class="tocsubseclink" data-pltdoc="x">Verktøy</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="tocsublinknumber">4<tt>&nbsp;</tt></span>
+              <a href="#referanser" class="tocsubseclink" data-pltdoc="x">Referanser</a>
             </td>
           </tr>
         </tbody>
@@ -148,34 +154,153 @@
     -->
 
     <h1>
-      Hvordan kommer vi i gang? Du vet noe, men du vet ikke at du vet det = ideologi
+      Hvordan kommer vi i gang?
     </h1>
-    <p>My motive's so handy<br /> 
-        Nothing but bogus operandi, yeah</p>
-    <p>Temaets video (xxx, <a href="https://kt.academy/article/humour-video">.htm</a>, eventuelt utdrag fra Dylan Beattie (34:27 <a href="https://www.youtube.com/watch?v=gdSlcxxYAA8">.htm</a>) og om "quine" <a href="https://github.com/mame/quine-relay">.htm</a>)</p>
-    <p>Teamaets kode</p>
-    <pre>
-<span style="color:brown;"># bbp - barnehagebehov (antall) plasser</span>
-bbp = <span style="color:blue">200</span>
-bbp-plus-5-prosent = bbp + bbp <span style="color:blue">* 0.05</span>
-<span style="font-weight: bolder; color: green;">check</span>: 
-  bbp-plus-5-prosent <span style="font-weight: bolder; color: green;">is</span> <span style="color:blue">210</span>
-<span style="font-weight: bolder; color: green;">end</span>
-    </pre>
-    <h2>1 Målsetting
-      <a name="maalsetting"></a>
+    
+<p>Temaets videoer:
+  <ul>  
+    <li>Teaser video for JavaZone 2010 featuring Jenny Skavlan, <a href="https://www.youtube.com/watch?v=1JZnj4eNHXE">.htm</a></li>
+    <li>Carlo Micheli, "The Turing Machine - An Implementation", <a href="https://www.youtube.com/watch?v=ZKoyp458wOU">.htm</a></li>
+  </ul></p>
+  
+<p>Temaets kode</p>
+
+<blockquote class="codeexamp">
+        <p class="codeexampheader">Kodeeksempel 1 (forstå komposisjon og gjenbruk)</p>
+        <blockquote class="codeexampbody">
+      <pre>
+overlay-align("pinhole", "bottom", overlay-align("pinhole", "middle", circle(8, "solid", "white"), 
+  circle(25, "solid", "black")), overlay-align("pinhole", "top", overlay-align("pinhole", "middle", 
+    circle(8, "solid", "black"), circle(25, "solid", "white")), overlay-align("pinhole", "middle",
+      crop(50, 0, 100, 100, circle(50, "solid", "black")), overlay-align("pinhole", "middle", 
+        circle(50, "outline", "black"), circle(50, "solid", "white")))))
+
+</pre>
+        </blockquote>
+      </blockquote>
+
+        <h2>1 Fantasi- / ideell-maskin
+      <a name="fantasimaskin"></a>
     </h2>
    
 
-
-<h2>X Dagens sjargong-ord
-  <a name="sjargong"></a>
-</h2>
-<p><b>coerce</b> - tvinge noe i koden, for eksempel med parenteser (som betyr mellomsetning på gresk); <code>!!true</code> og med tvinging vha. parenteser<code>!!(true)</code>
-</p>
+<p>En <b>fantasi-/ideell-maskin</b> er en modell mellom kildekoden og den fysiske maskinen hvis formål er å hjelpe den som lærer å programmere (oversatt og omformulert av JG basert på bloggen <a href="https://www.felienne.com/archives/6375">.htm</a>)</p>
+<p>Fortellinger om kode, som en "verdi ligger i minne", "en variabel er som en boks", "alt er en fil", "alt er en objekt" osv., er typiske eksempler på fantasi-maskiner. Fantasi-maskiner kan også forstås som semantiske regler, som beskriver hva som skjer inne i maskinen. For eksemepel, vi kan bruke addisjon for å si noe om design av maskinen som kan gjennomføre addisjon.</p>
 
 
-<h2>X Referanser
+<blockquote class="codeexamp">
+        <p class="codeexampheader">Kodeeksempel 2 (forstå funksjon)</p>
+        <blockquote class="codeexampbody">
+      <pre>
+  # Anta at vi har et uttrykk
+  3 + 4
+  
+  # uttrykket behandles av et program
+  # som splitter det opp i "tokens" og klassifiserer disse
+  # (tall, 3), (op, +), (tall, 4)
+  # Basert på dette lages det instruksjoner for maskinen:
+  # f. eks. i hvilken rekkefølge og hvordan skal vi lagre "tokens" 
+  # i maskinen for å returnere ønsket resultat.
+  # Når data er lagret, utføres instruksjonene en etter en.
+  # Blant annet har prosessor en innebygd instruksjon 
+  # for addisjon, som er laget basert på det binære 
+  # tallsystemet
+  7
+
+</pre>
+        </blockquote>
+      </blockquote> 
+<br />
+
+
+<h2>2 Arbeid i klassen
+      <a name="ica"></a>
+    </h2>
+
+<p>Legg merke til de forskjellige begrepene som brukes <i>Kodeeksempel 2</i>.</p>
+<p>Vi skal videre analysere begrepene som <b>uttrykk</b>, <b>program</b>, <b>tokens</b>, <b>instruksjon</b>, <b>op</b> (som står for operatør), <b>prosessor</b>, <b>innebygd instruksjon</b>, <b>lagring</b> og <b>det binære tallsystemet</b>.</p>
+
+    
+  <blockquote class="incercise">
+        <p class="incerciseheader">Spørmsål for arbeid i klassen.</p>
+        <blockquote class="incercisebody">
+          <p>Beskriv dine tanker så nøyaktig som mulig når du skal "prosessere" det symbolske uttrykket "3 + 4". Diskuter og sammenligne med en annen student (eller eventuelt flere andre).</p>
+          <p>Gjør det sammen med uttrykket "3 + 5 * 7". Hva er forskjellig (i dine tanker) fra uttrykket "3 + 4".</p>
+          <p>Beskriv dine tanker når du ser verdien "Jeg skal lære programmering". Diskuter og sammenligne igjen.</p>
+          <p>Beskriv dine tanker når du ser maleriet av Munk, Skrik (<a href="https://media.snl.no/media/19962/standard_compressed_712px-Edvard_Munch_-_The_Scream_-_Google_Art_Project.jpg">.htm</a>)</p>
+          <p>Nå prøv å tenke berenginsorientert i de tre tilfellene.</p>
+        </blockquote>
+      </blockquote> 
+
+
+<h2>3 Diverse "verktøy"
+      <a name="verk"></a>
+    </h2>
+<table class="table1" >
+      <thead>
+          <tr>
+              <th colspan="3">Verktøy BOT: Beregningsorientert tenkning</th>
+          </tr>
+          <tr>
+              <th>Begrep</th>
+              <th>Fantasimaskin / element i beregningsorientert tenkning</th>
+              <th>Beskrivelse</th>
+
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>tall</td>
+              <td>telle mes "streker" eller staver</td>
+              <td>markere spesifikt antall ting med et symbol, telle ting; viktig å forstå at det kan konstrueres uendelig mange "tallsystemer"</td>
+              
+              
+          </tr>
+          <tr>
+              <td>string</td>
+              <td>tittelen på en artikkel, språkrelaterte symboler, alle våre "chat"-applikasjoner</td>
+              <td>telle antall tegn i en tekst; vite om begrensninger av antall tegn i et tekst-felt i dataapplikasjoner osv.</td>
+              
+              
+          </tr>
+          
+          <tr>
+              <td>image</td>
+              <td>antall piksler, antall farger og fargekoder, koordinatsystem, (grunn)figurer</td>  
+              <td>mange måter å tenke på en bilde på, - en mengde med piksler, en mengde med streker, en mengde med komponenter</td>            
+              
+              
+          </tr>
+          <tr>
+              <td>komposisjon / substitusjon</td>
+              <td>man kan kombinere flere ting sammen for å oppnå en helhetlig resultat, kan også være relatert til substitusjon<; /td>
+              <td>reise fra kristiansand til oslo med en transportmiddel (kan returnere relevante transportmidler, avstand, kart osv.); reise fra kristiansand til oslo med sykkel (transportmiddel er blitt erstattet med "sykkel", kan returnere estimert tid for reise), reise fra kristiansand til oslo med "sykkel og buss", reise fra kristiansand, bjørndalssletta til oslo bussterminal med "sykkel og buss"  osv.</td>              
+              
+              
+          </tr>
+      </tbody>
+  </table>
+  <p>Tabell 1. Hvordan øve på beregningsrelatert tenkning.</p>
+
+  <p>Analyse og syntese blir ofte fremstilt som to forskjellige prosesser. I systemutviklingen snakker vi mye mer om analyse enn syntese. Når vi setter oss mål, så vi ønsker å oppnå i form av en artefakt, så anbefales det vanligvis å analysere artefakten, dvs. dele den opp i komponenter. Syntese er når man tar eksisterende artefakter som oppfattes helhetlig og setter de sammen i et større system. I systemutvikling gjør vi dette kanskje mer ubevisst, når vi bruker eksisterende moduler, pakker, biblioteker og funsjoner i et rammeverkt og kombinerer disse for å oppnå ønsker resultatet. Så først analyse og så syntese kan være en oppskrift på fremgang i programmering. Tabell 1 er et eksempel på analyse. Så må vi lete videre etter reelle elementer, som kan representere hver del som vi delte ut i analysen, for eksempel, "byggeklossene" i Pyret fra "image"-pakken (som i mange programmeringsrammeverkt kalles for innebygde funksjoner og biblioteker).</p>
+
+
+
+<img src="images/is-114-bunge-ipu.png" width="300" alt="Bunge Information Processing Unit = User + Hardware + Program">
+     <p><i>Figur 1. Informasjonsprosesseringsenhet etter Bunge.</i></p>
+
+    <br />
+    <br />
+
+<img src="images/is-114-analyse-verktoy-bunge-bpce.png" height="450" alt="Analyse verktøy for universale sytemer">
+     <p><i>Figur 2. Illustrasjon for systemanalyse (etter Mario Bunge).</i></p>
+ <br />
+    <br />
+
+<img src="images/is-114-kort-verden-data.png" height="450" alt="Tankekort i IS-114">
+     <p><i>Figur 3. Tankekort i IS-114.</i></p>
+
+<h2>4 Referanser
   <a name="referanser"></a>
 </h2>
 <ul>  
@@ -195,6 +320,10 @@ bbp-plus-5-prosent = bbp + bbp <span style="color:blue">* 0.05</span>
   <li>Kunnskapsdepartementet. (2023, April 20). Strategi for digital kompetanse og infrastruktur i barnehage og skole. Regjeringen.no; Regjeringen.no. https://www.regjeringen.no/no/dokumenter/strategi-for-digital-kompetanse-og-infrastruktur-i-barnehage-og-skole/id2972254/?ch=5</li>
 
   <li>Lau, S., & Guo, P. (2023). From "Ban It Till We Understand It" to "Resistance is Futile": How University Programming Instructors Plan to Adapt as More Students Use AI Code Generation and Explanation Tools such as ChatGPT and GitHub Copilot https://doi.org/10.1145/3568813.3600138 (Lau & Guo, 2023)</li>
+
+  <li>Notional Machines. (2023). Notional Machines. https://notionalmachines.github.io/notional-machines.html (Notional Machines, 2023)</li>
+
+  <li>PLATO Empire - Empire 1. (2016). Daleske.com. http://www.daleske.com/plato/empire1.php (PLATO Empire - Empire 1, 2016)</li>
  
   <li>Su, J., & Yang, W. (2023). A systematic review of integrating computational thinking in early childhood education. Computers and Education Open, 4, 100122–100122. https://doi.org/10.1016/j.caeo.2023.100122 (Su & Yang, 2023)</li>
 

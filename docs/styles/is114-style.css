@@ -34,8 +34,8 @@ table {
   text-indent: initial;
   border-spacing: 2px;
 }
+/*
 pre {
-  /*background-color: #3e5f53; */ /* #78938A; #cfd1a7; #3e5f53 #cfd5d3 */
   overflow: auto;
   font-family: 'Monaco', monospace;
   padding: 0 1em;
@@ -45,11 +45,28 @@ pre {
 code {
   font-family: Monaco, monospace;
   line-height: 100%;
-  color: #000000; /* #cfd5d3 #565656 #636262 9fafaa 1f2e2a */
+  color: #000000;
   padding: 0.2em;
   letter-spacing: -0.05em;
   word-break: normal;
-  /border-radius: 5px;/
+  border-radius: 5px;
+}
+*/
+pre {
+  background-color: #FFFBF7;
+  overflow: auto;
+  font-family: 'Monaco', monospace;
+  /*padding: 0 1em;*/
+  font-size: 0.8em;
+}
+code {
+  font-family: Monaco, monospace;
+  line-height: 100%;
+  color: #565656;
+  padding: 0.2em;
+  letter-spacing: -0.05em;
+  word-break: normal;
+  border-radius: 5px;
 }
 .defblockquote {
     border-left: 4px solid #ddd;
@@ -185,19 +202,19 @@ blockquote {
 
 /* section with programming code */
 .codeexamp {
-  padding: 0px 0px 0.5em 10px;
+  padding: 0px 0px 0px 0px;
   border-left-style: solid;
   border-width: 5px;
   border-color: green;
-  background-color: #3e5f53;
+  background-color: #FFFBF7;
 }
 
 .codeexampheader {
-  font-weight: bold;
-  font-style: italic;
+  color: antiquewhite;
   background-color: #6d8486;
   padding: 5px 0px 5px 10px;
-  margin-left: -10px;
+  margin-left: 0px;
+  margin-top: 0;
 }
 
 /* section about responsible computing */
@@ -248,7 +265,7 @@ blockquote {
     margin: 0 0 1em -10px;
 }
 
-.incercisebody, .exercisebody .dtrategybody .respcsbody .codeexampbody .strategybody {
+.incercisebody, .exercisebody .dtrategybody .respcsbody .strategybody {
     margin-left: 0px;
     margin-right: 10px;
 }
