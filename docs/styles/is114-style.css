@@ -270,6 +270,11 @@ blockquote {
     margin-right: 10px;
 }
 
+.imgcontainer {
+  align-items: center;
+  float:left;
+}
+
 /* print styles */
 @media print {
 
