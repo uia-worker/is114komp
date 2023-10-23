@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="no-NB">
+<head>
+    <meta charset="utf-8">
+    <title>IS-114 Kompendium: GP03</title>
+    <link href='https://fonts.googleapis.com/css?family=IBM Plex Serif' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/is114-style.css" title="default">
+    <script type="text/javascript" src="js/is114.js"></script>
+</head>
+<body>
+  <div class="tocset">
+    <div class="tocview">
+      <div class="tocviewlist tocviewlisttopspace">
+        <div class="tocviewtitle">
+          <table cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td style="width: 1em;">
+              <a href="javascript:void(0);" title="Expand/Collapse" class="tocviewtoggle" onclick="TocviewToggle(this,&quot;tocview_0&quot;);">▼</a>
+                </td>
+                <td>
+                </td>
+                <td>
+                  <a href="index.html" class="tocviewlink" data-pltdoc="x">Høst 2023: IS-114</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tocviewsublisttop" style="display: block;" id="tocview_0">
+          <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="index.html" class="tocviewlink" data-pltdoc="x">Beskrivelse og rettningslinjer</a>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="komp.html" class="tocviewselflink" data-pltdoc="x">Kompendium</a>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="draft_git.html" class="tocviewlink" data-pltdoc="x">Oppgaver</a>
+              </td>
+            </tr>
+            <!--
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="#" class="tocviewlink" data-pltdoc="x">Kollokvium</a>
+              </td>
+            </tr>
+          -->
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="honnor.html" class="tocviewlink" data-pltdoc="x">Honnør</a>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="tocviewlist">
+        <table cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <td style="width: 1em;">
+                <a href="javascript:void(0);" title="Expand/Collapse" class="tocviewtoggle" onclick="TocviewToggle(this,&quot;tocview_1&quot;);">▼</a>
+              </td>
+              <td>
+              </td>
+              <td>
+                <a href="" class="tocviewselflink" data-pltdoc="x">Kompendium</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="tocviewsublistbottom" style="display: block;" id="tocview_1">
+          <table cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="progogis.html" class="tocviewlink" data-pltdoc="x">Programmering og informasjonssystemer</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="progutdann.html" class="tocviewlink" data-pltdoc="x">Programmeringsutdanning</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="gp01.html" class="tocviewlink" data-pltdoc="x">GP01: komme i gang</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="gp02.html" class="tocviewselflink" data-pltdoc="x">GP02: variabler</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="tocsub">
+      <div class="tocsubtitle">På denne siden:</div>
+      <table class="tocsublist" cellspacing="0">
+        <tbody>
+          <tr>
+            <td>
+              <span class="tocsublinknumber">1<tt>&nbsp;</tt></span>
+              <a href="#" class="tocsubseclink" data-pltdoc="x">X</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="tocsublinknumber">2<tt>&nbsp;</tt></span>
+              <a href="#" class="tocsubseclink" data-pltdoc="x">X</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="tocsublinknumber">3<tt>&nbsp;</tt></span>
+              <a href="#" class="tocsubseclink" data-pltdoc="x">X</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="tocsublinknumber">X<tt>&nbsp;</tt></span>
+              <a href="#referanser" class="tocsubseclink" data-pltdoc="x">Referanser</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="maincolumn">
+    <!-- kun for første side
+    <div class="versionbox">
+      <span class="version">Mandag, 23. Oktober 2023, laget av Janis Gailis</span>
+    </div>
+    -->
+
+<h1>
+  Hvorfor funksjoner?
+</h1>
+    
+<p>Her beskriver kort Krishnamurthi metoden for design av funksjoner.</p>
+    
+<p>Temaets video:
+  <ul>  
+    <li>Dylan Beattie, "The Art of Code" Programmeringsspråket Rockstar (til ca. 53:35)<a href="https://youtu.be/gdSlcxxYAA8&t=3010">.htm</a></li>
+  </ul>
+</p>
+
+<p>Temaets spill:</p>
+  <ul>  
+    <li>Rocky's Boots<a href="Rockys_Boots_1982_Learning_Company">.htm</a></li>
+  </ul>
+</p>
+  
+<p>Temaets kode:</p>
+
+<blockquote class="codeexamp">
+        <p class="codeexampheader">Kodeeksempel 1 (forstå funksjoner)</p>
+        <blockquote class="codeexampbody">
+      <pre>
+fun draw-yin-and-yang() -> Image:
+  circle-50-outline-black = circle(50, "outline", "black")
+  circle-50-solid-white = circle(50, "solid", "white")
+  circle-50-solid-black = circle(50, "solid", "black")
+  half-circle-50-black = crop(50, 0, 100, 100, circle-50-solid-black)
+  circle-25-solid-white = circle(25, "solid", "white")
+  circle-8-solid-black = circle(8, "solid", "black")
+  circle-25-solid-black = circle(25, "solid", "black")
+  circle-8-solid-white = circle(8, "solid", "white")
+  combine-outline-with-circle = overlay-align("pinhole", "middle", circle-50-outline-black, circle-50-solid-white)
+  combine-outline-with-circle-with-half-circle = overlay-align("pinhole", "middle", half-circle-50-black, combine-outline-with-circle)
+  combine-circle-25-black-with-circle-8-white = overlay-align("pinhole", "middle", circle-8-solid-white, circle-25-solid-black)
+  combine-circle-25-white-with-circle-8-black = overlay-align("pinhole", "middle", circle-8-solid-black, circle-25-solid-white)
+  combine-circle-25-white-with-circle-8-black-with-outline-with-circle-with-half-circle = overlay-align("pinhole", "top", combine-circle-25-white-with-circle-8-black, combine-outline-with-circle-with-half-circle)
+  overlay-align("pinhole", "bottom", combine-circle-25-black-with-circle-8-white, combine-circle-25-white-with-circle-8-black-with-outline-with-circle-with-half-circle)
+end
+
+    </pre>
+  </blockquote>
+</blockquote>
+
+Vi har designet en funksjon (<i>Kodeeksempel 1</i>) som kun gjennomfører et spesifikt case (inkludert variabelnavn). Vi ønsker å generalisere i forhold til flere egenskaper, f. eks., størrelse og farge.
+
+<blockquote class="codeexamp">
+        <p class="codeexampheader">Kodeeksempel 2 (forstå funksjoner)</p>
+        <blockquote class="codeexampbody">
+      <pre>
+circle-radius = 50
+circle-diameter = 2 * circle-radius
+smaller-circle-radius = circle-radius / 2
+# this is based on individual perception
+RATIO = 8 / 50
+dot-radius = RATIO * circle-radius
+dot-radius
+color-repl-white = "blue"
+color-repl-black = "gray"
+
+overlay-align("pinhole", "bottom", overlay-align("pinhole", "middle", circle(dot-radius, "solid", color-repl-white), 
+    circle(smaller-circle-radius, "solid", color-repl-black)), overlay-align("pinhole", "top", overlay-align("pinhole", "middle", 
+    circle(dot-radius, "solid", color-repl-black), circle(smaller-circle-radius, "solid", color-repl-white)), overlay-align("pinhole", "middle",
+      crop(circle-radius, 0, circle-diameter, circle-diameter, circle(circle-radius, "solid", color-repl-black)), overlay-align("pinhole", "middle", 
+        circle(circle-radius, "outline", color-repl-black), circle(circle-radius, "solid", color-repl-white)))))
+
+</pre>
+  </blockquote>
+</blockquote>
+
+<h2>1 Funksjonell programmering
+  <a name="fantasimaskin"></a>
+</h2>
+   
+
+<table class="table1" >
+      <thead>
+          <tr>
+              <th colspan="3">Verktøy BOT: Funksjoner</th>
+          </tr>
+          <tr>
+              <th>I matematikken</th>
+              <th>I programmering</th>
+              <th>Beskrivelse</th>
+
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>y = f(x)</td>
+              <td>function temp-in-fahrenheit(temp-in-celsius) returns number</td>
+              <td>&nbsp;</td>
+              
+              
+          </tr>
+          <tr>
+              <td>størrelse som er avhengig av en annen størrelse og forandrer seg når denne forandres ; avbildning (<a href="https://naob.no/ordbok/funksjon">.htm</a>)</td>
+              <td> operasjon som en datamaskin eller annen innretning kan utføre  | jf. funksjonalitet (<a href="https://naob.no/ordbok/funksjon">.htm</a>)</td>
+              <td>&nbsp;</td>
+              
+          </tr>
+          
+      </tbody>
+  </table>
+  <p>Tabell 1. Analyse av funksjonsdefinisjon.</p>
+
+<h2>2 Arbeid i klassen
+      <a name="ica"></a>
+    </h2>
+
+
+
+    
+  <blockquote class="incercise">
+        <p class="incerciseheader">Spørmsål for arbeid i klassen.</p>
+        <blockquote class="incercisebody">
+          
+        </blockquote>
+      </blockquote> 
+
+
+<h2>3 Diverse "verktøy"
+      <a name="verk"></a>
+    </h2>
+
+
+
+
+<img src="images/is-114-bunge-ipu.png" width="300" alt="Bunge Information Processing Unit = User + Hardware + Program">
+     <p><i>Figur 1. Informasjonsprosesseringsenhet etter Bunge.</i></p>
+
+    <br />
+    <br />
+
+<img src="images/is-114-analyse-verktoy-bunge-bpce.png" height="450" alt="Analyse verktøy for universale sytemer">
+     <p><i>Figur 2. Illustrasjon for systemanalyse (etter Mario Bunge).</i></p>
+ <br />
+    <br />
+
+<img src="images/is-114-kort-verden-data.png" height="450" alt="Tankekort i IS-114">
+     <p><i>Figur 3. Tankekort i IS-114.</i></p>
+
+<h2>4 Referanser
+  <a name="referanser"></a>
+</h2>
+<ul>  
+
+  <li>A portrait of Tenochtitlan. (2023). Thomaskole.nl. https://tenochtitlan.thomaskole.nl/ (A Portrait of Tenochtitlan, 2023)</li>
+
+  <li>Brown, N., Guzdial, M. J., Krishnamurthi, S., & Mönig, J. (2023). Educational Programming Languages and Systems (Dagstuhl Seminar 22302). Dagstuhl Reports, 12(7). https://doi.org/10.4230/DagRep.12.7.205 (Brown et al., 2023)</li>
+
+  <li>CS50x 2023. (2023). Harvard.edu. https://cs50.harvard.edu/x/2023/ (CS50x 2023, 2023)</li>
+
+  <li>CSBridge. (2023). CSBridge. https://codeinplace.stanford.edu/ (CSBridge, 2023)</li>
+
+  <li>Det Norske Akademis ordbok. (2023a). Naob.no. https://naob.no/ordbok/funksjon (Det Norske Akademis Ordbok, 2023a)</li>
+
+  <li>Introduction to Computer Science and Programming in Python | Electrical Engineering and Computer Science | MIT OpenCourseWare. (2016). MIT OpenCourseWare. https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/ (Introduction to Computer Science and Programming in Python | Electrical Engineering and Computer Science | MIT OpenCourseWare, 2016)</li>
+
+  <li>Krishnamurthi, S. (2008). Teaching programming languages in a post-linnaean age. ACM SIGPLAN Notices, 43(11), 81–83. https://doi.org/10.1145/1480828.1480846 (Krishnamurthi, 2008)</li>
+
+  <li>Kunnskapsdepartementet. (2023, April 20). Strategi for digital kompetanse og infrastruktur i barnehage og skole. Regjeringen.no; Regjeringen.no. https://www.regjeringen.no/no/dokumenter/strategi-for-digital-kompetanse-og-infrastruktur-i-barnehage-og-skole/id2972254/?ch=5</li>
+
+  <li>Lau, S., & Guo, P. (2023). From "Ban It Till We Understand It" to "Resistance is Futile": How University Programming Instructors Plan to Adapt as More Students Use AI Code Generation and Explanation Tools such as ChatGPT and GitHub Copilot https://doi.org/10.1145/3568813.3600138 (Lau & Guo, 2023)</li>
+
+  <li>Notional Machines. (2023). Notional Machines. https://notionalmachines.github.io/notional-machines.html (Notional Machines, 2023)</li>
+
+  <li>PLATO Empire - Empire 1. (2016). Daleske.com. http://www.daleske.com/plato/empire1.php (PLATO Empire - Empire 1, 2016)</li>
+ 
+  <li>Su, J., & Yang, W. (2023). A systematic review of integrating computational thinking in early childhood education. Computers and Education Open, 4, 100122–100122. https://doi.org/10.1016/j.caeo.2023.100122 (Su & Yang, 2023)</li>
+
+  <li>Wing, J. M. (2006). Computational thinking. Communications of the ACM, 49(3), 33. https://doi.org/10.1145/1118178.1118215 (Wing, 2006)</li>
+
+</ul>
+
+
+
+  </div>
+
+</body>
+</html>
