@@ -284,9 +284,9 @@ overlay-align("pinhole", "bottom", overlay-align("pinhole", "middle", circle(dot
 
     
   <blockquote class="incercise">
-        <p class="incerciseheader">Spørmsål for arbeid i klassen.</p>
+        <p class="incerciseheader">Spørmsål for arbeid i klassen og i gruppe.</p>
         <blockquote class="incercisebody">
-          <p>(1) Diskuter muligheter for å lage en funksjon for å tegne alle flagg av land som er medlemsland i FN.</p>
+          <p>(1) Diskuter muligheter for og utfordringer med å lage EN funksjon for å tegne alle flagg av land, som er medlemsland i FN.</p>
           <p>(2) Drivstoff i bil (diesel eller bensin) er hydrokarboner (<a href="https://snl.no/hydrokarbon">.htm</a>). Hydrokarboner finnes også i mat og 3000 kJ per 100 g tilsvarer 8kWh (kilowatt-timer). Du finner disse verdiene i spesifikasjoner for kaloriinnholdet i matvarer. For drivstoff kan verdien 10 kWh per liter brukes (energy-per-unit-of-fuel). For å beregne et forbruk for kilowatt-timer per dag kan du bruke formelen: 
 <pre>
           energy-per-day = ( distance-travelled-per-day / 
@@ -296,7 +296,23 @@ overlay-align("pinhole", "bottom", overlay-align("pinhole", "middle", circle(dot
 </pre>
         </p>
           <p>Lage en funksjon i Pyret som beregner bilens daglige energi forbruk basert på formelen ovenfor.</p>
-          <p>(3) Gitt to enkelte beregninger av avstand på Jordens overflate mellom to punkter basert på Harvesine formula (<a href="https://en.wikipedia.org/wiki/Haversine_formula">.htm</a>), - Kristiansand til Oslo og Kristiansand til Lillesand. Lage en funksjon i Pyret, som beregner avstand (i direkte luftlinje) mellom to fritt valgte punkter på Jordens overflate.</p>
+          <p>(3) Gitt to enkelte beregninger av avstand på Jordens overflate mellom to punkter basert på Harvesine formula (<a href="https://en.wikipedia.org/wiki/Haversine_formula">.htm</a>), - Kristiansand til Oslo og Kristiansand til Lillesand. Lage en funksjon i Pyret, som beregner avstand (i direkte luftlinje) mellom to fritt valgte punkter på Jordens overflate. Sammenligne resultater fra din funksjon med målinger av avstand i Google Maps og reflekter.</p>
+          <p>Harvesine algoritme skrevet i Pyret, som kan brukes i din funksjon:</p>
+<pre>
+  radians = degrees * (PI / 180)
+  rad-lat = (lat2 - lat1) * (PI / 180)
+  rad-long = (long2 - long1) * (PI / 180)
+  prelim-a = num-expt(num-sin(rad-lat / 2), 2) + 
+                  (num-cos(lat1 * (PI / 180)) * 
+                   num-cos(lat2 * (PI / 180)) *
+                   num-expt(num-sin(rad-long / 2), 2))
+
+  prelim-b = 2 * num-atan2(num-sqrt(prelim-a), num-sqrt(1 - prelim-a))
+
+  distance-km = 6367 * prelim-b
+  distance-mi = 3956 * prelim-b 
+
+</pre>
           <p></p>
         </blockquote>
       </blockquote> 
