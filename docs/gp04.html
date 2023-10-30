@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="no-NB">
+<head>
+    <meta charset="utf-8">
+    <title>IS-114 Kompendium: GP04</title>
+    <link href='https://fonts.googleapis.com/css?family=IBM Plex Serif' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/is114-style.css" title="default">
+    <script type="text/javascript" src="js/is114.js"></script>
+</head>
+<body>
+  <div class="tocset">
+    <div class="tocview">
+      <div class="tocviewlist tocviewlisttopspace">
+        <div class="tocviewtitle">
+          <table cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td style="width: 1em;">
+              <a href="javascript:void(0);" title="Expand/Collapse" class="tocviewtoggle" onclick="TocviewToggle(this,&quot;tocview_0&quot;);">▼</a>
+                </td>
+                <td>
+                </td>
+                <td>
+                  <a href="index.html" class="tocviewlink" data-pltdoc="x">Høst 2023: IS-114</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tocviewsublisttop" style="display: block;" id="tocview_0">
+          <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="index.html" class="tocviewlink" data-pltdoc="x">Beskrivelse og rettningslinjer</a>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="komp.html" class="tocviewselflink" data-pltdoc="x">Kompendium</a>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="draft_git.html" class="tocviewlink" data-pltdoc="x">Oppgaver</a>
+              </td>
+            </tr>
+            <!--
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="#" class="tocviewlink" data-pltdoc="x">Kollokvium</a>
+              </td>
+            </tr>
+          -->
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="honnor.html" class="tocviewlink" data-pltdoc="x">Honnør</a>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="tocviewlist">
+        <table cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <td style="width: 1em;">
+                <a href="javascript:void(0);" title="Expand/Collapse" class="tocviewtoggle" onclick="TocviewToggle(this,&quot;tocview_1&quot;);">▼</a>
+              </td>
+              <td>
+              </td>
+              <td>
+                <a href="" class="tocviewselflink" data-pltdoc="x">Kompendium</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="tocviewsublistbottom" style="display: block;" id="tocview_1">
+          <table cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="progogis.html" class="tocviewlink" data-pltdoc="x">Programmering og informasjonssystemer</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="progutdann.html" class="tocviewlink" data-pltdoc="x">Programmeringsutdanning</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="gp01.html" class="tocviewlink" data-pltdoc="x">GP01: komme i gang</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="gp02.html" class="tocviewlink" data-pltdoc="x">GP02: variabler</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="gp03.html" class="tocviewlink" data-pltdoc="x">GP03: funksjoner</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="gp03.html" class="tocviewselflink" data-pltdoc="x">GP04: Modeller, data og tabeller</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="tocsub">
+      <div class="tocsubtitle">På denne siden:</div>
+      <table class="tocsublist" cellspacing="0">
+        <tbody>
+          <tr>
+            <td>
+              <span class="tocsublinknumber">1<tt>&nbsp;</tt></span>
+              <a href="#definisjoner" class="tocsubseclink" data-pltdoc="x"></a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="tocsublinknumber">2<tt>&nbsp;</tt></span>
+              <a href="#ica" class="tocsubseclink" data-pltdoc="x">Arbeid i klassen</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="tocsublinknumber">3<tt>&nbsp;</tt></span>
+              <a href="#verk" class="tocsubseclink" data-pltdoc="x">Diverse verktøy</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="tocsublinknumber">4<tt>&nbsp;</tt></span>
+              <a href="#referanser" class="tocsubseclink" data-pltdoc="x">Referanser</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="maincolumn">
+    <!-- kun for første side
+    <div class="versionbox">
+      <span class="version">Mandag, 23. Oktober 2023, laget av Janis Gailis</span>
+    </div>
+    -->
+
+<h1>
+  Tabulære data
+</h1>
+
+<table class="table1" >
+      <thead>
+          <tr>
+              <th colspan="3">Påstandstabellen</th>
+          </tr>
+          <tr>
+              <th>Påstand</th>
+              <th>Sant/Usant/Uavklart</th>
+              <th>Utforskning</th>
+
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>Data er grunnlaget for all databehandling.</td>
+              <td>Uavklart</td>
+              <td>&nbsp;</td>
+          </tr>
+          <tr>
+              <td>Programmeringsmiljøer er designet for databehandling.</td>
+              <td>Uavklart</td>
+              <td>&nbsp;</td>
+          </tr>
+          <tr>
+              <td>Data-sentrert introduksjon til programmering er bedre enn syntaks-sentrert introduksjon.</td>
+              <td>Uavklart</td>
+              <td>&nbsp;</td>
+          </tr>
+          <tr>
+              <td>Tabeller er rigide datastrukturer og er ikke godt egnet for dataanalyse ved hjelp av progammeringsmiljøer.</td>
+              <td>Uavklart</td>
+              <td>&nbsp;</td>
+          </tr>
+          <tr>
+              <td>Det grafiske brukergrensesnittet er en mengde med tabeller (med tanke på layout <a href="https://getbootstrap.com/docs/5.3/examples/features/">.htm</a>).</td>
+              <td>Uavklart</td>
+              <td>&nbsp;</td>
+          </tr>
+          <tr>
+              <td>Alle databehandlingsproblemer kan modelleres med CRUD-modellen.</td>
+              <td>Uavklart</td>
+              <td>Se Figur X.</td>
+          </tr>
+      </tbody>
+  </table>
+  <p>Tabell 1. Påstandstabellen.</p>
+
+
+    
+<p>Temaets video:
+  <ul>  
+    <li>Machine Learning on Tabular Data<a href="https://www.youtube.com/watch?v=7y-ZWkPBfFI">.htm</a></li>
+  </ul>
+</p>
+
+<p>Temaets navn:</p>
+  <ul>  
+    <li>Al-Khwārizmī (9. århundre <a href="https://en.wikipedia.org/wiki/Al-Khwarizmi">.htm</a>)</li>
+    <li>Luca Pacioli (publiserte bok om dobbelt bokholderi i 1494)</li>
+  </ul>
+</p>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Corpus_Christ_College_MS_283_%281%29.png" width="300" alt="Corpus Christ College MS 283 (1)">
+     <p><i>Figur 1. al-Khwārizmī et Otto Neugebauer. Corpus Christ College MS 283 (1). 12. århundre (eksempel på tabulære data).</i></p>
+
+<img src="images/is-114-data-science-pacioli-summa-de-arithmetica-1494.png" width="300" alt="En side fra Summa de Arithmetica geometria proportioni av Luca Pacioli.">
+     <p><i>Figur 2. En side fra Summa de Arithmetica geometria proportioni (1494) av Luca Pacioli (eksempel på regnark).</i></p>
+
+<p>Layout er en "moderne" eksempel på bruk av tabulære data )<a href="https://getbootstrap.com/docs/5.3/examples/features/">.htm</a>).</p>
+     
+  
+<p>Temaets kode:</p>
+
+<p>Relevante referanser, som dere kan bruke når dere jobber gjennom koden:
+<ul> 
+<li>Et ekstra bibliotek for arbeid med tabeller <code>dcic-2021</code>: <a href="https://hackmd.io/@cs111/table">https://hackmd.io/@cs111/table</a></li>
+<li>Pensumslitteratur fra Kap. 7 til Kap. 10 (relevant for dette tema): <a href="https://dcic-world.org/2022-01-25/intro-tabular-data.html">https://dcic-world.org/2022-01-25/intro-tabular-data.html</a></li>
+<li>Pyret dokumentasjon relevant for arbeid med tabeller: <a href="https://pyret.org/docs/latest/tables.html">https://pyret.org/docs/latest/tables.html</a></li>
+</ul>
+</p>
+
+<blockquote class="codeexamp">
+        <p class="codeexampheader">Kodeeksempel 1 (forstå behandling av tabulære data)</p>
+        <blockquote class="codeexampbody">
+      <pre>
+include shared-gdrive("dcic-2021", "1wyQZj_L0qqV9Ekgr9au6RX2iqt2Ga8Ep")
+
+shuttle = table: month, riders
+  row: "Jan", 1123
+  row: "Feb", 1045
+  row: "Mar", 1087
+  row: "Apr", 999
+end
+
+# SQL-lignende (relatert til READ i CRUD)
+month = select month from shuttle end 
+check:
+  month is table: month
+    row: "Jan"
+    row: "Feb"
+    row: "Mar"
+    row: "Apr"
+  end
+end 
+
+# reservert ord "sieve" (innebygd funksjon; READ i CRUD)
+# sile eller filtrere
+less-than-1K = sieve shuttle using riders:
+  riders < 1000
+end
+check:
+  less-than-1K is table: month, riders
+    row: "Apr", 999
+  end
+end
+
+# metode (knyttet til en instans; READ i CRUD)
+fun below-1K(r :: Row) -> Boolean:
+  doc: "determine whether row has fewer than 1000 riders"
+  r["riders"] < 1000 # r.get-column("riders")
+where:
+  below-1K(shuttle.row-n(2)) is false
+  below-1K(shuttle.row-n(3)) is true
+end
+
+# metode (READ i CRU)
+fun is-winter(r :: Row) -> Boolean:
+  doc: "is the given month a winter month?"
+  month = r["month"] 
+  string-equal(month, "Jan") or 
+  string-equal(month, "Feb")
+where:
+  is-winter(shuttle.row-n(0)) is true
+  is-winter(shuttle.row-n(3)) is true
+end
+
+# videre analyse vha. funksjoner i Pyret
+# må inkludere dcic-2021 https://hackmd.io/@cs111/table
+winter = filter-with(shuttle, is-winter)
+# Oppgave: skriv en sjekk for winter
+order-by(winter, "riders", true)
+
+# samme men med hjelp av reservte ord
+order winter: 
+  riders ascending
+end
+
+# sjekk om begge funksjonene kan brukes
+# less-than-1K og below-1K
+below-1K-test = filter-with(shuttle, below-1K)
+order-by(below-1K-test, "riders", true)
+
+
+
+    </pre>
+  </blockquote>
+</blockquote>
+
+<p>Fra pensumslitteratur Kap. 7: <cite>Pyret offers three different notations for processing tables: one uses functions, one uses methods, and one uses a SQL-like notation. This chapter uses the function-based notation. The SQL-like notation and the methods-based notation are shown in the Pyret Documentation.</cite></p>
+
+<h2>1 Tabeller
+  <a name="definisjoner"></a>
+</h2>
+   
+<table class="table1" >
+      <thead>
+          <tr>
+              <th colspan="3">Verktøy BOT: Beregningsorientert tenkning</th>
+          </tr>
+          <tr>
+              <th>Pyret funksjoner / innebygde ord</th>
+              <th>Eksempel</th>
+              <th>Beskrivelse</th>
+
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>table, load-table, source, sanitize, sieve, using, select, from, order, ascending, descending, transform, extract</td>
+              <td>såkalte reserverte ord, som inngår i uttrykk og er relatert til behandling av tabeller</td>
+              <td>CREATE, READ og UPDATE (sanitize) i CRUD</td> 
+          </tr>
+          <tr>
+              <td>
+                <ul>
+                  <li></li>
+                </ul>
+              </td>
+              <td>såkalte reserverte ord, som inngår i uttrykk og er relatert til behandling av tabeller</td>
+              <td>CREATE, READ og UPDATE (sanitize) i CRUD</td> 
+          </tr>
+          <tr>
+              <td>filter-with</td>
+              <td>filter-with(tabell, funksjon)</td>
+              <td>READ i CRUD: Filtrer (søk i) tabell med en funksjon (som har en rad som argument); returnerer tabell som inneholder filtrerte resultater</td>
+          </tr>
+          <tr>
+              <td>select-columns</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td> 
+          </tr>
+          <tr>
+              <td>select-columns</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td> 
+          </tr>
+          
+      </tbody>
+  </table>
+  <p>Tabell 2. Pyret funksjon for CRUD.</p>
+
+
+<h2>2 Arbeid i klassen
+      <a name="ica"></a>
+    </h2>
+
+
+
+    
+  <blockquote class="incercise">
+        <p class="incerciseheader">Oppgave i klassen #1</p>
+        <blockquote class="incercisebody">
+          <p>Diskuter med en eller flere personer i proksimal nærhet din forståelse av abstraksjoner for data i et dataprogram. </p>
+          <p>Hvilke abstraksjoner husker du fra de 6 tidligere temaer/samlinger?</p>
+          <p>Hva forbinder du med beregningsrelatert tenkning?</p>
+        </blockquote>
+      </blockquote> 
+
+      <blockquote class="incercise">
+        <p class="incerciseheader">Oppgave i klassen #2</p>
+        <blockquote class="incercisebody">
+          <p>Tenk om noe, som du kan samle data om og hvor disse dataene kan presenteres i tabellform.</p>
+          <p>Sammen med en eller flere personer i proksimal nærhet, finn noen data for tabellen.</p>
+        </blockquote>
+      </blockquote> 
+
+      <blockquote class="incercise">
+        <p class="incerciseheader">Oppgave i klassen #3</p>
+        <blockquote class="incercisebody">
+          <p>Det er gitt en modell for evaluering av Progoblig 01 (individuell del). Følgende kolonner er foreslått: <code>Id</code>, <code>col-1a</code>, <code>col-1b</code>, ..., <code>col-2g</code>.   </p>
+          <p>Sammen med en eller flere personer i proksimal nærhet, finn representative data en tabell, som gjenspeiler modellen.</p>
+        </blockquote>
+      </blockquote> 
+
+
+<h2>3 Diverse "verktøy"
+      <a name="verk"></a>
+    </h2>
+
+<p>manipulasjon av tabeller (metoder fra biblioteket "tables") https://pyret.org/docs/latest/tables.html#%28idx._%28gentag._187%29%29 </p>
+
+
+<img src="https://www.komplett.no/img/p/2048/1219330.jpg" width="300" alt="Dynamic Random Access Memory module">
+     <p><i>Figur 3. Fysisk (flyktig) minnemodul (DRAM, bilde fra komplett.no).</i></p>
+
+    <br />
+    <br />
+
+<img src="https://i.pcmag.com/imagery/articles/07hyeZ8Gp093k9bdVYUCX8p-18.jpg" width="400" alt="Analyse verktøy for universale sytemer">
+     <p><i>Figur 4. Fysisk minne (stabil) Solid-state Drive (bilde fra i.pcmag.com).</i></p>
+ <br />
+
+ <img src="https://i.pcmag.com/imagery/articles/07hyeZ8Gp093k9bdVYUCX8p-17.jpg" width="400" alt="Analyse verktøy for universale sytemer">
+     <p><i>Figur 5. Fysisk minne (stabil) Hard Disk Drive (bilde fra i.pcmag.com).</i></p>
+ <br />
+
+  
+
+ 
+
+
+
+<h2>4 Referanser
+  <a name="referanser"></a>
+</h2>
+<ul>  
+
+  <li>A portrait of Tenochtitlan. (2023). Thomaskole.nl. https://tenochtitlan.thomaskole.nl/ (A Portrait of Tenochtitlan, 2023)</li>
+
+  <li>Brown, N., Guzdial, M. J., Krishnamurthi, S., & Mönig, J. (2023). Educational Programming Languages and Systems (Dagstuhl Seminar 22302). Dagstuhl Reports, 12(7). https://doi.org/10.4230/DagRep.12.7.205 (Brown et al., 2023)</li>
+
+  <li>CS50x 2023. (2023). Harvard.edu. https://cs50.harvard.edu/x/2023/ (CS50x 2023, 2023)</li>
+
+  <li>CSBridge. (2023). CSBridge. https://codeinplace.stanford.edu/ (CSBridge, 2023)</li>
+
+  <li>Det Norske Akademis ordbok. (2023a). Naob.no. https://naob.no/ordbok/funksjon (Det Norske Akademis Ordbok, 2023a)</li>
+
+  <li>Introduction to Computer Science and Programming in Python | Electrical Engineering and Computer Science | MIT OpenCourseWare. (2016). MIT OpenCourseWare. https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/ (Introduction to Computer Science and Programming in Python | Electrical Engineering and Computer Science | MIT OpenCourseWare, 2016)</li>
+
+  <li>Krishnamurthi, S. (2008). Teaching programming languages in a post-linnaean age. ACM SIGPLAN Notices, 43(11), 81–83. https://doi.org/10.1145/1480828.1480846 (Krishnamurthi, 2008)</li>
+
+  <li>Kunnskapsdepartementet. (2023, April 20). Strategi for digital kompetanse og infrastruktur i barnehage og skole. Regjeringen.no; Regjeringen.no. https://www.regjeringen.no/no/dokumenter/strategi-for-digital-kompetanse-og-infrastruktur-i-barnehage-og-skole/id2972254/?ch=5</li>
+
+  <li>Lau, S., & Guo, P. (2023). From "Ban It Till We Understand It" to "Resistance is Futile": How University Programming Instructors Plan to Adapt as More Students Use AI Code Generation and Explanation Tools such as ChatGPT and GitHub Copilot https://doi.org/10.1145/3568813.3600138 (Lau & Guo, 2023)</li>
+
+  <li>Notional Machines. (2023). Notional Machines. https://notionalmachines.github.io/notional-machines.html (Notional Machines, 2023)</li>
+
+  <li>PLATO Empire - Empire 1. (2016). Daleske.com. http://www.daleske.com/plato/empire1.php (PLATO Empire - Empire 1, 2016)</li>
+ 
+  <li>Su, J., & Yang, W. (2023). A systematic review of integrating computational thinking in early childhood education. Computers and Education Open, 4, 100122–100122. https://doi.org/10.1016/j.caeo.2023.100122 (Su & Yang, 2023)</li>
+
+  <li>Wing, J. M. (2006). Computational thinking. Communications of the ACM, 49(3), 33. https://doi.org/10.1145/1118178.1118215 (Wing, 2006)</li>
+
+</ul>
+
+
+
+  </div>
+
+</body>
+</html>
