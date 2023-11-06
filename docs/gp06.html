@@ -213,47 +213,6 @@
 
 </pre>
 
-<p>Hvor mange ganger blir funksjonen foo kalt opp for n = 5? Hvor mye lagringskapasitet ("call stack") trenges det i tilfeller n = 5? </p>
-<pre>
-  fun foo(n):
-    if (n <= 1): n
-    else: foo(n - 1)
-    end
-  end
-</pre>
-
-<p>Tidkompleksitet er 2 opphøyd i n, mens lagringsbehovet vil være n</p>
-<pre>
-  fun dib(n):
-    if (n <= 1): n
-    else: 
-      dib(n - 1) # dib(n - 2) endrer ikke kompleksitetene
-      dib(n - 1)
-    end
-  end
-
-  data Memoization:
-    | memo(key, value)
-  end
-
-  fun fib2(n :: Number, memo :: Memoization):
-    if (n is in memo): memo(n)
-
-  end
-</pre>
-
-<p>Fib har 2 i n-te tidskompleksitet og n lagringskompleksistet. Men vår kode er treg. Kan vi gjøre den raskere?</p>
-<p>Tanken: gjenbruke tidligere beregnede resultater</p>
-<p>Optimalisering: 
-<ul> 
-<li>"memoization" (lagre tidligere resultater</li>
-<li>skape en datastruktur, nøkkel-verdi prinsippet</li>
-<li></li>
-</ul>
-</p>
-
-</pre>
-
 <h2>
   Diverse ressurser
   <a name="ressurser"></a>
@@ -303,6 +262,8 @@ end
   </blockquote>
 </blockquote>
 
+<p>Valget om å bruke rekursjon eller ikke er ofte en "trade-off" mellom tids- og plass-kompleksitet.</p>
+
 <blockquote class="codeexamp">
         <p class="codeexampheader">Kodeeksempel 2 (eksempler rekursjon)</p>
         <blockquote class="codeexampbody">
@@ -321,6 +282,11 @@ fun dib(n):
     dib(n - 1)
   end
 end
+
+const fib = (n) => {
+  if (n <= 2) return 1;
+  return fib(n - 1) + fib(n - 2);
+}
 
     </pre>
   </blockquote>
