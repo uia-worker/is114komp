@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="no-NB">
+<head>
+    <meta charset="utf-8">
+    <title>IS-114 Kompendium: GP06</title>
+    <link href='https://fonts.googleapis.com/css?family=IBM Plex Serif' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/is114-style.css" title="default">
+    <script type="text/javascript" src="js/is114.js"></script>
+</head>
+<body>
+  <div class="tocset">
+    <div class="tocview">
+      <div class="tocviewlist tocviewlisttopspace">
+        <div class="tocviewtitle">
+          <table cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td style="width: 1em;">
+              <a href="javascript:void(0);" title="Expand/Collapse" class="tocviewtoggle" onclick="TocviewToggle(this,&quot;tocview_0&quot;);">▼</a>
+                </td>
+                <td>
+                </td>
+                <td>
+                  <a href="index.html" class="tocviewlink" data-pltdoc="x">Høst 2023: IS-114</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tocviewsublisttop" style="display: block;" id="tocview_0">
+          <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="index.html" class="tocviewlink" data-pltdoc="x">Beskrivelse og rettningslinjer</a>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="komp.html" class="tocviewselflink" data-pltdoc="x">Kompendium</a>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="draft_git.html" class="tocviewlink" data-pltdoc="x">Oppgaver</a>
+              </td>
+            </tr>
+            <!--
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="#" class="tocviewlink" data-pltdoc="x">Kollokvium</a>
+              </td>
+            </tr>
+          -->
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="honnor.html" class="tocviewlink" data-pltdoc="x">Honnør</a>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="tocviewlist">
+        <table cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <td style="width: 1em;">
+                <a href="javascript:void(0);" title="Expand/Collapse" class="tocviewtoggle" onclick="TocviewToggle(this,&quot;tocview_1&quot;);">▼</a>
+              </td>
+              <td>
+              </td>
+              <td>
+                <a href="" class="tocviewselflink" data-pltdoc="x">Kompendium</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="tocviewsublistbottom" style="display: block;" id="tocview_1">
+          <table cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="progogis.html" class="tocviewlink" data-pltdoc="x">Programmering og informasjonssystemer</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="progutdann.html" class="tocviewlink" data-pltdoc="x">Programmeringsutdanning</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="gp01.html" class="tocviewlink" data-pltdoc="x">GP01: komme i gang</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="gp02.html" class="tocviewlink" data-pltdoc="x">GP02: variabler</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="gp03.html" class="tocviewlink" data-pltdoc="x">GP03: funksjoner</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="gp04.html" class="tocviewlink" data-pltdoc="x">GP04: Modeller, data og tabeller</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="gp05.html" class="tocviewlink" data-pltdoc="x">GP05: Datastrukturer</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="gp06.html" class="tocviewselflink" data-pltdoc="x">GP06: Rekursjon</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="tocsub">
+      <div class="tocsubtitle">På denne siden:</div>
+      <table class="tocsublist" cellspacing="0">
+        <tbody>
+          <tr>
+            <td>
+              <span class="tocsublinknumber">1<tt>&nbsp;</tt></span>
+              <a href="#ressurser" class="tocsubseclink" data-pltdoc="x">Diverse ressurser</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="tocsublinknumber">2<tt>&nbsp;</tt></span>
+              <a href="#ica" class="tocsubseclink" data-pltdoc="x">Arbeid i klassen</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="tocsublinknumber">3<tt>&nbsp;</tt></span>
+              <a href="#referanser" class="tocsubseclink" data-pltdoc="x">Referanser</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="maincolumn">
+    <!-- kun for første side
+    <div class="versionbox">
+      <span class="version">Mandag, 23. Oktober 2023, laget av Janis Gailis</span>
+    </div>
+    -->
+
+<h1>
+  Rekursjon
+</h1>
+
+<p>De to dominerende eksempler for å illustrere <b>rekursjon</b> i programmering, som brukes i ressurser på WWW, er faktorial (<a href="https://en.wikipedia.org/wiki/Factorial">.htm</a>) og Fibonacci tall/sekvens (<a href="https://en.wikipedia.org/wiki/Fibonacci_sequence">.htm</a>). Fibonacci sekvens blir også ofte omtalt i forbindelse med det gyldne snitt (<a href="https://no.wikipedia.org/wiki/Det_gyldne_snitt">.htm</a>) (alle referanser fra Wikipedia).</p>
+<p>La oss se på Fibonacci sekvensen først. Fibonacci sekvens klassifiseres i matematikken som en rekurrent (tilbakevendede) serie, som betyr at en beregning av et element i sekvensen avhenger av en eller flere tidligere (i forhold til en ordning, som kan representeres i form av en indeks) elementer. Fibonacci sekvens kan defineres på følgende måte (F betegner en ofte brukt funksjonsnavn fib):</p>
+<pre>
+  F(0) = 0
+  F(1) = 1
+  F(n) = F(n - 1) + F(n - 2)
+
+  hvor n er indeks i sekvensen.
+
+  Eksempel:
+  F(4) = F(3) + F(2)
+  F(3) = F(2) + F(1)
+  F(2) = F(1) + F(0)
+  F(1) = 1
+  F(0) = 0
+
+  Kan regnes ut ved substitusjon:
+  F(4) = (F(2) + F(1)) + F(2) = 2*F(2) + F(1)
+  F(4) = 2*(F(1) + F(0)) + F(1) = 3*F(1) + 2*F(0) = 3*1 + 0 = 3
+
+
+</pre>
+
+<p>Det er vanselig å se en praktisk anvendelse bak Fibonacci sekvensen, men ved hjelp av beregningsmetodene for en slik sekvens, er det mulig å forklare grunnleggende prinsipper ved databehandling (prosessering og lagring av data).</p>
+
+<p>Oppgaven vår er å skrive et program, som beregner Fibonacci tall for et spesifikt indeks/tall. Noe slikt (bruker fib istedenfor F, siden det er vanligvis brukt i studieressursene): </p>
+<pre>
+  n:        0, 1, 2, 3, 4, 5, 6, 7,  8,  ...
+  fib(n):   0, 1, 1, 2, 3, 5, 8, 13, 21, ...
+
+</pre>
+
+<p>Hvor mange ganger blir funksjonen foo kalt opp for n = 5? Hvor mye lagringskapasitet ("call stack") trenges det i tilfeller n = 5? </p>
+<pre>
+  fun foo(n):
+    if (n <= 1): n
+    else: foo(n - 1)
+    end
+  end
+</pre>
+
+<p>Tidkompleksitet er 2 opphøyd i n, mens lagringsbehovet vil være n</p>
+<pre>
+  fun dib(n):
+    if (n <= 1): n
+    else: 
+      dib(n - 1) # dib(n - 2) endrer ikke kompleksitetene
+      dib(n - 1)
+    end
+  end
+
+  data Memoization:
+    | memo(key, value)
+  end
+
+  fun fib2(n :: Number, memo :: Memoization):
+    if (n is in memo): memo(n)
+
+  end
+</pre>
+
+<p>Fib har 2 i n-te tidskompleksitet og n lagringskompleksistet. Men vår kode er treg. Kan vi gjøre den raskere?</p>
+<p>Tanken: gjenbruke tidligere beregnede resultater</p>
+<p>Optimalisering: 
+<ul> 
+<li>"memoization" (lagre tidligere resultater</li>
+<li>skape en datastruktur, nøkkel-verdi prinsippet</li>
+<li></li>
+</ul>
+</p>
+
+</pre>
+
+<h2>
+  Diverse ressurser
+  <a name="ressurser"></a>
+
+</h2>
+    
+<p>Temaets lenker:
+  <ul>  
+    <li>Bra og visuell forklaring på rekursjon av Alvin publisert på freecodecamp "Dynamic Programming - Learn to Solve Algorithmic Problems & Coding Challenges" https://www.youtube.com/watch?v=oBt53YbR9Kk</li>
+    <li>"How Recursion Works — Explained with Flowcharts and a Video" by Beau Carnes <a href="https://www.freecodecamp.org/news/how-recursion-works-explained-with-flowcharts-and-a-video-de61f40cb7f9/">.htm</a></li>
+    <li>Complex Recursion Explained Simply by Alvin from Coderbyte https://www.youtube.com/watch?v=wRH2I6IN4BE</li>
+    <li>Recursion in programming https://www.youtube.com/watch?v=IJDJ0kBx2LM</li>
+    <li>Reverse linked list https://www.youtube.com/watch?v=nCwjmaZ_6Kk</li>
+    <li>Big-O https://www.youtube.com/watch?v=zo7YFqw5hNw </li>
+    <li>JavaScript for Beginners - Full Course https://www.youtube.com/watch?v=5qlbbpvp2Y4 </li>
+    <li>Fortolkere med definisjons og https://playcode.io/empty_javascript (ikke forventet resultat for webutvikling, men kan skrive "ren" JavaScript), https://jsfiddle.net/ (best for webutvikling), https://www.programiz.com/html/online-compiler/ (minimalt med reklame)</li>
+  </ul>
+</p>
+     
+  
+<p>Temaets kode:</p>
+
+<p>Relevante referanser, som dere kan bruke når dere jobber gjennom koden:
+<ul>
+<li>Pensumslitteratur Kap. 13 (relevant for dette tema): <a href="https://dcic-world.org/2022-01-25/recursive-data.html">https://dcic-world.org/2022-01-25/recursive-data.html</a></li>
+</ul>
+</p>
+
+<blockquote class="codeexamp">
+        <p class="codeexampheader">Kodeeksempel 1 (rekursjon)</p>
+        <blockquote class="codeexampbody">
+      <pre>
+
+fun fib(n):
+  if (n <= 2): 1
+  else: 
+    _ = print(n)
+    fib(n - 1) + fib(n - 2)
+  end
+where:
+  fib(1) is 1
+  fib(2) is 1
+  fib(3) is 2
+end
+
+    </pre>
+  </blockquote>
+</blockquote>
+
+<blockquote class="codeexamp">
+        <p class="codeexampheader">Kodeeksempel 2 (eksempler rekursjon)</p>
+        <blockquote class="codeexampbody">
+      <pre>
+
+fun foo(n):
+  if (n <= 1): n
+  else: foo(n - 1)
+  end
+end
+
+fun dib(n):
+  if (n <= 1): n
+  else: 
+    dib(n - 1) # dib(n - 2) endrer ikke tids- og plassbehov signifikant
+    dib(n - 1)
+  end
+end
+
+    </pre>
+  </blockquote>
+</blockquote>
+
+<blockquote class="codeexamp">
+        <p class="codeexampheader">Kodeeksempel 3 (alt man trenger for å begynne med HTML, CSS, JS og Canvas API)</p>
+        <blockquote class="codeexampbody">
+      <pre><code>
+        <!DOCTYPE html>
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot; /&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; /&gt;
+  &lt;title&gt;IS-114 Go Go JavaScript&lt;/title&gt;
+  &lt;style&gt;
+    canvas {
+      border: solid;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;h1&gt;IS-114 Go Go JavaScript&lt;/h1&gt;
+
+  &lt;canvas id=&quot;canvas&quot; width=&quot;500&quot; height=&quot;500&quot;&gt;&lt;/canvas&gt;
+  &lt;p id=&quot;output&quot;&gt;&lt;/p&gt;
+  
+  &lt;script&gt;
+    const canvas = document.getElementById(&quot;canvas&quot;);
+    const ctx = canvas.getContext(&quot;2d&quot;);
+    
+    rectangle = function(ctxl) {
+      ctxl.fillStyle = &quot;green&quot;;
+      ctxl.fillRect(10, 10, 150, 50);
+    }
+    rectangle(ctx)
+    
+    circle = function(radius, mode, color) {
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.arc(100, 150, radius, 0, Math.PI * 2, true); // Outer circle
+      if (mode == &quot;solid&quot;) {
+        ctx.fill();
+      } else {
+        ctx.stroke();
+      }
+    }
+    circle(50, &quot;solid&quot;, &quot;red&quot;)
+    circle(20, &quot;solid&quot;, &quot;orange&quot;)
+    
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code>
+</pre>
+  </blockquote>
+</blockquote>
+
+<ul>  
+<li>https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API</li>
+<li>https://developer.mozilla.org/en-US/docs/Web/CSS/border</li>
+<li>https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes</li>
+<li>https://magictool.ai/tool/html-decoder-encoder/</li>
+</ul>
+
+<h2>
+  <a name="ica"></a>
+</h2>
+
+
+    
+  <blockquote class="incercise">
+        <p class="incerciseheader">Oppgave i klassen #1</p>
+        <blockquote class="incercisebody">
+          <p>Regn ut Fibonacci tallet for tallet 6 ved hjelp av substitusjon. Bruk helst penn/blyant og papir. Forelså en rekursiv funksjon for den samme utregningen.</p>
+         
+        </blockquote>
+      </blockquote> 
+
+      <blockquote class="incercise">
+        <p class="incerciseheader">Oppgave i klassen #2</p>
+        <blockquote class="incercisebody">
+          <p>Designe et program i Pyret som bruker rekursjon for å skrive en string bak frem ("hello"->"olleh"). </p>
+        </blockquote>
+      </blockquote> 
+
+
+
+
+
+
+  
+
+
+
+<h2>3 Referanser
+  <a name="referanser"></a>
+</h2>
+<ul>  
+
+  <li>A portrait of Tenochtitlan. (2023). Thomaskole.nl. https://tenochtitlan.thomaskole.nl/ (A Portrait of Tenochtitlan, 2023)</li>
+
+  <li>Brown, N., Guzdial, M. J., Krishnamurthi, S., & Mönig, J. (2023). Educational Programming Languages and Systems (Dagstuhl Seminar 22302). Dagstuhl Reports, 12(7). https://doi.org/10.4230/DagRep.12.7.205 (Brown et al., 2023)</li>
+
+  <li>CS50x 2023. (2023). Harvard.edu. https://cs50.harvard.edu/x/2023/ (CS50x 2023, 2023)</li>
+
+  <li>CSBridge. (2023). CSBridge. https://codeinplace.stanford.edu/ (CSBridge, 2023)</li>
+
+  <li>Det Norske Akademis ordbok. (2023a). Naob.no. https://naob.no/ordbok/funksjon (Det Norske Akademis Ordbok, 2023a)</li>
+
+  <li>Introduction to Computer Science and Programming in Python | Electrical Engineering and Computer Science | MIT OpenCourseWare. (2016). MIT OpenCourseWare. https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/ (Introduction to Computer Science and Programming in Python | Electrical Engineering and Computer Science | MIT OpenCourseWare, 2016)</li>
+
+  <li>Krishnamurthi, S. (2008). Teaching programming languages in a post-linnaean age. ACM SIGPLAN Notices, 43(11), 81–83. https://doi.org/10.1145/1480828.1480846 (Krishnamurthi, 2008)</li>
+
+  <li>Kunnskapsdepartementet. (2023, April 20). Strategi for digital kompetanse og infrastruktur i barnehage og skole. Regjeringen.no; Regjeringen.no. https://www.regjeringen.no/no/dokumenter/strategi-for-digital-kompetanse-og-infrastruktur-i-barnehage-og-skole/id2972254/?ch=5</li>
+
+  <li>Lau, S., & Guo, P. (2023). From "Ban It Till We Understand It" to "Resistance is Futile": How University Programming Instructors Plan to Adapt as More Students Use AI Code Generation and Explanation Tools such as ChatGPT and GitHub Copilot https://doi.org/10.1145/3568813.3600138 (Lau & Guo, 2023)</li>
+
+  <li>Notional Machines. (2023). Notional Machines. https://notionalmachines.github.io/notional-machines.html (Notional Machines, 2023)</li>
+
+  <li>PLATO Empire - Empire 1. (2016). Daleske.com. http://www.daleske.com/plato/empire1.php (PLATO Empire - Empire 1, 2016)</li>
+
+  <li>Risdal, M. (2023). Raw woogles.io games. Kaggle.com. https://www.kaggle.com/datasets/mrisdal/raw-wooglesio-games (Risdal, 2023)</li>
+ 
+  <li>Su, J., & Yang, W. (2023). A systematic review of integrating computational thinking in early childhood education. Computers and Education Open, 4, 100122–100122. https://doi.org/10.1016/j.caeo.2023.100122 (Su & Yang, 2023)</li>
+
+  <li>Wing, J. M. (2006). Computational thinking. Communications of the ACM, 49(3), 33. https://doi.org/10.1145/1118178.1118215 (Wing, 2006)</li>
+
+</ul>
+
+
+
+  </div>
+
+</body>
+</html>
