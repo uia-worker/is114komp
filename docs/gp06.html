@@ -213,8 +213,11 @@
 
 </pre>
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 777abc419d8809c51ac90068155a95b57260c6c6
 <h2>
   Diverse ressurser
   <a name="ressurser"></a>
@@ -259,6 +262,8 @@ end
   </blockquote>
 </blockquote>
 
+<p>Valget om å bruke rekursjon eller ikke er ofte en "trade-off" mellom tids- og plass-kompleksitet.</p>
+
 <blockquote class="codeexamp">
         <p class="codeexampheader">Kodeeksempel 2 (eksempler rekursjon)</p>
         <blockquote class="codeexampbody">
@@ -277,6 +282,11 @@ fun dib(n):
     dib(n - 1)
   end
 end
+
+const fib = (n) => {
+  if (n <= 2) return 1;
+  return fib(n - 1) + fib(n - 2);
+}
 
     </pre>
   </blockquote>
