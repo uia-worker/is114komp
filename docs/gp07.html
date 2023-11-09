@@ -135,7 +135,13 @@
               <tr>
                 <td align="right"></td>
                 <td>
-                  <a href="gp06.html" class="tocviewselflink" data-pltdoc="x">GP06: Rekursjon</a>
+                  <a href="gp06.html" class="tocviewlink" data-pltdoc="x">GP06: Rekursjon</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="gp07.html" class="tocviewselflink" data-pltdoc="x">GP07: Rekursjon</a>
                 </td>
               </tr>
             </tbody>
@@ -178,11 +184,11 @@
     -->
 
 <h1>
-  Rekursjon, datastrukturer og algoritmer
+  Rekursjon
 </h1>
 
 <p>De to dominerende eksempler for å illustrere <b>rekursjon</b> i programmering, som brukes i ressurser på WWW, er faktorial (<a href="https://en.wikipedia.org/wiki/Factorial">.htm</a>) og Fibonacci tall/sekvens (<a href="https://en.wikipedia.org/wiki/Fibonacci_sequence">.htm</a>). Fibonacci sekvens blir også ofte omtalt i forbindelse med det gyldne snitt (<a href="https://no.wikipedia.org/wiki/Det_gyldne_snitt">.htm</a>) (alle referanser fra Wikipedia).</p>
-<p>La oss se på Fibonacci sekvensen. Fibonacci sekvens klassifiseres i matematikken som en rekurrent (tilbakevendede) serie, som betyr at en beregning av et element i sekvensen avhenger av en eller flere tidligere (i forhold til en ordning, som kan representeres i form av en indeks) elementer. Fibonacci sekvens kan defineres på følgende måte (F betegner en ofte brukt funksjonsnavn fib):</p>
+<p>La oss se på Fibonacci sekvensen først. Fibonacci sekvens klassifiseres i matematikken som en rekurrent (tilbakevendede) serie, som betyr at en beregning av et element i sekvensen avhenger av en eller flere tidligere (i forhold til en ordning, som kan representeres i form av en indeks) elementer. Fibonacci sekvens kan defineres på følgende måte (F betegner en ofte brukt funksjonsnavn fib):</p>
 <pre>
   F(0) = 0
   F(1) = 1
@@ -213,7 +219,46 @@
 
 </pre>
 
+<p>Hvor mange ganger blir funksjonen foo kalt opp for n = 5? Hvor mye lagringskapasitet ("call stack") trenges det i tilfeller n = 5? </p>
+<pre>
+  fun foo(n):
+    if (n <= 1): n
+    else: foo(n - 1)
+    end
+  end
+</pre>
 
+<p>Tidkompleksitet er 2 opphøyd i n, mens lagringsbehovet vil være n</p>
+<pre>
+  fun dib(n):
+    if (n <= 1): n
+    else: 
+      dib(n - 1) # dib(n - 2) endrer ikke kompleksitetene
+      dib(n - 1)
+    end
+  end
+
+  data Memoization:
+    | memo(key, value)
+  end
+
+  fun fib2(n :: Number, memo :: Memoization):
+    if (n is in memo): memo(n)
+
+  end
+</pre>
+
+<p>Fib har 2 i n-te tidskompleksitet og n lagringskompleksistet. Men vår kode er treg. Kan vi gjøre den raskere?</p>
+<p>Tanken: gjenbruke tidligere beregnede resultater</p>
+<p>Optimalisering: 
+<ul> 
+<li>"memoization" (lagre tidligere resultater</li>
+<li>skape en datastruktur, nøkkel-verdi prinsippet</li>
+<li></li>
+</ul>
+</p>
+
+</pre>
 
 <h2>
   Diverse ressurser
@@ -223,18 +268,23 @@
     
 <p>Temaets lenker:
   <ul>  
-    
+    <li>Bra og visuell forklaring på rekursjon av Alvin publisert på freecodecamp "Dynamic Programming - Learn to Solve Algorithmic Problems & Coding Challenges" https://www.youtube.com/watch?v=oBt53YbR9Kk</li>
+    <li>"How Recursion Works — Explained with Flowcharts and a Video" by Beau Carnes <a href="https://www.freecodecamp.org/news/how-recursion-works-explained-with-flowcharts-and-a-video-de61f40cb7f9/">.htm</a></li>
+    <li>Complex Recursion Explained Simply by Alvin from Coderbyte https://www.youtube.com/watch?v=wRH2I6IN4BE</li>
+    <li>Recursion in programming https://www.youtube.com/watch?v=IJDJ0kBx2LM</li>
+    <li>Reverse linked list https://www.youtube.com/watch?v=nCwjmaZ_6Kk</li>
+    <li>Big-O https://www.youtube.com/watch?v=zo7YFqw5hNw </li>
     <li>JavaScript for Beginners - Full Course https://www.youtube.com/watch?v=5qlbbpvp2Y4 </li>
-    <li>JavaScript fortolkere på nett https://codepen.io/ og https://tio.run/#</li>
+    <li>Fortolkere med definisjons og https://playcode.io/empty_javascript (ikke forventet resultat for webutvikling, men kan skrive "ren" JavaScript), https://jsfiddle.net/ (best for webutvikling), https://www.programiz.com/html/online-compiler/ (minimalt med reklame)</li>
   </ul>
 </p>
      
   
 <p>Temaets kode:</p>
 
-<p>Relevante referanser, som dere kan brukes når dere jobber gjennom koden:
+<p>Relevante referanser, som dere kan bruke når dere jobber gjennom koden:
 <ul>
-<li>Pensumslitteratur Kap. 13 (relevant for dette tema): <a href="https://dcic-world.org/2022-01-25/recursive-data.html">https://dcic-world.org/2022-01-25/</a></li>
+<li>Pensumslitteratur Kap. 13 (relevant for dette tema): <a href="https://dcic-world.org/2022-01-25/recursive-data.html">https://dcic-world.org/2022-01-25/recursive-data.html</a></li>
 </ul>
 </p>
 
@@ -277,439 +327,6 @@ fun dib(n):
     dib(n - 1)
   end
 end
-
-    </pre>
-  </blockquote>
-</blockquote>
-
-<blockquote class="codeexamp">
-        <p class="codeexampheader">Kodeeksempel 2 (eksempler rekursjon)</p>
-        <blockquote class="codeexampbody">
-      <pre>
-
-data NumList:
-  | nl-empty
-  | nl-link(first :: Number, rest :: NumList)
-end
-
-nl-empty
-nl-link(3, nl-empty)
-nl-link(7, nl-link(3, nl-empty))
-nl-link(2, nl-link(7, nl-link(3, nl-empty)))
-
-
-nl-link(1,
-  nl-link(2,
-    nl-link(3,
-      nl-link(4,
-        nl-link(5,
-          nl-link(6,
-            nl-link(7,
-              nl-link(8,
-                nl-empty))))))))
-
-fun contains-3(nl :: NumList) -> Boolean:
-  doc: "Produces true if the list contains 3, false otherwise"
-  cases (NumList) nl:
-    | nl-empty => false
-    | nl-link(first, rest) =>
-      if first == 3:
-        true
-      else:
-        contains-3(rest)
-        # handle rest here
-        #cases (NumList) rest:
-        # | nl-empty => ...
-        # | nl-link(first-of-rest, rest-of-rest) =>
-        #   if first == 3:
-        #     true
-        #   else:
-              # handle rest here
-        #     cases (NumList) rest-of-rest:
-        #       | nl-empty => ...
-        #       | nl-link(first-of-rest-of-rest, rest-of-rest-of-rest) =>
-        #         ... first-of-rest-of-rest ...
-        #         ... rest-of-rest-of-rest ...
-        #     end
-        #end
-      end
-  end
-where:
-  contains-3(nl-empty) is false
-  contains-3(nl-link(3, nl-empty)) is true
-  contains-3(nl-link(1, nl-link(3, nl-empty))) is true
-  contains-3(nl-link(1, nl-link(2, nl-link(3, nl-link(4, nl-empty))))) is true
-  contains-3(nl-link(1, nl-link(2, nl-link(5, nl-link(4, nl-empty))))) is false
-end
-
-# Use the design recipe to write a function contains-n that takes
-# a NumList and a Number, and returns whether that number is 
-# in the NumList.
-fun contains-n(n :: Number, nl :: NumList) -> Boolean:
-  doc: "Produces true if the list contains 3, false otherwise"
-  cases (NumList) nl:
-    | nl-empty => false
-    | nl-link(first, rest) =>
-      if first == n:
-        true
-      else:
-        # handle rest here
-        contains-n(n, rest)
-      end
-  end
-where:
-  contains-n(4, nl-empty) is false
-  contains-n(2, nl-link(1, nl-link(2, nl-link(5, nl-link(4, nl-empty))))) is true
-end
-
-
-# Use the design recipe to write a function sum that takes a NumList, 
-# and returns the sum of all the numbers in it. 
-# The sum of the empty list is 0.
-fun nl-sum(nl :: NumList) -> Number:
-  cases (NumList) nl:
-    | nl-empty => 0
-    | nl-link(first, rest) => first + nl-sum(rest)
-  end
-where:
-  nl-sum(nl-empty) is 0
-  nl-sum(nl-link(1, nl-link(2, nl-link(5, nl-link(4, nl-empty))))) is 12
-  nl-sum(nl-link(-1, nl-link(2, nl-link(5, nl-link(4, nl-empty))))) is 10
-  nl-sum(nl-link(-1, nl-link(-2, nl-link(5, nl-link(4, nl-empty))))) is 6
-  nl-sum(nl-link(1/3, nl-link(1/3, nl-link(1/3, nl-empty)))) is 1
-end
-
-# Use the design recipe to write a function remove-3 that takes a NumList,
-# and returns a new NumList with any 3's removed. 
-# The remaining elements should all be in the list in the same order 
-# they were in the input.
-fun remove-3(nl :: NumList) -> NumList:
-  cases (NumList) nl:
-    | nl-empty => nl-empty
-    | nl-link(first, rest) => 
-      if first == 3:
-        remove-3(rest)
-      else:
-        nl-link(first, remove-3(rest))
-      end
-  end
-where:
-  remove-3(nl-empty) is nl-empty
-  remove-3(nl-link(3, nl-link(3, nl-empty))) is nl-empty
-  remove-3(nl-link(1, nl-link(2, nl-link(5, nl-link(4, nl-empty)))))
-    is nl-link(1, nl-link(2, nl-link(5, nl-link(4, nl-empty))))
-  remove-3(nl-link(1, nl-link(3, nl-link(5, nl-link(4, nl-empty)))))
-    is nl-link(1, nl-link(5, nl-link(4, nl-empty)))
-end
-
-# Write a data definition called NumListList that represents a list of NumLists,
-# and use the design recipe to write a function sum-of-lists that takes 
-# a NumListList and produces a NumList containing the sums of the sub-lists.
-data NumNumList:
-  | nnl-empty
-  | nnl-link(first :: NumList, rest :: NumNumList)
-end
-  
-fun sum-of-lists(nnl :: NumNumList) -> NumList:
-  cases (NumNumList) nnl:
-    | nnl-empty => nl-empty
-    | nnl-link(first, rest) => nl-link(nl-sum(first), sum-of-lists(rest))
-  end
-where:
-  sum-of-lists(nnl-link(nl-link(3, nl-link(3, nl-link(3, nl-empty))), nnl-link(nl-link(3, nl-link(3, nl-empty)) , nnl-empty))) is nl-link(9, nl-link(6, nl-empty))
-end
-
-# Write a data definition and corresponding template for StrList, which captures lists of strings.
-data StrList:
-  | sl-empty
-  | sl-link(first :: String, rest :: String)
-end
-
-
-### Mer om rekursjon (omvendt tekst)
-
-fun A() -> String:
-  "IS-114 " + B()
-end
-fun B() -> String:
-  "Go Go " + C()
-end
-fun C() -> String:
-  "JavaScript!"
-end
-
-A()
-# Programmet som laster inn programmet i det fysiske minne og gjør den tilgjengelig for CPU
-# allokerer en mengde av minne
-# A må legges "i mente" fordi at den ikke kan returnere før B() er blitt prosessert
-# A kan ikke returnere verdien før B er blitt prosessert 
-#  |_____|     
-#  |_____|
-#  |__A__|
-#
-# Siden B er avhengig av C, så kan heller ikke den returnere verdi (bli ferdig) 
-# før C er prosessert og må gå "i mente" (legges "på toppen" av adressen til A)
-#  |_____|     
-#  |__B__|
-#  |__A__|
-#
-# C har ingen videre kall til andre funksjoner, så den returerner en verdi
-# I datamaskinenens modeleller legges også C på stack men returnerere umiddelbart
-# til B (det som påkalte C)
-#  |__C__| --> B    
-#  |__B__|
-#  |__A__|
-#
-#  |_____|      
-#  |__B__| --> A
-#  |__A__| 
-#
-#  |_____|      
-#  |_____| 
-#  |__A__| --> hovedprogrammet i Pyret
-#
-#  |_____|      
-#  |_____| 
-#  |_____| 
-# Og stabelen deallokeres (minne firgjøres)
-
-#
-
-fun D():
-  D()
-end
-
-# ikke gjør dette!!
-# D() 
-# Eksempel på "stack overflow"
-# Hvordan løse dette? Trenger en "grunntilfelle"
-# Noe vi må lage en betingelse for
-
-# reverse en string
-fun my-reverse(str :: String) -> String:
-  # Hva blir "grunntilfelle"?
-  #  - veldig små input? en bokstav omvendt er seg selv
-  #  - eller tom streng? tom streng blir tom streng
-  if str == "":
-    ""
-  else:
-    # string-split-all("explode", "") is [list: "e", "x", "p", "l", "o", "d", "e"]
-    # string-substring("just the first", 0, 1) is "j"
-    # string-char-at("abc", 1) is "b"
-    #
-    # my-reverse(string-substring(str, 1, string-length(str))) + string-char-at(str, 0)
-    #nothing
-    my-reverse(string-substring(str, 1, string-length(str))) + string-char-at(str, 0)
-  end
-  # Hva er det minst mulige arbeid som kan gjøres i hver iterasjon?
-  # Den minste enheten? (modellering)
-where: 
-  my-reverse("") is ""
-  my-reverse("hei") is "ieh"
-end
-
-check:
-  str = "hei"
-  l = string-length(str)
-  string-substring(str, 1, l) is "ei"
-  string-substring(str, l, l) is ""
-end
-
-
-## Fibonacci
-
-fun fib(n):
-  if (n <= 2): 1
-  else: 
-    _ = print(n)
-    fib(n - 1) + fib(n - 2)
-  end
-where:
-  fib(1) is 1
-  fib(2) is 1
-  fib(3) is 2
-end
-
-## Tre
-data AncTree:
-  | noInfo
-  | person(
-      name :: String,
-      birthyear :: Number,
-      eye :: String,
-      mother :: AncTree,
-      father :: AncTree
-      )
-end
-
-anna-tree =
-  person("Anna", 1997, "blue",
-    person("Susan", 1971, "blue",
-      person("Ellen", 1945, "brown",
-        person("Laura", 1920, "blue", noInfo, noInfo),
-        person("John", 1920, "green",
-          noInfo,
-          person("Robert", 1893, "brown", noInfo, noInfo))),
-      person("Bill", 1946, "blue", noInfo, noInfo)),
-    person("Charlie", 1972, "green", noInfo, noInfo))
-
-robert-tree = person("Robert", 1893, "brown", noInfo, noInfo)
-laura-tree = person("Laura", 1920, "blue", noInfo, noInfo)
-john-tree = person("John", 1920, "green", noInfo, robert-tree)
-ellen-tree = person("Ellen", 1945, "brown", laura-tree, john-tree)
-bill-tree = person("Bill", 1946, "blue", noInfo, noInfo)
-susan-tree = person("Susan", 1971, "blue", ellen-tree, bill-tree)
-charlie-tree = person("Charlie", 1972, "green", noInfo, noInfo)
-anna-tree2 = person("Anna", 1997, "blue", susan-tree, charlie-tree)
-
-fun in-tree(at :: AncTree, name :: String) -> Boolean:
-  doc: "determine whether name is in the tree"
-  cases (AncTree) at:     # comes from AncTree being data with cases
-    | noInfo => false
-    | person(n, y, e, m, f) => (name == n) or in-tree(m, name) or in-tree(f, name)
-      # n is the same as at.name
-      # m is the same as at.mother
-  end
-where:
-  in-tree(anna-tree, "Anna") is true
-  in-tree(anna-tree, "Ellen") is true
-  in-tree(ellen-tree, "Anna") is false
-  in-tree(noInfo, "Ellen") is false
-  in-tree(charlie-tree, "Ellen") is false
-  in-tree(charlie-tree, "Charlie") is true
-end
-
-
-    </pre>
-  </blockquote>
-</blockquote>
-
-
-<blockquote class="codeexamp">
-        <p class="codeexampheader">Kodeeksempel 2 (eksempler rekursjon)</p>
-        <blockquote class="codeexampbody">
-      <pre>
-
-import image as I
-import reactors as R
-
-AIRPLANE-URL =
-  "http://world.cs.brown.edu/1/clipart/airplane-small.png"
-AIRPLANE = I.image-url(AIRPLANE-URL)
-
-AIRPLANE-X-MOVE = 10 # kan regulere horisontal "fart"
-AIRPLANE-Y-MOVE = 3
-WIDTH = 800
-HEIGHT = 500
-BASE-HEIGHT = 50
-WATER-WIDTH = 500
-KEY-DISTANCE = 10
-
-fun move-airplane-x-on-tick(w):
-  w + AIRPLANE-X-MOVE
-end
-fun move-airplane-y-on-tick(w):
-  w + AIRPLANE-Y-MOVE
-end
-
-check:
-  move-airplane-x-on-tick(50) is 50 + AIRPLANE-X-MOVE
-  move-airplane-x-on-tick(0) is 0 + AIRPLANE-X-MOVE
-  move-airplane-x-on-tick(100) is 100 + AIRPLANE-X-MOVE
-end
-
-fun move-airplane-wrapping-x-on-tick(x):
-  num-modulo(move-airplane-x-on-tick(x), WIDTH)
-end
-fun move-airplane-wrapping-y-on-tick(y):
-  num-modulo(move-airplane-y-on-tick(y), HEIGHT)
-end
-
-check:
-  move-airplane-wrapping-x-on-tick(50) is 50 + AIRPLANE-X-MOVE
-  move-airplane-wrapping-x-on-tick(500) is 500 + AIRPLANE-X-MOVE
-  move-airplane-wrapping-x-on-tick(810) is 10 + AIRPLANE-X-MOVE
-  move-airplane-wrapping-x-on-tick(1675) is 75 + AIRPLANE-X-MOVE
-end
-
-BLANK-SCENE = I.empty-scene(WIDTH, HEIGHT)
-
-WATER = I.rectangle(WATER-WIDTH, BASE-HEIGHT, "solid", "blue")
-LAND = I.rectangle(WIDTH - WATER-WIDTH, BASE-HEIGHT, "solid", "brown")
-
-BASE = I.beside(WATER, LAND)
-
-BACKGROUND =
-  I.place-image(BASE,
-    WIDTH / 2, HEIGHT - (BASE-HEIGHT / 2),
-    BLANK-SCENE)
-
-fun place-airplane-x(w):
-  I.place-image(AIRPLANE,
-    w,
-    50,
-    BACKGROUND)
-end
-
-fun place-airplane-xy(w):
-  I.place-image(AIRPLANE,
-    w.x,
-    w.y,
-    BACKGROUND)
-end
-
-
-
-data Posn:
-  | posn(x, y)
-end 
-
-fun move-airplane-xy-on-tick(p :: Posn):
-  posn(num-modulo(move-airplane-x-on-tick(p.x), WIDTH),
-    num-modulo(move-airplane-y-on-tick(p.y), HEIGHT))
-end
-
-check:
-  move-airplane-xy-on-tick(posn(10, 10)) is posn(20, 13)
-  move-airplane-xy-on-tick(posn(WIDTH + 1, HEIGHT + 1)) is posn(1 + AIRPLANE-X-MOVE, 1 + AIRPLANE-Y-MOVE)
-end
-
-check:
-  p = posn(10, 10)
-  move-airplane-xy-on-tick(p) is
-    posn(move-airplane-wrapping-x-on-tick(p.x),
-      move-airplane-y-on-tick(p.y))
-end
-
-check:
-  p = posn(10, 10)
-  move-airplane-xy-on-tick(p) is
-   posn(num-modulo(p.x + AIRPLANE-X-MOVE, WIDTH),
-    p.y + AIRPLANE-Y-MOVE)
-end
-
-fun alter-airplane-y-on-key(w, key):
-  ask:
-    | key == "up"   then: posn(w.x, w.y - KEY-DISTANCE)
-    | key == "down" then: posn(w.x, w.y + KEY-DISTANCE)
-    | otherwise: w
-  end
-end
-
-fun is-on-land-or-water(w):
-  w.y >= ((HEIGHT - BASE-HEIGHT) - 18)
-end
-
-INIT-POS = posn(0, 0)
-anim = reactor:
-  init: INIT-POS,
-  on-tick: move-airplane-xy-on-tick,
-  on-key: alter-airplane-y-on-key,
-  to-draw: place-airplane-xy,
-  stop-when: is-on-land-or-water
-end
-
-R.interact(anim)
 
     </pre>
   </blockquote>
