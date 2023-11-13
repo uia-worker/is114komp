@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="no-NB">
+<head>
+    <meta charset="utf-8">
+    <title>IS-114 Kompendium: GPeX Webutvikling</title>
+    <link href='https://fonts.googleapis.com/css?family=IBM Plex Serif' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/is114-style.css" title="default">
+    <script type="text/javascript" src="js/is114.js"></script>
+</head>
+<body>
+  <div class="tocset">
+    <div class="tocview">
+      <div class="tocviewlist tocviewlisttopspace">
+        <div class="tocviewtitle">
+          <table cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td style="width: 1em;">
+              <a href="javascript:void(0);" title="Expand/Collapse" class="tocviewtoggle" onclick="TocviewToggle(this,&quot;tocview_0&quot;);">▼</a>
+                </td>
+                <td>
+                </td>
+                <td>
+                  <a href="index.html" class="tocviewlink" data-pltdoc="x">Høst 2023: IS-114</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tocviewsublisttop" style="display: block;" id="tocview_0">
+          <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="index.html" class="tocviewlink" data-pltdoc="x">Beskrivelse og rettningslinjer</a>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="komp.html" class="tocviewselflink" data-pltdoc="x">Kompendium</a>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="draft_git.html" class="tocviewlink" data-pltdoc="x">Oppgaver</a>
+              </td>
+            </tr>
+            <!--
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="#" class="tocviewlink" data-pltdoc="x">Kollokvium</a>
+              </td>
+            </tr>
+          -->
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="honnor.html" class="tocviewlink" data-pltdoc="x">Honnør</a>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="tocviewlist">
+        <table cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <td style="width: 1em;">
+                <a href="javascript:void(0);" title="Expand/Collapse" class="tocviewtoggle" onclick="TocviewToggle(this,&quot;tocview_1&quot;);">▼</a>
+              </td>
+              <td>
+              </td>
+              <td>
+                <a href="" class="tocviewselflink" data-pltdoc="x">Kompendium</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="tocviewsublistbottom" style="display: block;" id="tocview_1">
+          <table cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="progogis.html" class="tocviewlink" data-pltdoc="x">Programmering og informasjonssystemer</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="progutdann.html" class="tocviewlink" data-pltdoc="x">Programmeringsutdanning</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="gp01.html" class="tocviewlink" data-pltdoc="x">GP01: komme i gang</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="gp02.html" class="tocviewlink" data-pltdoc="x">GP02: variabler</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="gp03.html" class="tocviewlink" data-pltdoc="x">GP03: funksjoner</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="gp04.html" class="tocviewlink" data-pltdoc="x">GP04: Modeller, data og tabeller</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="gp05.html" class="tocviewlink" data-pltdoc="x">GP05: Datastrukturer</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="gp06.html" class="tocviewlink" data-pltdoc="x">GP06: Rekursjon</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="gpex.html" class="tocviewselflink" data-pltdoc="x">GPeX: Web utvikling I</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="maincolumn">
+    <!-- kun for første side
+    <div class="versionbox">
+      <span class="version">Mandag, 23. Oktober 2023, laget av Janis Gailis</span>
+    </div>
+    -->
+
+<h1>
+  Web utvikling I
+</h1>
+
+<p>Forkortelser brukt i teksten:</p>
+<ul>  
+  <li>CERN - Conseil européen pour la Recherche nucléaire (European Organization for Nuclear Research)</li>
+  <li>CSS - Cascading Style Sheets</li>
+  <li>HTML - HyperText Markup Language</li>
+  <li>HTTP - HyperText Transfer Protocol</li>
+  <li>HTTPS - HyperText Transfer Protocol Secure (eller HTTP over TLS)</li>
+  <li>IP - Internet Protocol</li>
+  <li>MDN - Mozilla Developer Network</li>
+  <li>TCP - Transmission Control Protocol</li>
+  <li>TLS - Transport Layer Security</li>
+</ul>
+
+<p>Utvikling av WWW (over Internett) har foregått i diverse felleskap, organisasjoner og bedrifter siden tidlig på 1990-tallet, når TimBL (Tim-Berners Lie), en forsker ved CERN, forelso en implementasjon av klient-serverarkitektur for å dele elektroniske dokumenter, som innehold hypertekst.</p>
+
+<p>For at to datamaskiner skal kunne kommunisere over et nettverk (f. eks. Internett), begge trenger å starte minst et program som "hører" på signaler fra "utsiden". Et slikt program kan også kalles for en prosess. En prosess kan defineres som kode som er lastet inn i datamaskinens primære minne og administreres av en mengde andre programmer, ofte kalt for operativsystemet (disse er nødvendig i datamaskiner som er designet for generelle operasjoner, dvs. datamaskiner som kan utføre mange programmer for en ordinær (for)bruker samtidig). To typer av programvare er blitt vanlig når man betrakter webapplikasjoner, - nettleserer og webservere. Nettlesere er applikasjoner som utfører på klient-siden og webservere er applikasjoner som utfører på server-siden.</p>
+
+<p>I dag er det er fåtalls dominerende aktører (og applikasjoner) både på klient- og server-siden. På klient siden er de fleste kjent med nettlesere som Google Chrome, Edge, Safari og Mozilla Firefox (det finnes forskjellige varianter for de som ønsker mer tilpasset "browsing", som Tor Browser, Brave, Opera). Alle disse nettleser-programmer blir distribuert av leverandører i forskjellige varianter -  for skrivebordsdatamaskiner, tabletter og smarttelefoner.</p>
+
+<p>På serversiden har applikasjoner som Apache Webserver (httpd) og Nginx vært dominerende, men er ikke lenger nok til å implementere et stabilt server-side. Server-sidene er per i dag samlinger av diverse programmer, som kan tilby diverse typer tjenester til klient-sidene. Det vanlig å bruke en "tradisjonell" webserver (Nginx for eksempel) for å balansere belastning, som skapes når mange brukere prøver å laste ned ressurser fra en server samtidig, og andre type programmer (skrevet i JavaScript, PHP, Python, Go, C#, C++ osv.) for å hente data fra databaser og dynamisk skape responsen til en nettleser.</p>
+
+<p>Det er en vanlig oppfatning av utbredelsen av Internett og WorldWideWeb (eller web, som vi ofte kaller det), har vært mulig på grunn av stabile og åpne standarder for hvordan data mellom nettlesere og webservere skal utveksles. Når en ønsker å utbedre eksisterende programmer for både klient- og server-siden, så trenger man følge slike standarder nøye. Det er også muligheter til å delta i å utvide standarder og det skjer vanligvis gjennom såkalte konsortier. Eksempel på de viktigste standarder er TCP/IP, som har ikke vært mye endret siden 1970-tallet og HTTP, som har vært noe mer endret i de siste årene, men som har behold grunnleggende definisjon for en protokoll for å utveksle meldinger mellom nettleser og webserver. Disse standardene har blitt utvidet med diverse tillegg, spesielt for kryptering (HTTPS) og for effektivitet (HTTP/2 og HTTP/3). I dag brukes det minst tre forskjellige versjoner av HTTP om hverandre. Med "minst" menes her at det kan være flere varianter av HTTP/2 og HTTP/3, som er implementert på webservere, og at utvikling av slike varianter pågår kontinuerlig.</p>
+
+<p>På klient-siden finnes det en tilsvarende "stabil" standard, - HTML. Selv om det er blitt mange tillegg til denne standarden siden begynnelsen på 2000-tallet (spesielt for å inkludere diverse mediatyper, som video, bilder og lyd), har den beholdt en stabil basisspesifikasjon. Den gjeldende versjonen nå er HTML 5.</p>
+
+<p>TimBL utviklet HTML og HTTP kun for tekst-baserte dokumenter. Fort oppsto det behov for å gjøre dokumentente mer estetiske, dvs. gjøre det grafiske brukergrensesnittet mer brukbart for de fleste brukere av datamaskiner. Det resulterte i en tanke om å adskille innholdet fra formen, dvs. lagre innhold på en måte, som ga mulighet til å bytte formen eller stilen på innholdet med mindre endringer i koden. Denne tanken var bakgrunn for utviklingen av Cascading Style Sheets, som er kode, som gir mulighet til å "pynte" på innholdet i en webside. I tillegg oppsto det også et behov å gjøre en del dynamiske endringer på klient-siden, siden det vær ikke alltid effektivt å hente data fra server-siden når klient-siden trengte det. Derfor tenkte man på en modell, hvor man kunne overføre mer data fra server-siden til klient-siden enn det som brukeren forespurte der og da, for å eventuelt unngå å gjøre nye overføringer når brukeren forespurte mer av data, som hørte sammen med de opprinnelig forespurte dataene. Denne modellen er implementert i dag gjennom en "motor", som bruker et programmeringsspråk - JavaScript. Prinsippet kort forklart er at klient-siden forespør ressurser fra server-siden og laster disse inn i sitt primære minnet. Disse ressursene inneholder ikke bare HTML-kode, men også små programmer skrevet i JavaScript, som kan utføres under innlasting eller senere som en respons på brukerens handlinger på brukergrenssnittet.</p>
+
+<p>Dette er et meget forenklet beskrivelse av utvikling av webapplikasjonsrammeverk, men det bare illustrerer det faktum at dagens webutviklere trenger å bli kjent med HTML, CSS, JavaScript og ha en grunnleggnde forståelse av HTTP. I tillegge trenger webutviklere beherske en rekke verktøy, som er både inkludert i de dominerende nettleserapplikasjoner og som kan installeres som uavhengige applikasjoner. Testrammeverk, som er implementert som webapplikasjoner (codepn, jsfiddle osv.), er også et godt verktøy å ha kjennskap til.</p>
+
+<p>Som en inngang til denne omfattende verden av diverse standarder, programmer og rammeverk, anbefales det Mozilla Developer Network sine ressurser. Det finnes selvsagt mange andre muligheter tilgjengelig på WWW. Standarder finnes på W3C sine sider.</p>
+
+<h2>
+  Posisjonering
+  <a name=""></a>
+</h2>
+    
+<p>I Pyret brukte vi empty-scene eller en figur som hovedvindu for tegning. Hovedvindu ble presentert som en "verden" med et koordinatsystem (X- og Y-retning med enheter) eller et annet posisjoneringssystem (venstre, høyre, øverst, nederst). I nettlesere er hovedvinduet scenen hvor alle elementene blir lagt på (tegnet eller "rendered"). Størrelser og posisjoner i nettleservinduet bruker forskjellige måleenheter (<a href="https://www.w3.org/Style/Examples/007/units.en.html">.htm</a>). I begynnelsen av web-tiden (første nettleser til TimBL var WorldWideWeb <a href="https://www.w3.org/People/Berners-Lee/WorldWideWeb.html">.htm</a>) var nettleser bygd opp som en samling av vinduer og hvert vindu kunne inneholde tekst, meny, ikoner, knapper og bakgrunnsbilder som elementer. Tekst ble vanligvis formattert basert på et dokumentmodell, dvs. som et slags dokumentmal med tittel, overskrifter og brødtekst, som gjenspeilet både tradisjonelle formater fra boktrykkeri og formell kommunikasjon (lover, kontrakter og andre formelle dokumenter). Alle disse elementer finnes også i de moderne versjonene av HTML.</p>
+
+<p>På grunn av stor variasjon av programmer, er webdesign en utfordrende oppgave, hvis målet er å lage et brukergrensesnitt som oppleves brukbart for de fleste brukere på de fleste av de mest populære platformene (Apple, MS Windows, iOS, Android). Arsenalet av verktøy for webutviklere har blitt meget stor de siste årene og muligheter til å skape brukbare grensesnitt er veldig mange. La oss først betrakte noen sentrale begreper.</p>
+
+<p><b>Responsiv webdesign</b> er en tilnærming hvor designer forsøker å lage kode som vises frem brukbart på alle skjermstørrelser og oppløsninger. Det er en tilnærming til å designe for en multi-enhets-web.</p>
+
+<p><b>Viewport</b> er et mangekantet (vanligivis firkantent) området på skjermen, som blir vist (er i forgrunnen). I web-sammenheng refererer det til den delen av dokumentet, som brukeren viser, som er synlig i dets vinduet (eller på skjermen, hvis dokumentet vises i fullskjermmodus). Innholdet som ikke er i "viewport", vises ikke før den eventuelt blir scrollet inn i "viewport".</p>
+
+<img src="images/is-114-www-padding-marging-viewport.png" width="300" alt="browser window parameters">
+     <p><i>Figur 1. Parametre for et nettleservindu (Google Chrome Versjon 118.0.5993.117).</i></p>
+
+
+<p>Uten noen ekstra moduler (kun en HTML-parser), er en HTML side i de fleste nettlesere responsiv i den forstand at den lar elementene flyte når vindustørrelsen (eller, hvis dokumentet ikke har plass i vinduet, "viewport" sin størrelse) blir endret. Denne løsningen er ikke optimal, da på en bred skjerm vil tekstlinjene være veldig lange og vanskelig å lese. Hvis man prøver låse "viewport" sin størrelse, vil det også gi uønskede effekter, som behovet for scrolling på en mindre skjerm, for eksempel.</p>
+
+<p>De nyeste nettlesere har en del innebygde funksjoner, som kan hjelpe for å utvikle for en multi-enhets-web. For eksempel, ved hjelp av såkalte "at-rules" som <code>@media</code>, er det mulig å spesifisere forskjellige stiler for forskjellige skjermstørrelser. </p>
+<blockquote class="codeexamp">
+  <p class="codeexampheader">Kodeeksempel: at-rule @media</p>
+    <blockquote class="codeexampbody">
+      <pre><code>
+&lt;style type=&quot;text/css&quot;&gt;
+    p { 
+      color: green; 
+    }
+    @media screen and (min-width: 500px) {
+      p {
+        color: red;
+      }
+    }
+  &lt;/style&gt;
+      </code></pre>
+  </blockquote>
+</blockquote>
+
+<p>Før man begynner med utvikling av websider, kan det være nyttig med en mal: </p>
+
+<blockquote class="codeexamp">
+  <p class="codeexampheader">Kodeeksempel: mal for utvikling med HTML, CSS og JavaScript</p>
+    <blockquote class="codeexampbody">
+      <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;!-- &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot; /&gt; --&gt;
+    &lt;!-- &lt;script src=&quot;js/script.js&quot;&gt;&lt;/script&gt; --&gt;
+    &lt;title&gt;IS-114 Web test00: mal&lt;/title&gt;
+    &lt;!-- &lt;style type=&quot;text/css&quot;&gt;&lt;/style&gt; --&gt;
+    &lt;!-- &lt;script type=&quot;text/javascript&quot;&gt;&lt;/script&gt; --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;!-- alle &quot;vanlige&quot; html elementer som p, table, div osv. --&gt;
+
+  &lt;!--
+    &lt;canvas id=&quot;canvas1&quot; width=&quot;220&quot; height=&quot;160&quot;&gt;&lt;/canvas&gt;
+  --&gt;
+
+  &lt;!--
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+    &lt;/svg&gt;
+  --&gt;
+
+  &lt;!-- &lt;script type=&quot;text/javascript&quot;&gt;&lt;/script&gt; --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+   </code></pre>
+  </blockquote>
+</blockquote>
+<p>Når det gjelder posisjonering av både tekst, bilder og tegninger (SVG og Canvas) på en webside, så har en utvikler en stor fleksibilitet, - som kan både være nyttig og utfordrende. Det er mulig å skape en layout med elementer som p (paragraph eller avsnitt), table, og div (division, section) og plassere disse både i forhold til hovedvinduet og i forhold til hverandre. En slik posisjonering gjennomføres ved hjelp av CSS. Hvis man ikke bruker CSS, vil disse elementene flyte fritt innen hovedvinduet avhengig av størrelsen på "viewport". Her er et eksempel på posisjonering og fargelegging av div-elementer ved hjelp av CSS.</p>
+<blockquote class="codeexamp">
+  <p class="codeexampheader">Kodeeksempel: flaggtegning med HTML og CSS</p>
+    <blockquote class="codeexampbody">
+      <pre><code>
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot; /&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+  &lt;!--&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; /&gt;--&gt;
+  &lt;title&gt;IS-114 Web test04&lt;/title&gt;
+  &lt;style&gt;
+       .parent {
+            position: relative;
+            background-color: red;
+            width: 220px;
+            height: 160px;
+        }
+ 
+        .child_one {
+            position: absolute;
+            left: 60px;
+            top: 0px;
+            background-color: white;
+            width: 40px;
+            height: 160px;
+        }
+ 
+        .child_one:hover {
+            position: absolute;
+            cursor: pointer;
+        }
+ 
+        .child_two {
+            background-color: blue;
+            position: absolute;
+            left: 70px;
+            top: 0px;
+            width: 20px;
+            height: 160px;
+        }
+ 
+        .child_three {
+            background-color: white;
+            position: absolute;
+            left: 0px;
+            top: 60px;
+            width: 220px;
+            height: 40px;
+        }
+
+        .child_four {
+            background-color: blue;
+            position: absolute;
+            left: 0px;
+            top: 70px;
+            width: 220px;
+            height: 20px;
+        }
+        
+  &lt;/style&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div class=&quot;parent&quot;&gt;
+    &lt;div class=&quot;child_one&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;child_three&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;child_two&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;child_four&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  
+&lt;/body&gt;
+
+&lt;/html&gt;
+    </code></pre>
+  </blockquote>
+</blockquote>
+
+
+<p>Et mer komplekst eksempel for posisjonering med HTML, CSS og SVG: </p>   
+
+<blockquote class="codeexamp">
+  <p class="codeexampheader">Kodeeksempel: flaggtegning med HTML og CSS</p>
+    <blockquote class="codeexampbody">
+      <pre><code>
+
+  
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;!-- &lt;link href='https://fonts.googleapis.com/css?family=IBM Plex Serif' rel='stylesheet'&gt; --&gt;
+    &lt;!-- &lt;link href=&quot;https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt; --&gt;
+    &lt;!-- &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot; /&gt; --&gt;
+    &lt;!-- &lt;script src=&quot;js/script.js&quot;&gt;&lt;/script&gt; --&gt;
+    &lt;title&gt;IS-114 Web test09-2: yin-yang pyret-html(svg)&lt;/title&gt;
+    
+    &lt;style type=&quot;text/css&quot;&gt;
+
+      #main {
+        position: relative;
+
+      }
+
+      #yinyang {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 100%);
+        width: 150px;
+        height: 150px;
+        background-color: red;
+      }
+
+      #yinyang:hover {
+        background-color: green;
+      }
+
+    &lt;/style&gt;
+        
+    &lt;!-- &lt;script type=&quot;text/javascript&quot;&gt;&lt;/script&gt; --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;div id=&quot;main&quot;&gt;
+    &lt;a href=&quot;&quot;&gt;
+    &lt;div id=&quot;yinyang&quot;&gt;
+      &lt;!-- yin-and-yang --&gt; 
+      &lt;svg width=&quot;100&quot; height=&quot;100&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; style=&quot;margin: 25;&quot;&gt;
+        &lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;50&quot; stroke=&quot;black&quot; fill=&quot;white&quot; /&gt;
+        &lt;path d=&quot;M 50 0
+           A 50 50, 0, 0, 1, 50 100
+           L 50 100 Z&quot; fill=&quot;black&quot;/&gt;
+        &lt;circle cx=&quot;50&quot; cy=&quot;25&quot; r=&quot;25&quot; fill=&quot;white&quot; /&gt;
+        &lt;circle cx=&quot;50&quot; cy=&quot;25&quot; r=&quot;8&quot; fill=&quot;black&quot; /&gt;
+        &lt;circle cx=&quot;50&quot; cy=&quot;75&quot; r=&quot;25&quot; fill=&quot;black&quot; /&gt;
+        &lt;circle cx=&quot;50&quot; cy=&quot;75&quot; r=&quot;8&quot; fill=&quot;white&quot; /&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        
+   </code></pre>
+  </blockquote>
+</blockquote>  
+
+
+<blockquote class="codeexamp">
+  <p class="codeexampheader">Kodeeksempel:  HTML, CSS, JS og Canvas API</p>
+    <blockquote class="codeexampbody">
+      <pre><code>
+<!DOCTYPE html>
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot; /&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; /&gt;
+  &lt;title&gt;IS-114 Go Go JavaScript&lt;/title&gt;
+  &lt;style&gt;
+    canvas {
+      border: solid;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;h1&gt;IS-114 Go Go JavaScript&lt;/h1&gt;
+
+  &lt;canvas id=&quot;canvas&quot; width=&quot;500&quot; height=&quot;500&quot;&gt;&lt;/canvas&gt;
+  &lt;p id=&quot;output&quot;&gt;&lt;/p&gt;
+  
+  &lt;script&gt;
+    const canvas = document.getElementById(&quot;canvas&quot;);
+    const ctx = canvas.getContext(&quot;2d&quot;);
+    
+    rectangle = function(ctxl) {
+      ctxl.fillStyle = &quot;green&quot;;
+      ctxl.fillRect(10, 10, 150, 50);
+    }
+    rectangle(ctx)
+    
+    circle = function(radius, mode, color) {
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.arc(100, 150, radius, 0, Math.PI * 2, true); // Outer circle
+      if (mode == &quot;solid&quot;) {
+        ctx.fill();
+      } else {
+        ctx.stroke();
+      }
+    }
+    circle(50, &quot;solid&quot;, &quot;red&quot;)
+    circle(20, &quot;solid&quot;, &quot;orange&quot;)
+    
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+
+    </code></pre>
+  </blockquote>
+</blockquote>
+
+
+<p>Relevant studiemateriale:
+  <ul>  
+    <li>JavaScript for Beginners - Full Course (video) (<a href="https://www.youtube.com/watch?v=5qlbbpvp2Y4">.htm</a>)</li>
+    <li>On rekursjon av Alvin publisert på freecodecamp "Dynamic Programming - Learn to Solve Algorithmic Problems & Coding Challenges" (<a href="https://www.youtube.com/watch?v=oBt53YbR9Kk">.htm</a>)</li>
+    <li></li>
+    <li>Testmiljøet for HTML, CSS og JavaScript (markedsført som "a social development environment") (<a href="https://codepen.io/about">.htm</a>)</li>
+    <li>Noe vi kan relatere til det vi har sett i Pyret? https://www.youtube.com/watch?v=F-JvvFlYcts</li>
+    <li>Event Listeners (så mye som skjer under overflaten <a href="https://patrickhlauke.github.io/touch/tests/event-listener-keyevents.html">.htm</a>)</li>
+    <li>MDN Canvas API (<a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">.htm</a>)</li>
+<li>MDN CSS Border (<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border">.htm</a>)</li>
+<li>MDN Canvas API Drawing Shapes (<a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">.htm</a>)</li>
+<li>HTML decoder/encoder (<a href="https://magictool.ai/tool/html-decoder-encoder/">.htm</a>)</li>
+  </ul>
+</p>
+
+
+
+<h2>3 Referanser
+  <a name="referanser"></a>
+</h2>
+<ul>  
+
+  <li>JavaScript events eksempel https://codepen.io/joshuatz/pen/OGeYZP</li>
+  <li>Eloquent JavaScript. (2018). Eloquentjavascript.net. https://eloquentjavascript.net/index.html</li>
+  <li>Explore DOM Events. (2023). Domevents.dev. https://domevents.dev/</li>
+
+
+  
+
+</ul>
+
+<h2>Diverse bilder / skjermdump</h2>
+
+
+
+  </div>
+
+</body>
+</html>
