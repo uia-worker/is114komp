@@ -190,22 +190,22 @@
 
 <p>TimBL utviklet HTML og HTTP kun for tekst-baserte dokumenter. Fort oppsto det behov for å gjøre dokumentente mer estetiske, dvs. gjøre det grafiske brukergrensesnittet mer brukbart for de fleste brukere av datamaskiner. Det resulterte i en tanke om å adskille innholdet fra formen, dvs. lagre innhold på en måte, som ga mulighet til å bytte formen eller stilen på innholdet med mindre endringer i koden. Denne tanken var bakgrunn for utviklingen av Cascading Style Sheets, som er kode, som gir mulighet til å "pynte" på innholdet i en webside. I tillegg oppsto det også et behov å gjøre en del dynamiske endringer på klient-siden, siden det vær ikke alltid effektivt å hente data fra server-siden når klient-siden trengte det. Derfor tenkte man på en modell, hvor man kunne overføre mer data fra server-siden til klient-siden enn det som brukeren forespurte der og da, for å eventuelt unngå å gjøre nye overføringer når brukeren forespurte mer av data, som hørte sammen med de opprinnelig forespurte dataene. Denne modellen er implementert i dag gjennom en "motor", som bruker et programmeringsspråk - JavaScript. Prinsippet kort forklart er at klient-siden forespør ressurser fra server-siden og laster disse inn i sitt primære minnet. Disse ressursene inneholder ikke bare HTML-kode, men også små programmer skrevet i JavaScript, som kan utføres under innlasting eller senere som en respons på brukerens handlinger på brukergrenssnittet.</p>
 
-<p>Dette er et meget forenklet beskrivelse av utvikling av webapplikasjonsrammeverk, men det bare illustrerer det faktum at dagens webutviklere trenger å bli kjent med HTML, CSS, JavaScript og ha en grunnleggnde forståelse av HTTP. I tillegge trenger webutviklere beherske en rekke verktøy, som er både inkludert i de dominerende nettleserapplikasjoner og som kan installeres som uavhengige applikasjoner. Testrammeverk, som er implementert som webapplikasjoner (codepn, jsfiddle osv.), er også et godt verktøy å ha kjennskap til.</p>
+<p>Dette er en meget forenklet beskrivelse av utviklingen av webapplikasjonsrammeverk, men det bare illustrerer det faktum at dagens webutviklere trenger å bli kjent med HTML, CSS, JavaScript og ha en grunnleggnde forståelse av HTTP. I tillegge trenger webutviklere beherske en rekke verktøy, som er både inkludert i de dominerende nettleserapplikasjoner og som kan installeres som uavhengige applikasjoner. Testrammeverk, som er implementert som webapplikasjoner (codepen, jsfiddle osv.), er også et verktøy man kan dra nytte av.</p>
 
-<p>Som en inngang til denne omfattende verden av diverse standarder, programmer og rammeverk, anbefales det Mozilla Developer Network sine ressurser. Det finnes selvsagt mange andre muligheter tilgjengelig på WWW. Standarder finnes på W3C sine sider.</p>
+<p>Som en inngang til denne omfattende verdenen av diverse standarder, programmer og rammeverk, anbefales det Mozilla Developer Network (MDN) sine ressurser. Det finnes selvsagt mange andre muligheter tilgjengelig på WWW. Standarder finnes på W3C sine sider.</p>
 
 <h2>
   Posisjonering
   <a name=""></a>
 </h2>
     
-<p>I Pyret brukte vi empty-scene eller en figur som hovedvindu for tegning. Hovedvindu ble presentert som en "verden" med et koordinatsystem (X- og Y-retning med enheter) eller et annet posisjoneringssystem (venstre, høyre, øverst, nederst). I nettlesere er hovedvinduet scenen hvor alle elementene blir lagt på (tegnet eller "rendered"). Størrelser og posisjoner i nettleservinduet bruker forskjellige måleenheter (<a href="https://www.w3.org/Style/Examples/007/units.en.html">.htm</a>). I begynnelsen av web-tiden (første nettleser til TimBL var WorldWideWeb <a href="https://www.w3.org/People/Berners-Lee/WorldWideWeb.html">.htm</a>) var nettleser bygd opp som en samling av vinduer og hvert vindu kunne inneholde tekst, meny, ikoner, knapper og bakgrunnsbilder som elementer. Tekst ble vanligvis formattert basert på et dokumentmodell, dvs. som et slags dokumentmal med tittel, overskrifter og brødtekst, som gjenspeilet både tradisjonelle formater fra boktrykkeri og formell kommunikasjon (lover, kontrakter og andre formelle dokumenter). Alle disse elementer finnes også i de moderne versjonene av HTML.</p>
+<p>I Pyret brukte vi <code>empty-scene</code> eller en figur som hovedvindu for tegning. Hovedvinduet ble presentert som en "verden" med et koordinatsystem (X- og Y-retning hvor avstand ble målt med spesifikke enheter) eller et annet posisjoneringssystem (venstre, høyre, øverst, nederst). I nettlesere er hovedvinduet scenen hvor alle elementene blir lagt på (tegnet eller "rendered"). Størrelser og posisjoner i nettleservinduet bruker forskjellige målenheter (<a href="https://www.w3.org/Style/Examples/007/units.en.html">.htm</a>). I begynnelsen av web-tiden (første nettleser til TimBL var WorldWideWeb <a href="https://www.w3.org/People/Berners-Lee/WorldWideWeb.html">.htm</a>) var nettleser bygd opp som en samling av vinduer og hvert vindu kunne inneholde tekst, meny, ikoner, knapper og bakgrunnsbilder som elementer. Tekst ble vanligvis formattert basert på et dokumentmodell, dvs. som et slags dokumentmal med tittel, overskrifter og brødtekst, som gjenspeilet både tradisjonelle formater fra boktrykkeri og formell kommunikasjon (lover, kontrakter og andre formelle dokumenter). Alle disse elementene finnes også i de moderne versjonene av HTML.</p>
 
 <p>På grunn av stor variasjon av programmer, er webdesign en utfordrende oppgave, hvis målet er å lage et brukergrensesnitt som oppleves brukbart for de fleste brukere på de fleste av de mest populære platformene (Apple, MS Windows, iOS, Android). Arsenalet av verktøy for webutviklere har blitt meget stor de siste årene og muligheter til å skape brukbare grensesnitt er veldig mange. La oss først betrakte noen sentrale begreper.</p>
 
-<p><b>Responsiv webdesign</b> er en tilnærming hvor designer forsøker å lage kode som vises frem brukbart på alle skjermstørrelser og oppløsninger. Det er en tilnærming til å designe for en multi-enhets-web.</p>
+<p><b>Responsiv webdesign</b> er en tilnærming hvor designer forsøker å lage kode, som vises frem brukbart på alle skjermstørrelser og oppløsninger. Det er en tilnærming til å designe for en multi-enhets-web.</p>
 
-<p><b>Viewport</b> er et mangekantet (vanligivis firkantent) området på skjermen, som blir vist (er i forgrunnen). I web-sammenheng refererer det til den delen av dokumentet, som brukeren viser, som er synlig i dets vinduet (eller på skjermen, hvis dokumentet vises i fullskjermmodus). Innholdet som ikke er i "viewport", vises ikke før den eventuelt blir scrollet inn i "viewport".</p>
+<p><b>Viewport</b> er et mangekantet (vanligivis firkantet) omwrådet på skjermen, som blir vist (er i forgrunnen). I web-sammenheng refererer det til den delen av dokumentet, som brukeren viser, som er synlig i dets vinduet (eller på skjermen, hvis dokumentet vises i fullskjermmodus). Innholdet som ikke er i "viewport", vises ikke før den eventuelt blir scrollet inn i "viewport".</p>
 
 <img src="images/is-114-www-padding-marging-viewport.png" width="300" alt="browser window parameters">
      <p><i>Figur 1. Parametre for et nettleservindu (Google Chrome Versjon 118.0.5993.117).</i></p>
@@ -269,7 +269,7 @@
    </code></pre>
   </blockquote>
 </blockquote>
-<p>Når det gjelder posisjonering av både tekst, bilder og tegninger (SVG og Canvas) på en webside, så har en utvikler en stor fleksibilitet, - som kan både være nyttig og utfordrende. Det er mulig å skape en layout med elementer som p (paragraph eller avsnitt), table, og div (division, section) og plassere disse både i forhold til hovedvinduet og i forhold til hverandre. En slik posisjonering gjennomføres ved hjelp av CSS. Hvis man ikke bruker CSS, vil disse elementene flyte fritt innen hovedvinduet avhengig av størrelsen på "viewport". Her er et eksempel på posisjonering og fargelegging av div-elementer ved hjelp av CSS.</p>
+<p>Når det gjelder posisjonering av både tekst, bilder og tegninger (SVG og Canvas) på en webside, så har en utvikler en stor fleksibilitet, - som kan både være nyttig og utfordrende. Det er mulig å skape en layout med elementer som <code>p</code> (paragraph eller avsnitt), <code>table</code>, og <code>div</code> (division, section) og plassere disse både i forhold til hovedvinduet og i forhold til hverandre. En slik posisjonering gjennomføres ved hjelp av CSS. Hvis man ikke bruker CSS, vil disse elementene flyte fritt innen hovedvinduet avhengig av størrelsen på "viewport". Her er et eksempel på posisjonering og fargelegging av div-elementer ved hjelp av CSS.</p>
 <blockquote class="codeexamp">
   <p class="codeexampheader">Kodeeksempel: flaggtegning med HTML og CSS</p>
     <blockquote class="codeexampbody">
@@ -296,11 +296,6 @@
             background-color: white;
             width: 40px;
             height: 160px;
-        }
- 
-        .child_one:hover {
-            position: absolute;
-            cursor: pointer;
         }
  
         .child_two {
