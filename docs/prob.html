@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="no-NB">
+<head>
+    <meta charset="utf-8">
+    <title>IS-114 Kompendium: Problemløsning (Polya)</title>
+    <link href='https://fonts.googleapis.com/css?family=IBM Plex Serif' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/is114-style.css" title="default">
+    <script type="text/javascript" src="js/is114.js"></script>
+</head>
+<body>
+  <div class="tocset">
+    <div class="tocview">
+      <div class="tocviewlist tocviewlisttopspace">
+        <div class="tocviewtitle">
+          <table cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td style="width: 1em;">
+              <a href="javascript:void(0);" title="Expand/Collapse" class="tocviewtoggle" onclick="TocviewToggle(this,&quot;tocview_0&quot;);">▼</a>
+                </td>
+                <td>
+                </td>
+                <td>
+                  <a href="index.html" class="tocviewlink" data-pltdoc="x">Høst 2023: IS-114</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tocviewsublisttop" style="display: block;" id="tocview_0">
+          <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="index.html" class="tocviewlink" data-pltdoc="x">Beskrivelse og rettningslinjer</a>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="komp.html" class="tocviewselflink" data-pltdoc="x">Kompendium</a>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="draft_git.html" class="tocviewlink" data-pltdoc="x">Oppgaver</a>
+              </td>
+            </tr>
+            <!--
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="#" class="tocviewlink" data-pltdoc="x">Kollokvium</a>
+              </td>
+            </tr>
+          -->
+            <tr>
+              <td align="right">
+              </td>
+              <td>
+                <a href="honnor.html" class="tocviewlink" data-pltdoc="x">Honnør</a>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="tocviewlist">
+        <table cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <td style="width: 1em;">
+                <a href="javascript:void(0);" title="Expand/Collapse" class="tocviewtoggle" onclick="TocviewToggle(this,&quot;tocview_1&quot;);">▼</a>
+              </td>
+              <td>
+              </td>
+              <td>
+                <a href="" class="tocviewselflink" data-pltdoc="x">Kompendium</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="tocviewsublistbottom" style="display: block;" id="tocview_1">
+          <table cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="progogis.html" class="tocviewlink" data-pltdoc="x">Programmering og informasjonssystemer</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="progutdann.html" class="tocviewlink" data-pltdoc="x">Programmeringsutdanning</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="gp01.html" class="tocviewlink" data-pltdoc="x">GP01: komme i gang</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="gp02.html" class="tocviewlink" data-pltdoc="x">GP02: variabler</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="gp03.html" class="tocviewlink" data-pltdoc="x">GP03: funksjoner</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="gp04.html" class="tocviewlink" data-pltdoc="x">GP04: Modeller, data og tabeller</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="gp05.html" class="tocviewlink" data-pltdoc="x">GP05: Datastrukturer</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="gp06.html" class="tocviewlink" data-pltdoc="x">GP06: Rekursjon</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"></td>
+                <td>
+                  <a href="gpex.html" class="tocviewselflink" data-pltdoc="x">GPeX: Web utvikling I</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="maincolumn">
+    <!-- kun for første side
+    <div class="versionbox">
+      <span class="version">Mandag, 23. Oktober 2023, laget av Janis Gailis</span>
+    </div>
+    -->
+
+<h1>
+  Problemløsning
+</h1>
+
+<h2>Fire prinsipper</h2>
+
+<table class="table1" >
+      <thead>
+          <tr>
+              <th colspan="3">Fire prinsipper</th>
+          </tr>
+          <tr>
+              <th>Prinsipp</th>
+              <th>Kommentar</th>
+
+          </tr>
+      </thead>
+      <tbody>
+        <tr>
+              <td>Forstå problemet</td>
+              <td>
+                <ul>
+                  <li>Hva blir du spurt om å finne eller vise?</li>
+                  <li>Kan du reformulere problemet med dine egne ord?</li>
+                  <li>Kan du tenke på et bilde eller en diagram som kan hjelpe å løse problemet?</li>
+                  <li>Er det nok informasjon for å kunne finne en løsning?</li>
+                  <li>Forstår du alle ord som er brukt i problemdefinisjonen?</li>
+                  <li>Trenger du å stille et spørsmål?</li>
+                </ul></td>
+             
+          </tr>
+          <tr>
+              <td>Lage en plan</td>
+              <td>
+                Mulige strategier:
+                <ul>
+                  <li>gjette og sjekke</li>
+                  <li>lag en ordnet liste</li>
+                  <li>eliminere noen muligheter</li>
+                  <li>bruk symmetri</li>
+                  <li>betrakte spesialtilfeller</li>
+                  <li>bruke direkte resonnement</li>
+                  <li>løse en ligning</li>
+                  <li>se etter et mønster</li>
+                  <li>lag en tegning</li>
+                  <li>løse et enklere problem</li>
+                  <li>bruke en modell</li>
+                  <li>jobbe bakover</li>
+                  <li>bruke en formel</li>
+                  <li>være kreativ</li>
+                </ul>
+              </td>
+             
+          </tr>
+          <tr>
+              <td>Utføre plan</td>
+              <td>Alt du trenger er å være nøye og å være tålmodig, forutsatt at du har de nødvendige ferdighetene. Hold deg til planen. Hvis planen ikke fungerer, forkaste den og lage en ny.</td>
+             
+          </tr>
+          <tr>
+              <td>Se tilbake på ditt arbeid. Hvordan kan det gjøres bedre?</td>
+              <td>Dette kan forbedre dine ferdigheter for å løse andre problemer i fremtiden. Du vil bli belønnet, hvis du gjør dette.</td>
+             
+          </tr>
+          
+      </tbody>
+  </table>
+  <p><i><b>Tabell 1.</b> Fire prinsipper etter George Polya (1945).</i></p>
+
+<p>Se også (Wikipedia Contributors, 2023).</p>
+
+<h2>Heuristikk</h2>
+<ul>  
+<li>Kan du finne et analogt problem?</li>
+<li>Kan du legge til et nytt element til problemet for å komme nærmere en løsning?</li>
+<li>Kan du finne et mer generelt problem?</li>
+<li>Kan du løse problemet med å finne en generalisering fra noen få eksempler?</li>
+<li>Kan du variere eller endre ditt problem for å lage et nytt problem (eller en mengde av problemer) hvis løsninger kan hjelpe deg å løse det opprinnelige problemet?</li>
+<li>Kan du finne et problem relatert til ditt som allerede har blitt løst og bruke det for å løse ditt problem?</li>
+<li>Kan du finne et mer spesialisert problem?</li>
+<li>Kan du dekomponere problemet og sette samme elementene på en ny måte?</li>
+<li>Kan du begynne med et gitt mål og jobbe bakover til noe som du allerede vet?</li>
+<li>Kan du lage en tegning av problemet?</li>
+</ul>
+
+<h2>Referanser</h2>
+<ul>  
+  <li>Dromey, R. G. (1982). How to Solve it by Computer. Prentice Hall.</li>
+<li>Pólya, George (1945). How to Solve It. Princeton University Press. ISBN 0-691-08097-6.</li>
+<li>Wikipedia Contributors. (2023, October 22). How to Solve It. Wikipedia; Wikimedia Foundation. https://en.wikipedia.org/wiki/How_to_Solve_It</li>
+</ul>
+
+  </div>
+
+</body>
+</html>
