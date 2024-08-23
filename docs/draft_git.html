@@ -148,7 +148,7 @@
     <p>Dere vil få muligheten til å praktisere alle de tre nevnte scenarioene, og muligens flere varianter av dem, i løpet av bachelorstudiet. Når det gjelder forskjell på kloning og gaffling (cloning and forking), så ved kloning kopierer man endringsloggen (databasen i <code>.git</code> mappen) som den er og den er fortsett knyttet til den originale repositorien. Man kan, for eksempel, gjøre påfølgende <code>git pull</code> for å få kopiert over nye endringer fra originalen. Ved gaffling, derimot, lager man en ny endringslogg, som eies av den som gjør gaffling og tar med seg hele historikken fra den originale repositorien. Gaffling brukes ofte når man ønsker å ta utviklingen i en annen retning en det felleskapet rundt den originale repositorien ønsker.</p>
 
 
-    <p>Åpen kildekode programvare prosjekter har sporadiske (ikke planlagte) bidrag fra et stort antall utviklere (kodere, programmerere), som er en av årsakene at det oppsto et behov for et system, som begrenser muligheter for feil (bugger) i kildedoden. I tillegg oppsto det også et behov for å administrere versjoner, dvs. hvilken versjon av kildekoden som er gjennomtestet og stabil (<i>produksjonsversjon</i>), og hvilken som er kun en eksperimentell versjon (<i>utviklingsversjon</i>), som med høy sannsynlighet inneholder bugger. I <b>Git</b> kan man håndtere slike versjoner av den samme programvaren ved hjelp av såkalte <i>branches</i> (på norsk kan man kalle det grener), og kildekoden i de forskjellige grenene kan være forskjellig på et gitt tidspunkt. Det finnes ingen etablert standard for navngiving og antall av grenene i en repository, men man kaller ofte grener for retting av mindre bugger for "hotfix-" og grener for implementasjon av ny funksjonalitet for "feature-". Det er en god praksis å gjøre all ny utvikling i sin egen gren, for eksempel, "feature-registrering" og så gjøre en sammenslåing med et annet gren når man har gjennomført testing av den nyskrevede koden. Det er også vanlig å slette de grenene, som er sammenslått med produksjonsgren (vanligvis kalt "main"). Her er et eksempel på relevante kommandoer:</p>
+    <p>Åpen kildekode programvare prosjekter har sporadiske (ikke planlagte) bidrag fra et stort antall utviklere (kodere, programmerere), som er en av årsakene at det oppsto et behov for et system, som begrenser muligheter for feil (bugger) i kildedoden. I tillegg oppsto det også et behov for å administrere versjoner, dvs. hvilken versjon av kildekoden som er gjennomtestet og stabil (<i>produksjonsversjon</i>), og hvilken som er kun en eksperimentell versjon (<i>utviklingsversjon</i>), som med høy sannsynlighet inneholder bugger. I <b>Git</b> kan man håndtere slike versjoner av den samme programvaren ved hjelp av såkalte <i>branches</i> (på norsk kan man kalle det grener), og kildekoden i de forskjellige grenene kan være forskjellig på et gitt tidspunkt. Det finnes ingen etablert standard for navngiving og antall av grenene i en repository, men man kaller ofte grener for retting av mindre bugger for "hotfix-" og grener for implementasjon av ny funksjonalitet for "feature-". Det er en god praksis å gjøre all ny utvikling i sin egen gren, for eksempel, "feature-registrering" og så gjøre en sammenslåing med et annet gren når man har gjennomført testing av den nyskrevede koden. Det er også vanlig å slette de grenene, som er sammenslått med produksjonsgren (vanligvis kalt "main"). Les mer om arbeidsflyten for bruken av Git i Driessen (2020). Her er et eksempel på en mulig fremgangsmåte med nye grener (en. branches):</p>
 
     <p>
     <pre style="font-size: 0.68em;">
@@ -184,8 +184,6 @@ $ git push origin main
       <a name="po03"></a>
     </h2>
     
-
-    <h3>Individuell del</h3>
     <ol>
       <li>Installere et "minimalistisk" tekstredigeringsverktøy, som Sublime Text (for macOS, Linux og MS Windows) eller Notepad++ (kun for MS Windows). 
       <blockquote class="incercise">
@@ -203,11 +201,11 @@ $ git push origin main
           </blockquote>
         </blockquote>
       </li>
-      <li>Gjøre seg kjent med grunnleggende bruk av applikasjonen <b>Terminal</b> i macOS eller Linux (Ubuntu 22.04), og <b>GitBash</b> i MS Windows operativsystemet (Academind, 2020; Grunwald, 2018; Cocca, 2022; edureka, 2021; Super SQA, 2023). 
+      <li>Gjøre seg kjent med grunnleggende bruk av applikasjonen <b>Terminal</b> i macOS eller Linux (Ubuntu 22.04), og <b>GitBash</b> i MS Windows operativsystemet (Academind, 2020; Grunwald, 2018; Cocca, 2022; edureka, 2021; Super SQA, 2023). Se <a href="#cmdline">Appendix IV</a>.
       <blockquote class="incercise">
         <p class="incerciseheader">Gjør det nå! Spørsmål til refleksjon.</p>
           <blockquote class="incercisebody">
-          <p>Hvilke grunnleggende kommandoer kan brukes på kommandolinjen for å kunne se filene, som er lagret på egen datamaskin? Hvordan finner jeg de samme filene i <b>Terminal</b>/<b>GitBash</b> som jeg ser i applikasjonen med grafisk grensesnitt for fremvisning av mappe- og filstruktur på min datamaskin? Hvorfor er det anbefalt å lære å bruke Git-kommandoer som kan brukes på kommandolinjen?</p>
+          <p>Hvilke grunnleggende kommandoer kan brukes på kommandolinjen for å kunne se filene, som er lagret på egen datamaskin? Hvordan finner jeg de samme filene i <b>Terminal</b>/<b>GitBash</b> som jeg ser i applikasjonen med grafisk grensesnitt for fremvisning av mappe- og fil-struktur på min datamaskin? Hvorfor er det anbefalt å lære å bruke Git-kommandoer, som kan brukes på kommandolinjen?</p>
           </blockquote>
         </blockquote>
         </li>
@@ -223,7 +221,7 @@ $ git push origin main
       <blockquote class="incercise">
         <p class="incerciseheader">Gjør det nå! Spørsmål til refleksjon.</p>
           <blockquote class="incercisebody">
-          <p>Hvorfor trenger man en slik "token"? Kan man bruke andre måter å autentisere seg på enn "token"?</p>
+          <p>Hvorfor trenger man en slik "token"? Kan man bruke andre måter å autentisere seg på Github enn "token"?</p>
           </blockquote>
         </blockquote>
       </li>
@@ -231,7 +229,7 @@ $ git push origin main
       <blockquote class="incercise">
         <p class="incerciseheader">Gjør det nå! Spørsmål til refleksjon.</p>
           <blockquote class="incercisebody">
-          <p>Hva er en repository? Hvorfor skal repositorynavn være meningsbærende? Hvorfor velge en lisens? Hva er formålet med README-fil og hvorfor er det anbefalt å ha det i hver repository? Hva betyr det at repository-en er på Github? Hva betyr det at repository har en gren (på engelsk <i>branch</i>) som heter <code>main</code>?</p>
+          <p>Hva er en repository? Hvorfor skal et repositorynavn være meningsbærende? Hvorfor velge en lisens? Hva er formålet med README-fil og hvorfor er det anbefalt å ha det i hver repository? Hva betyr det at repository-en er på Github? Hva betyr det at repository har en gren (på engelsk <i>branch</i>) som heter <code>main</code>?</p>
           </blockquote>
         </blockquote>
         </li>
@@ -351,28 +349,8 @@ $ git push origin main
           </blockquote>
         </blockquote>
       </li>
-      <li>Reflekter rundt tegningen av "commit-tre".</li>
     </ol>
-    <h3>Gruppedel</h3>
-    <ol>
-      <li>Velg hvem av gruppemedlemmene, som skal eie <code>HOVEDREPOSITORY</code>.</li>
-      <li>Eieren av <code>HOVEDREPOSITORY</code> lager en ny offentlig (ikke privat) repository med et navn som hele gruppen velger.</li>
-      <li>Eieren av <code>HOVEDREPOSITORY</code> inviterer alle de andre gruppemedlemmene som samarbeidspartnere i denne repositorien.</li>
-      <li>Bruk erfaring fra den individuelle delen og lag "Github pages" med <code>index.html</code> i mappen <code>/docs</code> i <code>HOVEDREPOSITORY</code>.</li>
-      <li>Alle gruppemedlemmene kloner <code>HOVEDREPOSITORY</code> til sin lokale datamaskin.</li>
-      <li>Alle gruppemedlemmene lager en gren med navn <code>feature-(initialer)</code> (hvis noen av gruppemedlemmene har like initialer, så må dere finne på en måte å skille mellom dem).</li>
-      <li>I denne grenen endre <code>index.html</code> ved å legge inn et avsnitt med eget visitkort (kanskje lurt å unngå å legge ut mobilnummer, siden såkalte "crawlere" søker opp alle offentlig tilgengelige sider på WWW og "skraper" disse for informasjon som kan brukes i spamming/markedsføring).</li>
-      <li>Legg inn en "Pull request" for din gren i <code>HOVEDREPOSITORY</code>.</li>
-      <li>Alle sammen følger med på når eieren til <code>HOVEDREPOSITORY</code> godtar og legger inn alle endringene i grenen <code>main</code>.</li>
-      <li>Alle sletter sine personlige grener både fra den lokale og fra <code>HOVEDREPOSITORY</code>.</li>
-
-    </ol>
-          <blockquote class="incercise">
-        <p class="incerciseheader">Gjør det nå! Spørsmål til refleksjon.</p>
-          <blockquote class="incercisebody">
-          <p>Skisser hvordan man kunne gjennomføre prosessen i pkt. 6-9 uten å bruke "Pull request". Hva kan være fordeler og ulemper med en (eller flere) alternative fremgangsmåter?</p>
-          </blockquote>
-          </blockquote>
+    
     <h2>Hva skal evalueres?</h2>
     <p>Læringsassitenten skal sjekke følgende:
     <ul>
@@ -395,14 +373,9 @@ $ git push origin main
       <li>Studenten har registert en konto på Github</li>
       <li>Studenten kan vise frem den individuelle repository-en og websiden som baserer seg på den gjennom en konfigurasjon av Github pages.</li>
       <li>Github pages er konfigurert basert på <code>main</code> gren og med roten for websidene i mappen <code>docs</code>.</li>
-      <li>Gruppen kan vise frem repository-en til gruppen (<code>HOVEDREPOSITORY</code>) og websiden som baserer seg på den gjennom en konfigurasjon av Github pages.</li>
-      <li>Studentene kan vise status og log for begge repository-ene på kommandolinje lokalt på sin datamaskin.</li>
-      <li><code>README.md</code> i den lokale repositorien inneholder 3 linjer (1: operativsystemets navn og versjon, 2: brukenavnet for Github-konto, 3: versjonsidentifikator til Git).</li>
-      <li><code>HOVEDREPOSITORY</code> inneholder minst en "Pull request" fra hver av gruppemedlemmene. Bidragene fra gruppemedlemmene er sammenslått i <code>index.html</code> filen og vises frem på websiden gjennom en konfigurasjon av "Github pages".</li>
-      <li>Studenten har tegnet "commit-tre" for begge prosessene som ble gjennomført basert på oppgaveteksten.</li>
-      <li>Studenten kan redegjøre for spørsmålene til refleksjon (LA vil spørre noen tilfeldig utvalgte spørsmål).</li>
+      <li>"Network graph" fra "Insights->Network" viser de to sammenslåeingene, som studenten har gjort. Studenten kan forklare "Network graph".</li>
     </ul>
-    I tilfelle det har oppstått problemer med gjennomføringen av noen av punktene i oppgavene, skal studenten eller gruppen forklare sin fremgangsmåte og beskrive problemene for LA-en.
+    I tilfelle det har oppstått problemer med gjennomføringen av noen av punktene i oppgavene, skal studenten forklare sin fremgangsmåte og beskrive problemene for LA-en.
     </p>
     <p>Godkjent/Ikke godkjent, men det blir gitt flere forsøk på å få innleveringen godkjent.</p>
     
@@ -443,23 +416,28 @@ hint: invocation.
       Appendix II: Installasjon
       <a name="install"></a>
     </h2>
-    <p>Installasjon av <b>Git</b> varierer avhengig av operativsystemet. Våre studenter bruker hovedsakelig tre forskjellige operativsystemer, - MS Windows, mocOS og Linux. De fleste bruker MS Windows og macOS, mens veldig få bruker Linux (oftest Ubuntu distribusjonen). Under [manuell] installasjon av all programvare på egen datamaskin, må man regne med at utfordringer kan oppstå. Selv om noen datamaskiner kan være fysisk tilnærmet like (dvs. har den samme maskinvaren), er aldri like når det gjelder programvaren som er installert på dem. Derfor ingen guider, som man finner på Internett, vil garantere en korrekt installasjon. Du som bruker må regne med å bruke tid på å finne ut av problemene når de oppstår og gjennomføre tester for å forsikre deg at programvaren funksjonener som forventet.</p>
-    <p>Her er de vanligste spørsmål, som kommer opp i form av dialogbokser under installasjonen av <b>Git</b>:
+    <p>Installasjon av <b>Git</b> varierer avhengig av operativsystemet. Våre studenter bruker hovedsakelig tre forskjellige operativsystemer, - MS Windows, mocOS og Linux. De fleste bruker MS Windows og macOS, mens veldig få bruker Linux (oftest Ubuntu distribusjonen). Under [manuell] installasjon av all programvare på egen datamaskin, må man regne med at utfordringer kan oppstå. Selv om noen datamaskiner kan være fysisk tilnærmet like (dvs. har den samme maskinvaren), er de aldri like når det gjelder programvaren, som er installert på dem. Derfor ingen guider, som man finner på Internett, vil garantere en korrekt installasjon. Du som bruker av datamaskinen må regne med å bruke tid på å finne ut av problemene når de oppstår og gjennomføre tester for å forsikre deg at programvaren funksjonener som forventet.</p>
+
+    <p>Git programvaren kan du laste ned fra <a href="https://git-scm.com/download/" target="_blank">https://git-scm.com/download/</a> (pass på at du velger riktig versjon for ditt operativsystem; velg "Standalone Installer" for Windows, og "Homebrew" eller "Macports" for MacOS; OBS! unngå "GUI Clients").</p>
+
+    <p>Her er de vanligste spørsmål, som kommer opp i form av dialogbokser under installasjonen av <b>Git</b> på Windows (OBS! eksempel er for Git-versjonen 2.37.2.2):
     <ul>
+      <li>Velge mappen hvor filene for Git-installasjonen skal lagres (bruk gjerne det som er foreslått).f</li>
       <li>Velge Git GUI - kan beholde denne, siden den vil vise noen grafiske symboler i MS Windows Explorer, når filsystemet blir fremvist i det grafiske grensesnittet til MS Windows.</li>
       <li>Velge Git LFS - LFS står for Large File Storage og er anbefalt hvis man ønsker å lagre store [binære] filer, som bilder eller videoer i sin Git repository. <b>Git</b> var ikke designet for å kontrollere versjoner på binære filer, så dette valget har kommet inn senere, siden det er mulig å få forholdsvis stor gratis lagringsplass gjennom webapplikasjoner som Github og Gitlab, for eksempel. For oppgavene i IS-114 skal det ikke være behov for superstore filer, men siden dette valget er default og har ingen store implikasjoner for vanlig bruk, så kan man la den være selektert.</li>
       <li>Valg av default (forhåndsvalgt alternativ i et dataprogram) tekstredigeringsverktøy - dette er et viktig valg siden noen av <b>Git</b>-kommandoene vil prøve automatisk å starte en applikasjon for tekstredigering. Grunnen til det er at alle forpliktende registreringer av endringer i den gjeldende mappen skal ha en kommentar om hva endringene dreier seg om. Det regnes som dårlig praksis blant utviklere, hvis man ikke er nøye med å kommentere alle forpliktende ("commit") registreringer i repository-en. For eksempel, hvis man har lagt en fil "på scenen" for endringer og utfører kommando <pre><code>git commit</code></pre> i den gjeldende mappen, vil default tekstredigeringsverktøy forsøke å starte opp. Derfor er det viktig at før man installerer <b>Git</b>, har man allerede installert et egnet tekstredigeringsverktøy. Anbefalt verktøy for IS-114 er Sublime Text og Notepad++. <b><span style="color:red;">OBS!</span></b> Ofte når man jobber i kommandolinje, ønsker man ikke avbrytelser som at en ny applikasjon starter opp. Tekstredigeringsverktøy er blitt store applikasjoner og en slik oppstart kan ta tid. Derfor kan man velge å skrive kommentaren direkte i kommandolinje ved å bruke ekstravalget <code>-m</code>, som står for <i>message</i> (husk at meldingen må skrives mellom doble anførselstegn): <pre><code>git commit -m "Endret fontstørrelsen for brødteksten"</code></pre> Et alternativ er også å beholde default tekstbehandler, som vanligvis er <b>vim</b>. Da må man lære noen grunnleggende kommandoer i <b>vim</b>. Hvis man allerede har erfaring med systemutvikling/programmering, kan man bruke IDE-er som Visual Studio eller IntelliJ. IDE står for Integrated Development Environment. Studentene kan ikke regne med å få hjelp med problemer som eventuelt oppstår i forbindelse med bruken av IDE-er.</li>
-      <li>Velge applikasjon som utføres for å sørge for SSH - SSH står for Secure [Socket] Shell og garanterer ende til ende kryptering for kommunikasjon mellom den lokale kommandolinjen og den eksterne tjeneren (i vårt tilfelle en tjener som Github foretaket administrerer). OpenSSH er her det beste valget, som også skal være default.</li>
-      <li>Velge PATH - PATH er et miljøvariabel og er en samling av stier som peker til steder hvor utførbare programmer ligger. Stien som legges inn i PATH for <b>Git</b>, er en sti (absolutt navn til en mappe) hvor den utførbare filen til <b>Git</b> ligger. Valget her bør være "Git from command line and also from 3rd-party software". Da vil man kunne utføre <b>Git</b>-kommandoer både i GitBash, cmd og PowerShell under MS Windows operativsystemet.</li>
       <li>Velge initiell gren - det engelske ordet er "branch"; velg <code>main</code> som standardnavn til den initielle "branch"-en (<code>master</code> ble forkastet på grunn av politiske grunner).</li>
-      <li>Velg "chechout style" (utsjekkingsstil) - velg "Checkout Windows-style, commit Unix-style line endings". Dette valget er grunnet forskjeller på hvilke binære symboler som indikerer linjeskift i tekstfiler. Hvis en utvikler jobber på MS Windows plattform og en annen på macOS plattform, så må linjeendingene konverteres, hvis tekstredigeringsverktøyene på begge plattformene skal vise filen korrekt. </li>
+      <li>Velge PATH - PATH er et miljøvariabel og er en samling av stier som peker til steder hvor utførbare programmer ligger. Stien som legges inn i PATH for <b>Git</b>, er en sti (absolutt navn til en mappe) hvor den utførbare filen til <b>Git</b> ligger. Valget her bør være "Git from command line and also from 3rd-party software". Da vil man kunne utføre <b>Git</b>-kommandoer både i GitBash, cmd og PowerShell under MS Windows operativsystemet.</li>
+      <li>Velge applikasjon som utføres for å sørge for SSH - SSH står for Secure [Socket] Shell og garanterer ende til ende kryptering for kommunikasjon mellom den lokale kommandolinjen og den eksterne tjeneren (i vårt tilfelle en tjener som Github foretaket administrerer). "Use bundled OpenSSH" er her det beste valget, som også skal være default.</li>
+      <li>For HTTPS forbindelser kan du velge "Use the OpenSSH library" (forutsatt at du valgte det i forrige steget).</li>
+      <li>Velg "chechout style" (utsjekkingsstil) - velg "Checkout Windows-style, commit Unix-style line endings". Dette valget er grunnet forskjeller på hvilke binære symboler som indikerer linjeskift i tekstfiler. Hvis en utvikler jobber på MS Windows plattform og en annen på macOS plattform, så må linjeendingene konverteres, slik at tekstredigeringsverktøyene på begge plattformene kan vise filen korrekt. </li>
       <li>Velg terminalemulator - la den være default. Vi kommer senere tilbake til hva det er, men du er velkommen til å finne det ut selv.</li>
       <li>Velg default adferd ved <code>git pull</code> - denne kommandoen synkroniserer repositorien på en annen datamaskin med din lokale repositorien (for eksempel, når den versjonen som du sjekket ut fra en annen datamaskin, er blitt oppdatert av en annen og sammenfaller ikke lenger med din versjon). La denne står default, dvs. at man gjør en "fast-forward" eller "merge" (kommer tilbake til hva det betyr etterhvert, men du er velkommen til å finne det ut selv).</li>
-      <li>Velge "Git Credential Manager" - la den være default. Den skal administrerer dine personlige "tokens", slik at du ikke trenger å skrive inn brukernavn og passord hver gang du skal oppdatere en ekstern, tidligere utsjekket versjon av repository. Husk å utføre disse to kommandoene før du begynner å bruke b>Git</b> (bruk ditt navn og e-postadressen som du brukte når du opprettet en konto på Github): <pre><code>
+      <li>Velge "Git Credential Manager" - la den være default. Den skal administrerer dine personlige tilgangs-"tokens", slik at du ikke trenger å skrive inn brukernavn og passord hver gang du skal oppdatere en ekstern, tidligere utsjekket versjon av repository. Husk å utføre disse to kommandoene før du begynner å bruke b>Git</b> (bruk ditt navn og e-postadressen som du brukte når du opprettet en konto på Github): <pre><code>
         git config --global user.name "(ditt navn)"
         git confit --global user.email "(din e-postadresse)"
       </code></pre></li>
-      <li>Andre valgmuligheter kan man la stå med default.</li>
+      <li>Andre valgmuligheter kan man la stå med det som er foreslått (default).</li>
     </ul>
     </p>
 
@@ -475,6 +453,88 @@ hint: invocation.
       <li>(Authenticating with GitHub, 2023)</li>
     </ul>
 
+    <h2>Appendix IV: Relevante kommandoer i terminalvinduet
+    <a name="cmdline"></a>
+    </h2>
+    <table class="table1" >
+      <thead>
+          <tr>
+              <th colspan="3">Kommandoer i kommandovindu (gjelder Gitbash i Windows og Terminal i MacOS)</th>
+          </tr>
+          <tr>
+              <th>Kommando</th>
+              <th>Kommentar</th>
+
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><code>$ pwd</code></td>
+              <td>For å vise den gjeldende mappen (pwd - print working directory).</td>
+          </tr>
+          <tr>
+              <td><code>$ mkdir IS-114</code></td>
+              <td>For å lage en ny mappe med navn "IS-114" i den gjeldende mappen (mkdir - make directory).</td>
+          </tr>
+          <tr>
+              <td><code>$ cd</code></td>
+              <td>Bytte til en ny gjeldende mappe "IS-114" (cd - change directory).</td>
+          </tr>
+          <tr>
+              <td><code>$ ls -la</code></td>
+              <td>Vise en detaljert liste av alle filer og mapper i den gjeldende mappen, inkludert de såkalte skjulte filer, som begynner med symbolet "."</td>
+          </tr>
+          <tr>
+              <td><code>$ cd ..</code></td>
+              <td>Bytte den gjeldende mappen til et nivå opp i mappehierarkien til filsystemet.</td>
+          </tr>
+          <tr>
+              <td><code>$ git clone REPOSITORY_ID</code></td>
+              <td>Kopiere alle filer fra en repository på Github (eller eventuelt et annet nettsted med versjonskontrollsystem installert). Eksempel på en REPOSITORY_ID (anførselstegn inngår ikke i navnet): "https://github.com/uia-worker/is114-tema01.git".</td>
+          </tr>
+          <tr>
+              <td><code>$ git add README.md</code></td>
+              <td>Legger til en fil på "scenen" til Git (alle filer på "scenen" (en. stage) vil bli lagt inn i den lokale repository-en med en "git commit"-kommando.</td>
+          </tr>
+          <tr>
+              <td><code>$ git commit -m "Added details about problem solving to README."</code></td>
+              <td>Legger inn alle filene på "scenen" i den lokale repositorien, sammen med en kommentar fra utvikleren.</td>
+          </tr>
+          <tr>
+              <td><code>$ git push origin main</code></td>
+              <td>Kopierer endringene til Github (remote "origin" og grenen "main"), hvis den gjeldende mappe inneholder en repository, som ble "klonet" fra Github, for eksempel.</td>
+          </tr>
+          <tr>
+              <td><code>$ git status</code></td>
+              <td>Viser status for repository-en.</td>
+             
+          </tr>
+          <tr>
+              <td><code>$ git log</code></td>
+              <td>Viser loggen til repository-en (informasjon om hver "commit", dvs. hver endring i hver fil i repository-en).</td>
+             
+          </tr>
+          <tr>
+              <td><code>$ git checkout -b feature-registrering main</code></td>
+              <td>Lager en ny gren (en. branch) til [hoved]grenen "main".</td>
+             
+          </tr>
+          <tr>
+              <td>
+                <code>$ git checkout main</code></br>
+                <code>$ git merge --no-ff feature-registrering</code> </td>
+              <td>Bytter til grenen "main" og legger inn endringene fra grenen "feature-registrering" (--no-ff gjør at eksistensen til grenen "feature-registrering" vil bli laget i loggen).</td>
+          </tr>
+          <tr>
+            <td>
+              <code>$ git branch -d feature-registrering</code></br>
+              <code>$ git push origin main</code> </td>
+              <td>Sletter grenen "feature-registrering" og sender endringene til repository-en på Github.</td>
+          </tr>
+        </tbody>
+      </table>
+  <p><i><b>Tabell 1.</b>Mest relevante kommandoer for administrasjon av filsystemet og versjonskontroll (git).</i></p>
+
 <h2>
       Referanser
       <a name="references"></a>
@@ -487,6 +547,7 @@ hint: invocation.
       <li>Cocca, G. (2022, April 5). Command Line for Beginners – How to Use the Terminal Like a Pro [Full Handbook]. FreeCodeCamp.org; freeCodeCamp.org. https://www.freecodecamp.org/news/command-line-for-beginners/ (Cocca, 2022)</li>
       <li>Det Norske Akademis ordbok. (2023c). Naob.no. https://naob.no/ordbok/applikasjon</li>
       <li>Det Norske Akademis ordbok. (2023d). Naob.no. https://naob.no/ordbok/program</li>
+      <li>Driessen, V. (2020). A successful Git branching model. (2020). Nvie.com. https://nvie.com/posts/a-successful-git-branching-model/</li>
       <li>edureka. (2021). Git Bash Tutorial | Git Bash Basics | Git and GitHub Tutorial | DevOps Training | Edureka [YouTube Video]. In YouTube. https://www.youtube.com/watch?v=iGutIN5t9Mo (edureka, 2021)</li>
       <li>Git - Basic Branching and Merging. (2023). Git-Scm.com. https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging#_basic_merging (Git - Basic Branching and Merging, 2023)</li>
       <li>Git - Downloads. (2023). Git-Scm.com. https://git-scm.com/downloads (Git - Downloads, 2023)</li>
